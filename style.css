@@ -9,28 +9,36 @@
         background-attachment: fixed;
 }
 
-#resume {
+#name {
         text-align: left;
-        font-size: 50px;
+        font-size: 40px;
         padding-left: 10px;
         font-family: "Tahoma";
 }
 
+#bio {
+        text-align: left;
+        font-size: 40px;
+        padding-left: 10px;
+        font-family: "Tahoma";        
+}
+
 .link {
-        padding-top: 12px;
-        padding-bottom: 12px;
+        padding-top: 8px;
+        padding-bottom: 8px;
         font-size: 22px;
-        margin-left: 40%;
-        margin-right: 40%;
-        background-color: white;
+        margin-left: 41%;
+        margin-right: 41%;
+        background-color: lightgray;
         border-color: black;
         border-style: solid;
         border-width: 1px;   
         color: black;      
 }
 
-.school {
-        font-color: blue;
+div {
+        padding-left: 10px; 
+        font-family: "Geneva";       
 }
 
 body {
@@ -40,7 +48,8 @@ body {
 h1 {
         font-size: 120px;
         color: black;
-        text-align: center;  
+        text-align: center; 
+        padding-bottom: 10px; 
         margin: 2px; 
 }
 
@@ -51,26 +60,69 @@ img {
 }
 
 li {
-        list-style-type: none;
         font-size: 18px;
         padding-left: 2%;
         font-family: "Tahoma";
+        padding: 0;
 }
 
 h2 {
-        background-color: lightsteelblue;
         color: black;
-        font-family: "Times";
-        font-size: 24px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-left: 10px;  
+        font-weight: bold;
+        font-family: "Geneva";
+        font-size: 27px;
+        padding-top: 2px;
+        padding-left: 20px;  
         margin: 0;  
+        margin-bottom: 10px;
+        border-bottom-color: darkgray;
+        border-bottom-style: solid;
+        border-bottom-width: 3px;
+
 }
 
 p {
         padding-left: 10px;
         font-family: "Tahoma";
         font-size: 18px;
+}
+
+.biopara {
+        text-indent: 50px;
+        display: block; 
+        padding-top: 5px;
+        padding-left: 5%;
+        padding-right: 5%;
+            
+}
+
+.school {
+        font-size: 22px;
+        padding-left: 20px;
+        font-family: "Times New Roman";
+        font-weight: bold;
+}
+
+.degree {
+        padding-left: 28px;
+        font-size: 17px;
+        font-family: "Arial";
+}
+
+.work {
+        font-size: 22px;
+        padding-left: 20px;
+        font-family: "Times New Roman";
+        font-weight: bold;
+}
+
+.dates {
+        padding-left: 28px;
+        font-size: 17px;
+        font-family: "Arial";
+}
+
+.other {
+        padding-left: 20px;
 }
 
