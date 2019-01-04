@@ -12,7 +12,7 @@ body {
 }
 
 h1 {
-    align-self: center;
+    align: center;
 }
 
 #board {
@@ -29,11 +29,11 @@ h1 {
     padding: 5px;
 }
 
-.boggle:hover {
+.tile:hover {
     cursor: pointer;
 }
 
-.boggle {
+.tile {
    width: 80px;
    height: 80px;
    border-radius: 5px;
@@ -43,11 +43,11 @@ h1 {
    margin:5px;
 }
 
-.boggle.selected {
+.tile.selected {
    background-color: #ACCEEC;
 }
 
-.boggle span {
+.tile span {
    font-weight: bold;
    display: block;
    position: relative;
