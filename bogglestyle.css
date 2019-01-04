@@ -54,3 +54,9 @@ h1 {
    top: 50%;
    transform: translateY(-50%);
 }
+
+#word-submit {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
