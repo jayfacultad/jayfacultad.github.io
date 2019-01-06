@@ -67,6 +67,8 @@ h3 {
 #word-submit {
     margin: 15px 0;
     display: flex;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .word-field {
