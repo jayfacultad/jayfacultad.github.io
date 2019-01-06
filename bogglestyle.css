@@ -73,7 +73,7 @@ h3 {
 
 .word-field {
     display: block;
-    width: 170px;
+    width: 400px;
 }
 
 input {
@@ -99,7 +99,7 @@ input {
 }
 
 #score-table {
-    width: 275px;
+    width: 250px;
     align-self: left;
     border: 5px solid #FFCA08;
     border-collapse: collapse;
@@ -117,11 +117,10 @@ input {
     border: 5px solid #FFCA08;
     background-color: azure;
     padding: 5px;
-    height: 315px;
+    height: 355px;
     text-align: right;
     vertical-align: text-top;
 }
-
 
 #board {
     border: 5px solid #FFCA08;
@@ -189,9 +188,12 @@ input {
 }
 
 #answers-table td {
-    text-align: center;
+    border: 5px solid #FFCA08;
     background-color: azure;
+    text-align: center;
+    padding: 5px;
     height: 355px;
+    vertical-align: middle;
 }
 
 #start-button:hover {
