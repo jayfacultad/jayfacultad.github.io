@@ -16,7 +16,7 @@ h3 {
 
 #start-button {
     width: 100px;
-    background: #8f7a66;
+    background: steelblue;
     border-radius: 3px;
     padding: 0 10px;
     color: #f9f6f2;
@@ -83,13 +83,15 @@ h3 {
 
 input {
     font-size: 14px;
-    text-align: right;
+    text-align: center;
 }
 
 .submit-button {
     font-size: 14px;
     vertical-align: middle;
-    background: white;
+    background: steelblue;
+    color: white;
+    font-weight: bold;
     border-radius: 3px;
     padding: 2px 5px;
     height: 20px;

@@ -2,7 +2,7 @@ var startGame = false;
 var dictionary = Trie();
 
 document.getElementById("start-button").addEventListener("click", function(){
-    document.getElementById("start-button").style.background = "steelblue";
+    document.getElementById("start-button").style.background = "#8f7a66";
     document.getElementById("start-button").innerHTML = "Stop Game";
     if (startGame == false) {
         startGame = true;
@@ -13,7 +13,7 @@ document.getElementById("start-button").addEventListener("click", function(){
     }
     else if (startGame == true) {
         startGame = false;
-        document.getElementById("start-button").style.background = "#8f7a66";
+        document.getElementById("start-button").style.background = "steelblue";
         document.getElementById("start-button").innerHTML = "Start Game";
     }
 });
