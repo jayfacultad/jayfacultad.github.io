@@ -87,6 +87,8 @@ function start_timer() {
 
 function create_dictionary() {
 
+    var dictionary = Trie();
+
     function readTextFile(file)
     {
         var txtFile = new XMLHttpRequest();
@@ -98,7 +100,12 @@ function create_dictionary() {
                 {
                     var result = txtFile.responseText;
                     result.split("\n");
-                    console.log(result);
+                    
+                    var num_words = array_of_words.length;
+
+                    for (var i = 0; i < num_words; i++) {
+                        dictionary.insert(array_of_words[i]);
+                    }
 
                 }
             }
