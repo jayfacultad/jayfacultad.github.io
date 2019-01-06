@@ -1,5 +1,5 @@
 var startGame = false;
-var dictionary = Trie();
+var dictionary;
 
 document.getElementById("start-button").addEventListener("click", function(){
     document.getElementById("start-button").style.background = "steelblue";
@@ -99,8 +99,9 @@ function create_dictionary() {
             {
                 if(txtFile.status == 200 || txtFile.status == 0)
                 {
+                    dictionary = Trie();
                     var array_of_words;
-                    
+
                     array_of_words = txtFile.responseText;
                     array_of_words.split("\n");
                     
