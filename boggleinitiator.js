@@ -1,5 +1,5 @@
 var startGame = false;
-var dictionary;
+var dictionary = Trie();
 
 document.getElementById("start-button").addEventListener("click", function(){
     document.getElementById("start-button").style.background = "steelblue";
@@ -90,8 +90,7 @@ function start_timer() {
 
 function create_dictionary() {
 
-    function readTextFile(file)
-    {
+    function readTextFile(file, dictionary) {
         var txtFile = new XMLHttpRequest();
         txtFile.open("GET", file, true);
         txtFile.onreadystatechange = function () {
@@ -99,7 +98,6 @@ function create_dictionary() {
             {
                 if(txtFile.status == 200 || txtFile.status == 0)
                 {
-                    dictionary = Trie();
                     var array_of_words;
 
                     array_of_words = txtFile.responseText;
@@ -116,7 +114,7 @@ function create_dictionary() {
         }
         txtFile.send(null);
     }
-    readTextFile('dictionary.txt');
+    readTextFile('dictionary.txt', dictionary);
 }
 
 function boggle_solver() {
