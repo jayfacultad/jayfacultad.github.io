@@ -72,8 +72,10 @@ h3 {
 }
 
 .word-field {
+    font-size: 20px;
     display: block;
     width: 390px;
+    text-transform: uppercase;
 }
 
 input {
