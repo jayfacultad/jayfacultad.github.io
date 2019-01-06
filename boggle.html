@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bogglestyle.css">
+    <title>Boggle Game</title>
+</head>
+
+<body>
+
+    <h3>BOGGLE by Jay Facultad</h3>
+
+    <div class="intro">
+        Find words by connecting adjacent letters<br>
+        horizontally, vertically, and diagonally<br>
+    </div>
+
+    <br><div id="start-button">Start Game</div>
+
+    <div id="game-container">
+
+        <div id="left-container">
+            <br>
+            <div class="score-container">
+                <a class="score-heading">Score: </a>
+                <a class="score">0</a>
+            </div>
+            <div id="word-submit">
+                    <div>
+                        <input class="word-field" type="text" name="word-entry">
+                    </div>
+                <div class="submit-button">Enter Word</div>
+            </div>
+
+            <table id="score-table">
+                <tr>
+                    <th>Your Words</th>
+                    <th>Score</th>
+                </tr>
+
+                <!-- Inner HTML
+                <tr>
+                    <td class="submitted-word">congruent</td>
+                    <td class="submitted-word-score">11</td>
+                </tr>
+
+                <tr>
+                    <td>urgent</td>
+                    <td>3</td>
+                </tr>
+
+                -->
+
+                <tr id="footer">
+                    <td>Word </td>
+                    <td class="word-score"></td>
+                </tr>
+
+            </table>
+
+        </div>
+        <!-- End left container -->
+
+        <div id="center-container">
+
+            <div id="board">
+
+                <div class="row R0">
+                    <div class="tile">
+                        <span id="R0C0"></span>
+                    </div> 
+                    <div class="tile">
+                        <span id="R0C1"></span>
+                    </div> 
+                    <div class="tile">
+                        <span id="R0C2"></span>
+                    </div> 
+                    <div class="tile">
+                        <span id="R0C3"></span>
+                    </div> 
+                    <div class="tile">
+                        <span id="R0C4"></span>
+                    </div>
+                </div>
+
+                <div class="row R1">
+                    <div class="tile">
+                        <span id="R1C0"></span>
+                    </div> 
+                    <div class="tile">
+                        <span id="R1C1"></span>
+                    </div> 
+                    <div class="tile">
+                        <span id="R1C2"></span>
+                    </div> 
+                    <div class="tile">
+                        <span id="R1C3"></span>
+                    </div> 
+                    <div class="tile">
+                        <span id="R1C4"></span>
+                    </div>
+                </div>
+
+                <div class="row R1">
+                    <div class="tile">
+                        <span id="R2C0"></span>
+                    </div> 
+                    <div class="tile">
+                        <span id="R2C1"></span>
+                    </div> 
+                    <div class="tile">
+                        <span id="R2C2"></span>
+                    </div> 
+                    <div class="tile">
+                        <span id="R2C3"></span>
+                    </div> 
+                    <div class="tile">
+                        <span id="R2C4"></span>
+                    </div>
+                </div>
+
+                <div class="row R3">
+                    <div class="tile">
+                        <span id="R3C0"></span>
+                    </div> 
+                    <div class="tile">
+                        <span id="R3C1"></span>
+                    </div> 
+                    <div class="tile">
+                        <span id="R3C2"></span>
+                    </div> 
+                    <div class="tile">
+                        <span id="R3C3"></span>
+                    </div> 
+                    <div class="tile">
+                        <span id="R3C4"></span>
+                    </div>
+                </div>
+
+                <div class="row R4">
+                    <div class="tile">
+                        <span id="R4C0"></span>
+                    </div> 
+                    <div class="tile">
+                        <span id="R4C1"></span>
+                    </div> 
+                    <div class="tile">
+                        <span id="R4C2"></span>
+                    </div> 
+                    <div class="tile">
+                        <span id="R4C3"></span>
+                    </div> 
+                    <div class="tile">
+                        <span id="R4C4"></span>
+                    </div>
+                </div>
+
+            </div> <!-- End board -->
+
+        </div> <!-- End center container -->
+
+        <div class="right-container">
+            <br>
+            <div class="score-container">
+                <a class="time-remaining-heading">Time Left: </a>
+                <a id="time-remaining">2:00</a>
+            </div>
+
+            <br>
+            <br>
+            <table id="answers-table">
+                <tr>
+                    <th>All Possible Words</th>
+                </tr>
+                <tr>
+                    <td>Displayed when game is over</td>
+                </tr>
+            </table>
+        </div> <!-- End right container -->
+
+
+    </div> 
+    <!-- End game container -->
+    <br>
+    <br>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="trie.js"></script>
+    <script src="boggleinitiator.js"></script>
+
+</body>
+</html>
