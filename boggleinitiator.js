@@ -1,4 +1,5 @@
 var startGame = false;
+var dictionary = Trie();
 
 document.getElementById("start-button").addEventListener("click", function(){
     document.getElementById("start-button").style.background = "steelblue";
@@ -7,6 +8,7 @@ document.getElementById("start-button").addEventListener("click", function(){
         startGame = true;
         build_board();
         create_dictionary();
+        boggle_solver();
         start_timer();
     }
     else if (startGame == true) {
@@ -71,6 +73,7 @@ function start_timer() {
                 timer.innerHTML = "<span style='font-size:50px; color:white;'>0:00</span>";
                 alert("Game Over!");
                 clearInterval(timeinterval); 
+                startGame = false;
             }
         }
         update_clock(); // run function once at first to avoid delay
@@ -87,8 +90,6 @@ function start_timer() {
 
 function create_dictionary() {
 
-    var dictionary = Trie();
-
     function readTextFile(file)
     {
         var txtFile = new XMLHttpRequest();
@@ -98,8 +99,10 @@ function create_dictionary() {
             {
                 if(txtFile.status == 200 || txtFile.status == 0)
                 {
-                    var result = txtFile.responseText;
-                    result.split("\n");
+                    var array_of_words;
+                    
+                    array_of_words = txtFile.responseText;
+                    array_of_words.split("\n");
                     
                     var num_words = array_of_words.length;
 
@@ -113,6 +116,10 @@ function create_dictionary() {
         txtFile.send(null);
     }
     readTextFile('dictionary.txt');
+}
+
+function boggle_solver() {
+
 }
 
 // Dice values taken from actual Boggle game pieces
