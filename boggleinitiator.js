@@ -3,9 +3,12 @@ var timerOn = false;
 var dictionary = new Trie();
 
 document.getElementById("start-button").addEventListener("click", function(){
-    document.getElementById("start-button").style.background = "#8f7a66";
-    document.getElementById("start-button").innerHTML = "Stop Game";
+    
     if (startGame == false) {
+        document.getElementById("start-button").style.background = "#8f7a66";
+        document.getElementById("start-button").innerHTML = "Stop Game";
+        document.getElementById("word-entry").value = "";
+        document.getElementById("answer_cell").innerHTML = "";
         startGame = true;
         timerOn = true;
         build_board();
@@ -24,6 +27,7 @@ document.getElementById("start-button").addEventListener("click", function(){
         start_timer();
         document.getElementById("start-button").style.background = "steelblue";
         document.getElementById("start-button").innerHTML = "Start Game";
+        user_inputs.length = 0;
     }
 });
 

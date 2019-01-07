@@ -11,46 +11,23 @@
 
 <body>
 
-    <h3>BOGGLE by Jay Facultad</h3>
-
-    <div class="intro">
-        Find words by connecting adjacent letters<br>
-    </div>
-
-    <br><div id="start-button">Start Game</div>
-
     <div id="game-container">
 
         <div id="left-container">
             <div class="score-container">
-                <a class="score-heading">Score: </a>
-                <a class="score">0</a>
+                <a class="score-heading">Score:</a><br>
+                <a id="score">000</a>
             </div>
 
-            <br>
-            <br>
             <table id="score-table">
                 <tr>
                     <th>Your Words</th>
-                    <th>Score</th>
-                </tr>
-
-                <!-- Inner HTML
-                <tr>
-                    <td class="submitted-word">congruent</td>
-                    <td class="submitted-word-score">11</td>
                 </tr>
 
                 <tr>
-                    <td>urgent</td>
-                    <td>3</td>
-                </tr>
-
-                -->
-
-                <tr>
-                    <td id="user_words">Word </td>
-                    <td class="word-score"></td>
+                    <td>
+                        <div id="answer_cell"></div>
+                    </td>
                 </tr>
 
             </table>
@@ -60,11 +37,19 @@
 
         <div id="center-container">
 
+            <h3>BOGGLE by Jay Facultad</h3>
+
+            <div class="intro">
+                Find words by connecting adjacent letters<br>
+            </div>
+
+            <br><div id="start-button">Start Game</div>
+
             <div id="word-submit">
                 <div>
                     <input class="word-field" type="text" id="word-entry" pattern="[A-Z]">
                 </div>
-                <div class="submit-button">Enter Word</div>
+                <div id="submit-button">Enter Word</div>
             </div>
 
             <div id="board">
@@ -163,20 +148,19 @@
 
         </div> <!-- End center container -->
 
-        <div class="right-container">
-            <div class="score-container">
-                <a class="time-remaining-heading">Time Left: </a>
+        <div id="right-container">
+
+            <div class="time-container">
+                <a class="time-remaining-heading">Time Left:</a><br>
                 <a id="time-remaining">2:00</a>
             </div>
 
-            <br>
-            <br>
             <table id="answers-table">
                 <tr>
                     <th>All Possible Words</th>
                 </tr>
                 <tr>
-                    <td>Displayed when game is over</td>
+                    <td><div id="score_cell">Displayed when game is over</div></td>
                 </tr>
             </table>
         </div> <!-- End right container -->

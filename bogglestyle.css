@@ -8,12 +8,6 @@ h3 {
     text-align: center;
 }
 
-.intro {
-    width: 490px;
-    margin: 0 auto;
-    text-align: center;
-}
-
 #start-button {
     width: 100px;
     background: steelblue;
@@ -32,37 +26,40 @@ h3 {
 }
 
 #left-container {
-    float: left;
-    width: 275px;
+    margin: 15px 25px;
+    /* width: 250px; */
 }
 
 #center-container {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 490px;
+    /* width: 490px; */
     text-align: center;
 }
 
 #right-container {
-    float: right;
-    width: 275px;
+    margin: 15px 25px;
+    /* width: 250px; */
 }
 
 .score-container {
-    display: inline-block;
+    float: center;
+    text-align: center;
 }
 
 .score-heading {
     color: white;
     font-family: "Arial";
     font-size: 30px;
+    text-align: center;
 }
 
-.score {
+#score {
     font-family: "Arial";
     color: white;
     font-size: 50px; 
+    text-align: right;
 }
 
 #word-submit {
@@ -76,7 +73,7 @@ h3 {
 .word-field {
     font-size: 20px;
     display: block;
-    width: 200px;
+    width: 175px;
     text-transform: uppercase;
     padding: 5px; 
 }
@@ -86,7 +83,7 @@ input {
     text-align: center;
 }
 
-.submit-button {
+#submit-button {
     font-size: 14px;
     vertical-align: middle;
     background: steelblue;
@@ -101,32 +98,48 @@ input {
     margin: 0 auto;
 }
 
-.submit-button:hover {
+#submit-button:hover {
     cursor: pointer;
 }
 
 #score-table {
-    width: 275px;
+    width: 175px;
     align-self: left;
     border: 5px solid #FFCA08;
     border-collapse: collapse;
     text-align: left;
+    table-layout: fixed;
+}
+
+#score_cell {
+    height: 560px;
+    overflow: auto;
+}
+
+#score_col {
+    width: 50px;
+}
+
+#answer_cell {
+    height: 560px;
+    overflow: auto;
 }
 
 #score-table th {
     border: 5px solid #FFCA08;
     padding: 5px;
     background-color: #ACCEEC;
-    text-align: center
+    text-align: center;
 }
 
 #score-table td {
     border: 5px solid #FFCA08;
     background-color: azure;
     padding: 5px;
-    height: 415px;
+    height: 560px;
     text-align: right;
     vertical-align: text-top;
+    table-layout: fixed;
 }
 
 #board {
@@ -175,20 +188,29 @@ input {
     font-family: "Arial";
     color: white;
     font-size: 30px;
+    text-align: center;
 }
 
 #time-remaining {
     font-family: "Arial";
     color: white;
-    font-size: 50px;    
+    font-size: 50px;   
+    text-align: center; 
+}
+
+
+.time-container {
+    float: center;
+    text-align: center;
 }
 
 #answers-table {
-    width: 275px;
+    width: 175px;
     align-self: left;
     border: 5px solid #FFCA08;
     border-collapse: collapse;
     text-align: left;
+    table-layout: fixed;
 }
 
 #answers-table th {
@@ -203,8 +225,10 @@ input {
     background-color: azure;
     text-align: center;
     padding: 5px;
-    height: 415px;
+    height: 560px;
     vertical-align: middle;
+    overflow: auto;
+
 }
 
 #start-button:hover {
