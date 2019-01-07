@@ -9,11 +9,11 @@ document.getElementById("start-button").addEventListener("click", function(){
         startGame = true;
         timerOn = true;
         build_board();
-        dictionary.insert_word("helium");
-        console.log(dictionary.is_word("helium"));  // true
-        console.log(dictionary.is_word("kickass")); // false
+        // dictionary.insert_word("helium");
+        // console.log(dictionary.is_word("helium"));  // true
+        // console.log(dictionary.is_word("kickass")); // false
         create_dictionary();
-        console.log(dictionary.is_word("word")); // true
+        // console.log(dictionary.is_word("word")); // true
         boggle_solver();
         start_timer();
 
@@ -113,6 +113,7 @@ function create_dictionary() {
                     var num_words = array_of_words.length;
 
                     for (var i = 0; i < num_words; i++) {
+                        console.log(array_of_words[i]);
                         dictionary.insert_word(array_of_words[i]);
                     }
                 }
