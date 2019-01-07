@@ -117,6 +117,9 @@ function create_dictionary() {
     readTextFile('dictionary.txt', dictionary);
 }
 
+console.log(dictionary.is_word("helium"));  // true
+console.log(dictionary.is_word("kickass")); // false
+
 function boggle_solver() {
 
 }

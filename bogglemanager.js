@@ -1,27 +1,28 @@
 var user_inputs = [];
 
-var input = document.getElementById("word-entry");
-input.addEventListener("keyup", function(event) {
-  // Number 13 is the "Enter" key on the keyboard
-  if (event.keyCode == 13) {
-    // Trigger the button element with a click
-    document.getElementById("submit-button").click();
-  }
-});
+window.onload=function(){
 
-document.getElementById("submit-button").addEventListener("click", function() {
-    if (startGame == true) {
+    var input = document.getElementById("word-entry");
+    input.addEventListener("keyup", function(event) {
+      // Number 13 is the "Enter" key on the keyboard
+      if (event.keyCode == 13) {
+        // Trigger the button element with a click
+        document.getElementById("submit-button").click();
+      }
+    });
 
-        input = document.getElementById("word-entry").value;
-        user_inputs.push(input);  
+    document.getElementById("submit-button").addEventListener("click", function() {
+        if (startGame == true) {
 
-        // Clear input field
-        document.getElementById("word-entry").value = "";
+            input = document.getElementById("word-entry").value;
+            user_inputs.push(input);  
 
-        // Display user's inputted words in word table
-        document.getElementById("user_words").innerHTML = user_inputs.join("<br>");
-        
-    }
+            // Clear input field
+            document.getElementById("word-entry").value = "";
 
-});
+            // Display user's inputted words in word table
+            document.getElementById("user_words").innerHTML = user_inputs.join("<br>");            
+        }
+    });
+}
 
