@@ -27,10 +27,6 @@ document.getElementById("start-button").addEventListener("click", function(){
     }
 });
 
-if (startGame == false) {
-    document.getElementById("start-button").style.background = "#8f7a66";
-}
-
 function build_board() {
 
     var randomNumberForDice;
