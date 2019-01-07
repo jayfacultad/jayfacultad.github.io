@@ -1,6 +1,6 @@
 var startGame = false;
 var timerOn = false;
-var dictionary = Trie();
+var dictionary = new Trie();
 
 document.getElementById("start-button").addEventListener("click", function(){
     document.getElementById("start-button").style.background = "#8f7a66";
@@ -9,9 +9,11 @@ document.getElementById("start-button").addEventListener("click", function(){
         startGame = true;
         timerOn = true;
         build_board();
-        create_dictionary();
+        create_dictionary(dictionary);
         boggle_solver();
         start_timer();
+        console.log(dictionary.is_word("helium"));  // true
+        console.log(dictionary.is_word("kickass")); // false
     }
     else if (startGame == true) {
         startGame = false;
@@ -94,12 +96,12 @@ function start_timer(status) {
     run_clock(deadline);
 }
 
-function create_dictionary() {
+function create_dictionary(dictionary) {
 
-    function readTextFile(file) {
+    function readTextFile(file, dictionary) {
         var txtFile = new XMLHttpRequest();
         txtFile.open("GET", file, true);
-        txtFile.onreadystatechange = function () {
+        txtFile.onreadystatechange = function (dictionary) {
             if(txtFile.readyState == 4)
             {
                 if(txtFile.status == 200 || txtFile.status == 0)
@@ -112,20 +114,14 @@ function create_dictionary() {
                     var num_words = array_of_words.length;
 
                     for (var i = 0; i < num_words; i++) {
-                        dictionary.insert(array_of_words[i]);
-
-                        console.log(dictionary.is_word("helium"));  // true
-                        console.log(dictionary.is_word("kickass")); // false
+                        dictionary.insert_word(array_of_words[i]);
                     }
-
-                    
-
                 }
             }
         }
         txtFile.send(null);
     }
-    readTextFile('dictionary.txt');
+    readTextFile('dictionary.txt', dictionary);
 }
 
 function boggle_solver() {
