@@ -1,4 +1,5 @@
 var startGame = false;
+var timerOn = false;
 var dictionary = Trie();
 
 document.getElementById("start-button").addEventListener("click", function(){
@@ -6,6 +7,7 @@ document.getElementById("start-button").addEventListener("click", function(){
     document.getElementById("start-button").innerHTML = "Stop Game";
     if (startGame == false) {
         startGame = true;
+        timerOn = true;
         build_board();
         create_dictionary();
         boggle_solver();
@@ -13,6 +15,8 @@ document.getElementById("start-button").addEventListener("click", function(){
     }
     else if (startGame == true) {
         startGame = false;
+        timerOn = false;
+        start_timer();
         document.getElementById("start-button").style.background = "steelblue";
         document.getElementById("start-button").innerHTML = "Start Game";
     }
@@ -51,7 +55,7 @@ function build_board() {
     }
 }
 
-function start_timer() {
+function start_timer(status) {
 
     function time_remaining(endtime){
         var t = Date.parse(endtime) - Date.parse(new Date());
@@ -68,10 +72,12 @@ function start_timer() {
         var timer = document.getElementById("time-remaining");
         function update_clock() {
             var time = time_remaining(endtime);
-            timer.innerHTML = "<span style='font-size:50px; color:white;'>" + time.minutes + ":" + time.seconds + "</span>";
-            if(time.minutes < 0) { 
+            if (timerOn == true) {
+                timer.innerHTML = "<span style='font-size:50px; color:white;'>" + time.minutes + ":" + time.seconds + "</span>";
+            }
+            
+            if(time.minutes < 0 || timerOn == false) { 
                 timer.innerHTML = "<span style='font-size:50px; color:white;'>0:00</span>";
-                alert("Game Over!");
                 clearInterval(timeinterval); 
                 startGame = false;
             }
@@ -90,7 +96,7 @@ function start_timer() {
 
 function create_dictionary() {
 
-    function readTextFile(file, dictionary) {
+    function readTextFile(file) {
         var txtFile = new XMLHttpRequest();
         txtFile.open("GET", file, true);
         txtFile.onreadystatechange = function () {
@@ -107,16 +113,19 @@ function create_dictionary() {
 
                     for (var i = 0; i < num_words; i++) {
                         dictionary.insert(array_of_words[i]);
+
+                        console.log(dictionary.is_word("helium"));  // true
+                        console.log(dictionary.is_word("kickass")); // false
                     }
 
-                    console.log(dictionary.is_word("helium"));  // true
-                    console.log(dictionary.is_word("kickass")); // false
+                    
+
                 }
             }
         }
         txtFile.send(null);
     }
-    readTextFile('dictionary.txt', dictionary);
+    readTextFile('dictionary.txt');
 }
 
 function boggle_solver() {
