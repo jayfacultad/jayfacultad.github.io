@@ -13,6 +13,7 @@ document.getElementById("start-button").addEventListener("click", function(){
         console.log(dictionary.is_word("helium"));  // true
         console.log(dictionary.is_word("kickass")); // false
         create_dictionary();
+        console.log(dictionary.is_word("word")); // true
         boggle_solver();
         start_timer();
 
