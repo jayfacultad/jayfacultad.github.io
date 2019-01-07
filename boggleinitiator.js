@@ -9,11 +9,13 @@ document.getElementById("start-button").addEventListener("click", function(){
         startGame = true;
         timerOn = true;
         build_board();
-        create_dictionary(dictionary);
-        boggle_solver();
-        start_timer();
+        dictionary.insert_word("helium");
         console.log(dictionary.is_word("helium"));  // true
         console.log(dictionary.is_word("kickass")); // false
+        create_dictionary();
+        boggle_solver();
+        start_timer();
+
     }
     else if (startGame == true) {
         startGame = false;
@@ -96,12 +98,12 @@ function start_timer(status) {
     run_clock(deadline);
 }
 
-function create_dictionary(dictionary) {
+function create_dictionary() {
 
-    function readTextFile(file, dictionary) {
+    function readTextFile(file) {
         var txtFile = new XMLHttpRequest();
         txtFile.open("GET", file, true);
-        txtFile.onreadystatechange = function (dictionary) {
+        txtFile.onreadystatechange = function () {
             if(txtFile.readyState == 4)
             {
                 if(txtFile.status == 200 || txtFile.status == 0)
@@ -121,7 +123,7 @@ function create_dictionary(dictionary) {
         }
         txtFile.send(null);
     }
-    readTextFile('dictionary.txt', dictionary);
+    readTextFile('dictionary.txt');
 }
 
 function boggle_solver() {
