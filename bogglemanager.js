@@ -11,18 +11,21 @@ window.onload=function(){
       }
     });
 
-    document.getElementById("submit-button").addEventListener("click", function() {
-        if (startGame == true) {
+    if (document.getElementById("submit-button")) {
 
-            input = document.getElementById("word-entry").value;
-            user_inputs.push(input);  
+        document.getElementById("submit-button").addEventListener("click", function() {
+            if (startGame == true) {
 
-            // Clear input field
-            document.getElementById("word-entry").value = "";
+                input = document.getElementById("word-entry").value;
+                user_inputs.push(input);  
 
-            // Display user's inputted words in word table
-            document.getElementById("user_words").innerHTML = user_inputs.join("<br>");            
-        }
-    });
+                // Clear input field
+                document.getElementById("word-entry").value = "";
+
+                // Display user's inputted words in word table
+                document.getElementById("user_words").innerHTML = user_inputs.join("<br>");            
+            }
+        });
+    }
 }
 
