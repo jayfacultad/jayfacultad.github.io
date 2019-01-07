@@ -109,6 +109,8 @@ function create_dictionary() {
                         dictionary.insert(array_of_words[i]);
                     }
 
+                    console.log(dictionary.is_word("helium"));  // true
+                    console.log(dictionary.is_word("kickass")); // false
                 }
             }
         }
@@ -116,9 +118,6 @@ function create_dictionary() {
     }
     readTextFile('dictionary.txt', dictionary);
 }
-
-console.log(dictionary.is_word("helium"));  // true
-console.log(dictionary.is_word("kickass")); // false
 
 function boggle_solver() {
 
