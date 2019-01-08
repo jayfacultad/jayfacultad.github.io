@@ -117,10 +117,12 @@ function create_dictionary() {
                     var num_words = array_of_words.length;
                     console.log("Num words: " + num_words);
 
+                    /*
                     for (var i = 0; i < num_words; i++) {
                         console.log(array_of_words[i]);
                         dictionary.insert_word(array_of_words[i]);
                     }
+                    */
                 }
             }
         }
