@@ -103,7 +103,7 @@ input {
 }
 
 #score-table {
-    width: 175px;
+    width: 200px;
     align-self: left;
     border: 5px solid #FFCA08;
     border-collapse: collapse;
@@ -157,7 +157,7 @@ input {
 }
 
 .tile {
-    font-size: 40px;
+    font-size: 35px;
     color: black;
     width: 75px;
     height: 75px;
@@ -205,7 +205,7 @@ input {
 }
 
 #answers-table {
-    width: 175px;
+    width: 200px;
     align-self: left;
     border: 5px solid #FFCA08;
     border-collapse: collapse;

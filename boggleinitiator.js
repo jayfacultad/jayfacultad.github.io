@@ -117,12 +117,10 @@ function create_dictionary() {
                     var num_words = array_of_words.length;
                     console.log("Num words: " + num_words);
 
-                    /*
                     for (var i = 0; i < num_words; i++) {
                         console.log(array_of_words[i]);
                         dictionary.insert_word(array_of_words[i]);
                     }
-                    */
                 }
             }
         }
@@ -137,7 +135,7 @@ function boggle_solver() {
 
 // Dice values taken from actual Boggle game pieces
 var dice = new Array(25)
-dice[0] = ['Q', 'B', 'Z', 'J', 'X', 'K'];
+dice[0] = ["Qu", 'B', 'Z', 'J', 'X', 'K'];
 dice[1] = ['H', 'H', 'L', 'R', 'D', 'O'];
 dice[2] = ['T', 'E', 'L', 'P', 'C', 'I'];
 dice[3] = ['T', 'T', 'O', 'T', 'E', 'M'];
