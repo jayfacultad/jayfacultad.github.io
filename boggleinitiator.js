@@ -112,9 +112,10 @@ function create_dictionary() {
                     var array_of_words;
 
                     array_of_words = txtFile.responseText;
-                    array_of_words.split("\n");
+                    array_of_words = array_of_words.split("\n");
                     
                     var num_words = array_of_words.length;
+                    console.log("Num words: " + num_words);
 
                     for (var i = 0; i < num_words; i++) {
                         console.log(array_of_words[i]);
