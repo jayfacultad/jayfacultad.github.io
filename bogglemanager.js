@@ -1,5 +1,6 @@
 var user_inputs = [];
 var word_score;
+var score_total = 0;
 
 document.getElementById("word-entry").addEventListener("keyup", function(event) {
   // Number 13 is the "Enter" key on the keyboard
@@ -29,6 +30,9 @@ document.getElementById("submit-button").addEventListener("click", function() {
             word_score = 0;
             display_text = "<div>" + input_value + "&nbsp;&nbsp;&emsp;" + word_score + "</div>";
         }
+
+        score_total += word_score;
+        document.getElementById("score").innerHTML = score_total;
 
         // Add to beginning of array
         user_inputs.unshift(display_text); 

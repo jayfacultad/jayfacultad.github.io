@@ -15,7 +15,6 @@ document.getElementById("start-button").addEventListener("click", function(){
         timerOn = true;
         build_board();
         start_timer();
-        console.log(dictionary.is_word("ABALONES")); // true
         boggle_solver();
     }
     else if (startGame == true) {
@@ -81,7 +80,7 @@ function start_timer() {
                 timer.innerHTML = "<span style='font-size:50px; color:white;'>0:00</span>";
                 clearInterval(timeinterval); 
                 startGame = false;
-                window.alert("Game Over");
+                window.alert("Game Over. Final Score: " + score_total);
                 document.getElementById("start-button").style.background = "steelblue";
                 document.getElementById("start-button").innerHTML = "Start Game";
             }
