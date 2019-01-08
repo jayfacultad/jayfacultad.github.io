@@ -14,7 +14,7 @@ document.getElementById("start-button").addEventListener("click", function(){
         build_board();
         start_timer();
         create_dictionary();
-        console.log(dictionary.is_word("word")); // true
+        console.log(dictionary.is_word("ABALONE")); // true
         boggle_solver();
     }
     else if (startGame == true) {
@@ -117,6 +117,8 @@ function create_dictionary() {
                     for (var i = 0; i < num_words; i++) {
                         dictionary.insert_word(array_of_words[i]);
                     }
+
+                    console.log(array_of_words[39]);
                 }
             }
         }
