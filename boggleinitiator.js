@@ -80,7 +80,7 @@ function start_timer() {
                 timer.innerHTML = "<span style='font-size:50px; color:white;'>0:00</span>";
                 clearInterval(timeinterval); 
                 startGame = false;
-                window.alert("Game Over. Final Score: " + score_total);
+                window.alert("Game Over\n\nFinal Score: " + score_total);
                 document.getElementById("start-button").style.background = "steelblue";
                 document.getElementById("start-button").innerHTML = "Start Game";
             }
