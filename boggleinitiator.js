@@ -2,6 +2,8 @@ var startGame = false;
 var timerOn = false;
 var dictionary = new Trie();
 
+create_dictionary();
+
 document.getElementById("start-button").addEventListener("click", function(){
     
     if (startGame == false) {
@@ -13,8 +15,7 @@ document.getElementById("start-button").addEventListener("click", function(){
         timerOn = true;
         build_board();
         start_timer();
-        create_dictionary();
-        console.log(dictionary.is_word("ABALONE")); // true
+        console.log(dictionary.is_word("ABALONES")); // true
         boggle_solver();
     }
     else if (startGame == true) {

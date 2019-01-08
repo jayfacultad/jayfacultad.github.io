@@ -18,8 +18,10 @@ document.getElementById("submit-button").addEventListener("click", function() {
 
         var display_text;
 
-        if (input_value.length > 2 )//&& dictionary.is_word(input_value)) 
-        {   
+        console.log(dictionary.is_word("ABALONES")); // test
+        console.log(dictionary.is_word(input_value)); // test
+
+        if (input_value.length > 2 && dictionary.is_word(input_value)) {   
             word_score = calculate_score(input_value.length);
             display_text = "<div>" + input_value + "&emsp;" + word_score + "</div>";
         }
