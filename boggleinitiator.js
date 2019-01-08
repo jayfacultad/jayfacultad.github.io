@@ -12,19 +12,14 @@ document.getElementById("start-button").addEventListener("click", function(){
         startGame = true;
         timerOn = true;
         build_board();
-        // dictionary.insert_word("helium");
-        // console.log(dictionary.is_word("helium"));  // true
-        // console.log(dictionary.is_word("kickass")); // false
-        create_dictionary();
-        // console.log(dictionary.is_word("word")); // true
-        boggle_solver();
         start_timer();
-
+        create_dictionary();
+        console.log(dictionary.is_word("word")); // true
+        boggle_solver();
     }
     else if (startGame == true) {
         startGame = false;
         timerOn = false;
-        start_timer();
         document.getElementById("start-button").style.background = "steelblue";
         document.getElementById("start-button").innerHTML = "Start Game";
         user_inputs.length = 0;
@@ -60,7 +55,7 @@ function build_board() {
     }
 }
 
-function start_timer(status) {
+function start_timer() {
 
     function time_remaining(endtime){
         var t = Date.parse(endtime) - Date.parse(new Date());
@@ -85,6 +80,9 @@ function start_timer(status) {
                 timer.innerHTML = "<span style='font-size:50px; color:white;'>0:00</span>";
                 clearInterval(timeinterval); 
                 startGame = false;
+                window.alert("Game Over");
+                document.getElementById("start-button").style.background = "steelblue";
+                document.getElementById("start-button").innerHTML = "Start Game";
             }
         }
         update_clock(); // run function once at first to avoid delay
@@ -115,10 +113,8 @@ function create_dictionary() {
                     array_of_words = array_of_words.split("\n");
                     
                     var num_words = array_of_words.length;
-                    console.log("Num words: " + num_words);
 
                     for (var i = 0; i < num_words; i++) {
-                        console.log(array_of_words[i]);
                         dictionary.insert_word(array_of_words[i]);
                     }
                 }
