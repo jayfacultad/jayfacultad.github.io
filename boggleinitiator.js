@@ -203,21 +203,18 @@ function create_boggle_graph() {
 
 function boggle_solver() {
 
-    var letter_positions = new Array();
-
     for (var i = 0; i < number_of_tiles; i++)
     {
         string word = "";
         boggle_graph.clear_marks();
 
-        DFS(i, word, letter_positions);
+        DFS(i, word);
     }
 }
 
-function DFS(index, word, letter_positions)
+function DFS(index, word)
 {
     word += letter_array[index];
-    letter_positions.push(index);
 
     var neighbors = new Array();
 
@@ -228,7 +225,6 @@ function DFS(index, word, letter_positions)
     }
 
     var is_prefix = dictionary.is_prefix(word);
-
     if (is_prefix) {
         boggle_graph.mark_vertex(index);
         boggle_graph.get_to_vertices(index, neighbors);
@@ -239,8 +235,7 @@ function DFS(index, word, letter_positions)
 
             if (!boggle_graph.is_marked(item))
             {
-                DFS(item, word, letter_positions);
-                letter_positions.pop();
+                DFS(item, word);
             }
         }
         boggle_graph.remove_mark(index); 
