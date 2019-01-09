@@ -1,6 +1,11 @@
+var num_of_tiles = 25;
 var startGame = false;
 var timerOn = false;
 var dictionary = new Trie();
+var boggle_answers = new Trie();
+
+var boggle_graph = new Graph(num_of_tiles);
+var letter_array = new Array();
 
 create_dictionary();
 
@@ -15,6 +20,7 @@ document.getElementById("start-button").addEventListener("click", function(){
         timerOn = true;
         build_board();
         start_timer();
+        create_boggle_graph();
         boggle_solver();
     }
     else if (startGame == true) {
@@ -30,11 +36,11 @@ function build_board() {
 
     var randomNumberForDice;
     var randomNumberInEachDice;
-    var board = new Array(5);
     var tracker = new Array(25);
     for (var i = 0; i < 25; i++) {
         tracker[i] = 0;
     }
+    var j = 0;
 
     for (var row = 0; row < 5; row++) {
         board[row] = new Array(5);
@@ -46,8 +52,11 @@ function build_board() {
                     tracker[randomNumberForDice] = 1;
                     randomNumberInEachDice = Math.floor(Math.random() * 6);
                     assignedLetter = dice[randomNumberForDice][randomNumberInEachDice];
-                    board[row][col] = assignedLetter;
+                    if (assignedLetter == 'Q') {
+                        assignedLetter = "Qu";
+                    }
                     document.getElementById("R" + row + "C" + col).innerHTML = assignedLetter;
+                    letter_array[j++] = assignedLetter;
                     done = true;
                 }   
             }
@@ -101,7 +110,7 @@ function create_dictionary() {
 
     function readTextFile(file) {
         var txtFile = new XMLHttpRequest();
-        txtFile.open("GET", file, true);
+        txtFile.open("GET", file, false);
         txtFile.onreadystatechange = function () {
             if(txtFile.readyState == 4)
             {
@@ -117,8 +126,6 @@ function create_dictionary() {
                     for (var i = 0; i < num_words; i++) {
                         dictionary.insert_word(array_of_words[i]);
                     }
-
-                    console.log(array_of_words[39]);
                 }
             }
         }
@@ -127,13 +134,124 @@ function create_dictionary() {
     readTextFile('dictionary.txt');
 }
 
-function boggle_solver() {
+function create_boggle_graph() {
+
+    // Number of rows and columns
+    var row = 5;
+    var col = 5;
+
+    // Positions relative to the current tile.  These variables will be used
+    // to determine neighbors.  Once neighbors are determined, the proper 
+    // edges will be added.
+    var up, down, left, right, diagonal_up_left, diagonal_down_right,
+        diagonal_up_right, diagonal_down_left;
+
+    // Add edges by checking if their adjacent tiles exist.
+    for (var i = 0; i < number_of_tiles; i++)
+    {
+        if (i - row >= 0)
+        {
+            up = i - col;
+            boggle_graph.add_edge(i, up);
+        }
+
+        if (i + row < number_of_tiles)
+        {
+            down = i + col;
+            boggle_graph.add_edge(i, down);
+        }
+
+        if (i % col != 0)
+        {
+            left = i - 1;
+            boggle_graph.add_edge(i, left); 
+
+            if (i + (row - 1) < number_of_tiles)
+            {
+                diagonal_down_left = i + (col - 1);
+                boggle_graph.add_edge(i, diagonal_down_left);
+            }
+
+            if (i - (row + 1) >= 0)
+            {
+                diagonal_up_left = i - (col + 1);
+                boggle_graph.add_edge(i, diagonal_up_left);
+            }
+        }
+
+        if ( (i + 1) % col != 0)
+        {
+            right = i + 1;
+            boggle_graph.add_edge(i, right);
+
+            if (i + (row + 1) < number_of_tiles)
+            {
+                diagonal_down_right = i + (col + 1);
+                boggle_graph.add_edge(i, diagonal_down_right);
+            }
+
+            if (i - (row - 1) >= 0)
+            {
+                diagonal_up_right = i - (col - 1);
+                boggle_graph.add_edge(i, diagonal_up_right);
+            }
+        }
+    }
 
 }
 
+
+function boggle_solver() {
+
+    var letter_positions = new Array();
+
+    for (var i = 0; i < number_of_tiles; i++)
+    {
+        string word = "";
+        boggle_graph.clear_marks();
+
+        DFS(i, word, letter_positions);
+    }
+}
+
+function DFS(index, word, letter_positions)
+{
+    word += letter_array[index];
+    letter_positions.push(index);
+
+    var neighbors = new Array();
+
+    var is_word = dictionary.is_word(word);
+
+    if (is_word) {
+        boggle_answers.insert(word);
+    }
+
+    var is_prefix = dictionary.is_prefix(word);
+
+    if (is_prefix) {
+        boggle_graph.mark_vertex(index);
+        boggle_graph.get_to_vertices(index, neighbors);
+
+        while (!neighbors.is_empty())
+        {
+            neighbors.dequeue(item);
+
+            if (!boggle_graph.is_marked(item))
+            {
+                DFS(item, word, letter_positions);
+                letter_positions.pop();
+            }
+        }
+        boggle_graph.remove_mark(index); 
+    }   
+}
+
+
+
 // Dice values taken from actual Boggle game pieces
 var dice = new Array(25)
-dice[0] = ["Qu", 'B', 'Z', 'J', 'X', 'K'];
+dice[0] = ["Q", 'B', 'Z', 'J', 'X', 'K'];
 dice[1] = ['H', 'H', 'L', 'R', 'D', 'O'];
 dice[2] = ['T', 'E', 'L', 'P', 'C', 'I'];
 dice[3] = ['T', 'T', 'O', 'T', 'E', 'M'];

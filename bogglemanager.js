@@ -17,11 +17,17 @@ document.getElementById("submit-button").addEventListener("click", function() {
         var input_value = document.getElementById("word-entry").value;
         input_value = input_value.toUpperCase();
 
+
         var display_text;
 
-        if (input_value.length > 2 && dictionary.is_word(input_value)) {   
+        if (input_value.length > 2 && boggle_answers.is_word(input_value)) {   
             word_score = calculate_score(input_value.length);
-            display_text = "<div>" + input_value + "&emsp;" + word_score + "</div>";
+            if (word_score < 10 ) {
+                display_text = "<div>" + input_value + "&nbsp;&nbsp;&emsp;" + word_score + "</div>";
+            }
+            else {
+                display_text = "<div>" + input_value + "&emsp;" + word_score + "</div>";
+            } 
         }
         else {
             word_score = 0;
@@ -46,16 +52,16 @@ function calculate_score(word) {
     switch(word) {
         case 3:
         case 4:
-            word_score = "&nbsp;&nbsp;" + 1;
+            word_score = 1;
             break;
         case 5: 
-            word_score = "&nbsp;&nbsp;" + 2;
+            word_score = 2;
             break;
         case 6: 
-            word_score = "&nbsp;&nbsp;" + 3;
+            word_score = 3;
             break;
         case 7: 
-            word_score = "&nbsp;&nbsp;" + 5;
+            word_score = 5;
             break;
         default:
             word_score = 11;
