@@ -36,8 +36,8 @@ function build_board() {
 
     var randomNumberForDice;
     var randomNumberInEachDice;
-    var tracker = new Array(25);
-    for (var i = 0; i < 25; i++) {
+    var tracker = new Array(num_of_tiles);
+    for (var i = 0; i < num_of_tiles; i++) {
         tracker[i] = 0;
     }
     var j = 0;
@@ -47,7 +47,7 @@ function build_board() {
         for (var col = 0; col < 5; col++) {
             var done = false;
             while (done == false) {
-                randomNumberForDice = Math.floor(Math.random() * 25);
+                randomNumberForDice = Math.floor(Math.random() * num_of_tiles);
                 if (tracker[randomNumberForDice] == 0) {
                     tracker[randomNumberForDice] = 1;
                     randomNumberInEachDice = Math.floor(Math.random() * 6);
@@ -244,7 +244,7 @@ function DFS(index, word)
 
 
 // Dice values taken from actual Boggle game pieces
-var dice = new Array(25)
+var dice = new Array(num_of_tiles)
 dice[0]  = ["Q", 'B', 'Z', 'J', 'X', 'K'];
 dice[1]  = ['H', 'H', 'L', 'R', 'D', 'O'];
 dice[2]  = ['T', 'E', 'L', 'P', 'C', 'I'];
