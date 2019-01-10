@@ -7,7 +7,7 @@ function Graph(num_vertices) {
     this.num_vertices = num_vertices;
     this.curr_vertex_index = 0;
     this.vertices = new Array(num_vertices).fill(null);
-    this.edges = new Array(num_vertices).fill(null);
+    this.edges = new Array(num_vertices);
     var dimension = Math.sqrt(num_vertices);
     for (var i = 0; i < dimension; i++) {
         this.edges[i] = new Array(dimension).fill(null);
