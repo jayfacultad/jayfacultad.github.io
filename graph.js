@@ -3,7 +3,7 @@ function GraphNode(key) {
     this.val = key;
 }
 
-function Graph(num_vert) {
+function Graph(num_vertices) {
     this.num_vertices = num_vert;
     this.curr_vertex_index = 0;
     this.vertices = new Array(num_vertices).fill(null);
