@@ -205,7 +205,7 @@ function boggle_solver() {
 
     for (var i = 0; i < number_of_tiles; i++)
     {
-        string word = "";
+        var word = letter_array[i];
         boggle_graph.clear_marks();
 
         DFS(i, word);
@@ -214,27 +214,27 @@ function boggle_solver() {
 
 function DFS(index, word)
 {
-    word += letter_array[index];
-
-    var neighbors = new Array();
-
-    var is_word = dictionary.is_word(word);
-
-    if (is_word) {
+    if (dictionary.is_word(word)) {
         boggle_answers.insert(word);
     }
 
-    var is_prefix = dictionary.is_prefix(word);
-    if (is_prefix) {
+    var neighbors = new Array();
+
+    if (dictionary.is_prefix(word)) {
+
+        // Mark as visited
         boggle_graph.mark_vertex(index);
+        // Find all neighbors
         boggle_graph.get_to_vertices(index, neighbors);
 
         while (!neighbors.is_empty())
         {
+            // For each neighbor, perform depth first search.
             neighbors.dequeue(item);
 
             if (!boggle_graph.is_marked(item))
             {
+                word += letter_array[item];
                 DFS(item, word);
             }
         }
@@ -243,19 +243,18 @@ function DFS(index, word)
 }
 
 
-
 // Dice values taken from actual Boggle game pieces
 var dice = new Array(25)
-dice[0] = ["Q", 'B', 'Z', 'J', 'X', 'K'];
-dice[1] = ['H', 'H', 'L', 'R', 'D', 'O'];
-dice[2] = ['T', 'E', 'L', 'P', 'C', 'I'];
-dice[3] = ['T', 'T', 'O', 'T', 'E', 'M'];
-dice[4] = ['A', 'E', 'A', 'E', 'E', 'E'];
-dice[5] = ['T', 'O', 'U', 'O', 'T', 'O'];
-dice[6] = ['N', 'H', 'D', 'T', 'H', 'O'];
-dice[7] = ['S', 'S', 'N', 'S', 'E', 'U'];
-dice[8] = ['S', 'C', 'T', 'I', 'E', 'P'];
-dice[9] = ['Y', 'I', 'F', 'P', 'S', 'R'];
+dice[0]  = ["Q", 'B', 'Z', 'J', 'X', 'K'];
+dice[1]  = ['H', 'H', 'L', 'R', 'D', 'O'];
+dice[2]  = ['T', 'E', 'L', 'P', 'C', 'I'];
+dice[3]  = ['T', 'T', 'O', 'T', 'E', 'M'];
+dice[4]  = ['A', 'E', 'A', 'E', 'E', 'E'];
+dice[5]  = ['T', 'O', 'U', 'O', 'T', 'O'];
+dice[6]  = ['N', 'H', 'D', 'T', 'H', 'O'];
+dice[7]  = ['S', 'S', 'N', 'S', 'E', 'U'];
+dice[8]  = ['S', 'C', 'T', 'I', 'E', 'P'];
+dice[9]  = ['Y', 'I', 'F', 'P', 'S', 'R'];
 dice[10] = ['O', 'V', 'W', 'R', 'G', 'R'];
 dice[11] = ['L', 'H', 'N', 'R', 'O', 'D'];
 dice[12] = ['R', 'I', 'Y', 'P', 'R', 'H'];
