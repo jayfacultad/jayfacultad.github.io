@@ -146,52 +146,44 @@ function create_boggle_graph() {
     var up, down, left, right, diagonal_up_left, diagonal_down_right,
         diagonal_up_right, diagonal_down_left;
 
-    // Add edges by checking if their adjacent tiles exist.
+    // Add edges by checking if their adjacent neighboring tiles exist.
     for (var i = 0; i < num_of_tiles; i++)
     {
-        if (i - row >= 0)
-        {
+        if (i - row >= 0) {
             up = i - col;
             boggle_graph.add_edge(i, up);
         }
 
-        if (i + row < num_of_tiles)
-        {
+        if (i + row < num_of_tiles) {
             down = i + col;
             boggle_graph.add_edge(i, down);
         }
 
-        if (i % col != 0)
-        {
+        if (i % col != 0) {
             left = i - 1;
             boggle_graph.add_edge(i, left); 
 
-            if (i + (row - 1) < num_of_tiles)
-            {
+            if (i + (row - 1) < num_of_tiles) {
                 diagonal_down_left = i + (col - 1);
                 boggle_graph.add_edge(i, diagonal_down_left);
             }
 
-            if (i - (row + 1) >= 0)
-            {
+            if (i - (row + 1) >= 0) {
                 diagonal_up_left = i - (col + 1);
                 boggle_graph.add_edge(i, diagonal_up_left);
             }
         }
 
-        if ( (i + 1) % col != 0)
-        {
+        if ( (i + 1) % col != 0) {
             right = i + 1;
             boggle_graph.add_edge(i, right);
 
-            if (i + (row + 1) < num_of_tiles)
-            {
+            if (i + (row + 1) < num_of_tiles) {
                 diagonal_down_right = i + (col + 1);
                 boggle_graph.add_edge(i, diagonal_down_right);
             }
 
-            if (i - (row - 1) >= 0)
-            {
+            if (i - (row - 1) >= 0) {
                 diagonal_up_right = i - (col - 1);
                 boggle_graph.add_edge(i, diagonal_up_right);
             }
