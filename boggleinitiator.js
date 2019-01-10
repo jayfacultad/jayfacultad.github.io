@@ -137,8 +137,8 @@ function create_dictionary() {
 function create_boggle_graph() {
 
     // Number of rows and columns
-    var row = Math.sqrt(num_vertices);
-    var col = Math.sqrt(num_vertices);
+    var row = Math.sqrt(num_of_tiles);
+    var col = Math.sqrt(num_of_tiles);
 
     // Positions relative to the current tile.  These variables will be used
     // to determine neighbors.  Once neighbors are determined, the proper 
