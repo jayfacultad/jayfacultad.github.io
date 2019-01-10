@@ -147,7 +147,7 @@ function create_boggle_graph() {
         diagonal_up_right, diagonal_down_left;
 
     // Add edges by checking if their adjacent tiles exist.
-    for (var i = 0; i < number_of_tiles; i++)
+    for (var i = 0; i < num_of_tiles; i++)
     {
         if (i - row >= 0)
         {
@@ -155,7 +155,7 @@ function create_boggle_graph() {
             boggle_graph.add_edge(i, up);
         }
 
-        if (i + row < number_of_tiles)
+        if (i + row < num_of_tiles)
         {
             down = i + col;
             boggle_graph.add_edge(i, down);
@@ -166,7 +166,7 @@ function create_boggle_graph() {
             left = i - 1;
             boggle_graph.add_edge(i, left); 
 
-            if (i + (row - 1) < number_of_tiles)
+            if (i + (row - 1) < num_of_tiles)
             {
                 diagonal_down_left = i + (col - 1);
                 boggle_graph.add_edge(i, diagonal_down_left);
@@ -184,7 +184,7 @@ function create_boggle_graph() {
             right = i + 1;
             boggle_graph.add_edge(i, right);
 
-            if (i + (row + 1) < number_of_tiles)
+            if (i + (row + 1) < num_of_tiles)
             {
                 diagonal_down_right = i + (col + 1);
                 boggle_graph.add_edge(i, diagonal_down_right);
@@ -203,7 +203,7 @@ function create_boggle_graph() {
 
 function boggle_solver() {
 
-    for (var i = 0; i < number_of_tiles; i++)
+    for (var i = 0; i < num_of_tiles; i++)
     {
         var word = letter_array[i];
         boggle_graph.clear_marks();
