@@ -9,7 +9,7 @@ function Graph(num_vertices) {
     this.vertices = new Array(num_vertices).fill(null);
     this.edges = new Array(num_vertices).fill(null);
     for (var i = 0; i < Math.sqrt(num_vertices); i++) {
-        this.edges[i] = new Array(Math.sqrt(num_vertices).fill(null));
+        this.edges[i] = new Array(Math.sqrt(num_vertices)).fill(null);
     }
     this.path = new Array(num_vertices).fill(null);
     this.marks = new Array(num_vertices).fill(null);
