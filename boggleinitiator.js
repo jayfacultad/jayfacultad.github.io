@@ -9,7 +9,7 @@ var letter_array = new Array();
 
 create_dictionary();
 
-document.getElementById("start-button").addEventListener("click", function(){
+document.getElementById("start-button").addEventListener("click", function() {
     
     if (startGame == false) {
         document.getElementById("start-button").style.background = "#8f7a66";
@@ -112,10 +112,8 @@ function create_dictionary() {
         var txtFile = new XMLHttpRequest();
         txtFile.open("GET", file, false);
         txtFile.onreadystatechange = function () {
-            if(txtFile.readyState == 4)
-            {
-                if(txtFile.status == 200 || txtFile.status == 0)
-                {
+            if(txtFile.readyState == 4) {
+                if(txtFile.status == 200 || txtFile.status == 0) {
                     var array_of_words;
 
                     array_of_words = txtFile.responseText;
@@ -189,14 +187,12 @@ function create_boggle_graph() {
             }
         }
     }
-
 }
 
 
 function boggle_solver() {
 
-    for (var i = 0; i < num_of_tiles; i++)
-    {
+    for (var i = 0; i < num_of_tiles; i++) {
         var word = letter_array[i];
         boggle_graph.clear_marks();
 
@@ -204,8 +200,8 @@ function boggle_solver() {
     }
 }
 
-function DFS(index, word)
-{
+function DFS(index, word) {
+
     if (dictionary.is_word(word)) {
         boggle_answers.insert(word);
     }
@@ -219,13 +215,11 @@ function DFS(index, word)
         // Find all neighbors
         boggle_graph.get_to_vertices(index, neighbors);
 
-        while (!neighbors.is_empty())
-        {
+        while (!neighbors.is_empty()) {
             // For each neighbor, perform depth first search.
             neighbors.dequeue(item);
 
-            if (!boggle_graph.is_marked(item))
-            {
+            if (!boggle_graph.is_marked(item)) {
                 word += letter_array[item];
                 DFS(item, word);
             }

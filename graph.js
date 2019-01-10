@@ -31,12 +31,10 @@ Graph.prototype.clear_marks = function() {
 }
 
 //  Finds the location in the vertices array for predecessor vertex and current vertex. Updates the path array to reflect predecessor relationship.
-Graph.prototype.update_predecessor = function(predecessor_vertex, current_vertex)
-{
+Graph.prototype.update_predecessor = function(predecessor_vertex, current_vertex) {
     var pred_index = 0;
     var curr_index = 0;
-    for (var i = 0; i < this.num_vertices; i++)
-    {
+    for (var i = 0; i < this.num_vertices; i++) {
         if (this.vertices[i] == predecessor_vertex)
             pred_index = i;
         if (this.vertices[i] == currrent_vertex)
@@ -58,16 +56,14 @@ Graph.prototype.is_marked = function(vertex_index) {
 }
 
 // Updates edges array to have edge weight
-Graph.prototype.add_edge = function(origin_index, destination_index)
- {
+Graph.prototype.add_edge = function(origin_index, destination_index) {
      if (this.edges[origin_index][destination_index] == null) {
          this.edges[origin_index][destination_index] = 1;
      }
 }
 
 // Finds all neighbors of the given vertex and enqueues into passed queue
-Graph.prototype.get_to_vertices = function(origin_index, queue) 
- {
+Graph.prototype.get_to_vertices = function(origin_index, queue) {
     for (var i = 0; i < this.num_vertices; i++) {
         if (this.edges[origin_index][i] != null) {
             if (origin_index != i) {
@@ -78,8 +74,7 @@ Graph.prototype.get_to_vertices = function(origin_index, queue)
 }
 
 // Takes in Vertex object and iterates through the vertices array to find that object.  Return true if found, false otherwise.
-Graph.prototype.is_value_in_graph = function(vertex_value) 
-{
+Graph.prototype.is_value_in_graph = function(vertex_value) {
     var found = false;
     for (var i = 0; i < num_vertices; i++)
         if (vertex_value == this.vertices[i]) {
