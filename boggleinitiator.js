@@ -200,6 +200,7 @@ function boggle_solver() {
 
     for (var i = 0; i < num_of_tiles; i++) {
 
+        var word = "";
         boggle_graph.clear_marks();
 
         DFS(i, word);
