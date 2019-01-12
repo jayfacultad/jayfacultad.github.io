@@ -7,17 +7,16 @@ function Graph(num_vertices) {
     this.num_vertices = num_vertices;
     this.curr_vertex_index = 0;
     this.vertices = new Array(num_vertices).fill(null);
-    var dimension = Math.sqrt(num_vertices);
-    this.edges = new Array(dimension);
-    for (var i = 0; i < dimension; i++) {
-        this.edges[i] = new Array(dimension).fill(null);
+
+    this.edges = new Array(num_vertices);
+    for (var i = 0; i < num_vertices; i++) {
+        this.edges[i] = new Array(num_vertices).fill(null);
     }
     this.path = new Array(num_vertices).fill(null);
     this.marks = new Array(num_vertices).fill(null);
 }
 
 Graph.prototype.add_vertex = function(key) {
-
     this.vertices[this.curr_vertex_index] = new GraphNode(key);     
     this.curr_vertex_index++;
 }
@@ -57,6 +56,7 @@ Graph.prototype.is_marked = function(vertex_index) {
 
 // Updates edges array to have edge weight
 Graph.prototype.add_edge = function(origin_index, destination_index) {
+    console.log(origin_index + " " + destination_index);
      if (this.edges[origin_index][destination_index] == null) {
          this.edges[origin_index][destination_index] = 1;
      }

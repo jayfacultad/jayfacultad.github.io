@@ -108,7 +108,7 @@ function start_timer() {
 }
 
 function create_dictionary() {
-
+ /*
     function readTextFile(file) {
         var txtFile = new XMLHttpRequest();
         txtFile.open("GET", file, false);
@@ -131,6 +131,7 @@ function create_dictionary() {
         txtFile.send(null);
     }
     readTextFile('dictionary.txt');
+    */
 }
 
 function create_boggle_graph() {
@@ -142,8 +143,8 @@ function create_boggle_graph() {
     // Positions relative to the current tile.  These variables will be used
     // to determine neighbors.  Once neighbors are determined, the proper 
     // edges will be added.
-    var up, down, left, right, diagonal_up_left, diagonal_down_right,
-        diagonal_up_right, diagonal_down_left;
+    var     up = 0, down = 0, left = 0, right = 0, 
+            diagonal_up_left = 0, diagonal_down_right = 0, diagonal_up_right = 0, diagonal_down_left = 0;
 
     // Add edges by checking if their adjacent neighboring tiles exist.
     for (var i = 0; i < num_of_tiles; i++)
