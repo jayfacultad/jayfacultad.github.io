@@ -87,5 +87,9 @@ Graph.prototype.remove_mark = function(vertex_index){
     this.marks[vertex_index] = false;
 }
 
+Graph.prototype.is_edge = function(row_index, col_index) {
+    console.log("row: " row_index + " " + "col: " + col_index + " " + this.edges[origin_index][destination_index]);
+}
+
 
 

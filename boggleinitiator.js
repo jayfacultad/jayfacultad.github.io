@@ -194,6 +194,13 @@ function create_boggle_graph() {
             }
         }
     }
+
+    // Test boggle graph:
+    for (var i = 0; i < Math.sqrt(num_of_tiles); i++) {
+        for (var j = 9; j < Math.sqrt(num_of_tiles); j++) {
+            is_edge(j, i);
+        }
+    }
 }
 
 
