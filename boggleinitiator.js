@@ -207,6 +207,7 @@ function DFS(index, word) {
     console.log("Word: " + word);
 
     if (dictionary.is_word(word)) {
+        console.log("Inserted word: " + word);
         boggle_answers.insert_word(word);
     }
 
