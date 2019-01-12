@@ -52,6 +52,7 @@ function build_board() {
                     tracker[randomNumberForDice] = 1;
                     randomNumberInEachDice = Math.floor(Math.random() * 6);
                     assignedLetter = dice[randomNumberForDice][randomNumberInEachDice];
+                    boggle_graph.add_vertex(assignedLetter);
                     if (assignedLetter == 'Q') {
                         assignedLetter = "Qu";
                     }
