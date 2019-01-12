@@ -69,7 +69,7 @@ Trie.prototype.is_prefix = function(word) {
 
     for (var i = 0; i < word_length; i++) {
 
-        console.log(word[i]);
+        console.log(word + " " + word[i]);
         // If child exists, iterate down to the next letter of the word.
         if (node.child[word[i]]) {
             node = node.child[word[i]];
