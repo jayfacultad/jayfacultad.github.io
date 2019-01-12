@@ -20,7 +20,7 @@ document.getElementById("submit-button").addEventListener("click", function() {
 
         var display_text;
 
-        if (input_value.length > 2 && boggle_answers.is_word(input_value)) {   
+        if ((input_value.length > 2) && boggle_answers.is_word(input_value)) {   
             word_score = calculate_score(input_value.length);
             if (word_score < 10 ) {
                 display_text = "<div>" + input_value + "&nbsp;&nbsp;&emsp;" + word_score + "</div>";

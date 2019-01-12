@@ -216,7 +216,7 @@ function boggle_solver() {
 
 function DFS(index, word) {
 
-    if (dictionary.is_word(word)) {
+    if (dictionary.is_word(word) && (word.length > 2)) {
         console.log("Inserted word: " + word);
         boggle_answers.insert_word(word);
     }
