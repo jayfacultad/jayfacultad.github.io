@@ -207,7 +207,7 @@ function DFS(index, word) {
     console.log("Word: " + word);
 
     if (dictionary.is_word(word)) {
-        boggle_answers.insert(word);
+        boggle_answers.insert_word(word);
     }
 
     var neighbors = new Array();
