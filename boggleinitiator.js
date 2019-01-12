@@ -225,16 +225,25 @@ function DFS(index, word) {
 
     if (dictionary.is_prefix(word)) {
 
-        // Mark as visited
-        boggle_graph.mark_vertex(index);
+        
         // Find all neighbors
         boggle_graph.get_to_vertices(index, neighbors);
+
+        console.log("current index = " + index);
+        console.log("current index's neighbors = ");
+        var i = 0;
+        while (neighbors.length > 0) {
+            console.log(neighbors[i]);
+            i++;
+        }
 
         while (neighbors.length > 0) {
             // For each neighbor, perform depth first search.
             var item = neighbors.shift();
 
             if (!boggle_graph.is_marked(item)) {
+                // Mark as visited
+                boggle_graph.mark_vertex(index);
                 word += letter_array[item];
                 DFS(item, word);
             }
