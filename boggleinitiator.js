@@ -219,7 +219,7 @@ function DFS(index, word) {
         // Find all neighbors
         boggle_graph.get_to_vertices(index, neighbors);
 
-        while (!neighbors.is_empty()) {
+        while (neighbors.length > 0) {
             // For each neighbor, perform depth first search.
             neighbors.shift(item);
 
