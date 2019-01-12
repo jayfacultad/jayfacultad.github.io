@@ -13,7 +13,7 @@ function Graph(num_vertices) {
         this.edges[i] = new Array(num_vertices).fill(null);
     }
     this.path = new Array(num_vertices).fill(null);
-    this.marks = new Array(num_vertices).fill(null);
+    this.marks = new Array(num_vertices).fill(false);
 }
 
 Graph.prototype.add_vertex = function(key) {
@@ -87,10 +87,10 @@ Graph.prototype.remove_mark = function(vertex_index){
     this.marks[vertex_index] = false;
 }
 
-Graph.prototype.is_edge = function(row_index, col_index){
+Graph.prototype.is_edge = function(x_index, y_index){
 
-    console.log(row_index + " " + col_index);
-    console.log(this.edges[origin_index][destination_index]);
+    console.log(x_index + " " + y_index);
+    console.log(this.edges[x_index][y_index]);
 }
 
 

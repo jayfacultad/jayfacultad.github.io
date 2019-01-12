@@ -65,7 +65,6 @@ function build_board() {
     }
 
     for (var i = 0; i < num_of_tiles; i++) {
-        console.log(letter_array[i]);
         boggle_graph.add_vertex(letter_array[i]);
     }
 }
@@ -196,9 +195,10 @@ function create_boggle_graph() {
     }
 
     // Test boggle graph:
-    for (var i = 0; i < Math.sqrt(num_of_tiles); i++) {
-        for (var j = 9; j < Math.sqrt(num_of_tiles); j++) {
-            is_edge(j, i);
+    console.log("Test1");
+    for (var i = 0; i < num_of_tiles; i++) {
+        for (var j = 9; j < num_of_tiles; j++) {
+            is_edge(i, j);
         }
     }
 }
