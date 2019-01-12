@@ -108,7 +108,7 @@ function start_timer() {
 }
 
 function create_dictionary() {
- /*
+ 
     function readTextFile(file) {
         var txtFile = new XMLHttpRequest();
         txtFile.open("GET", file, false);
@@ -131,7 +131,7 @@ function create_dictionary() {
         txtFile.send(null);
     }
     readTextFile('dictionary.txt');
-    */
+    
 }
 
 function create_boggle_graph() {
