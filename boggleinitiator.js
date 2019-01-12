@@ -16,7 +16,7 @@ document.getElementById("start-button").addEventListener("click", function() {
         document.getElementById("start-button").innerHTML = "Stop Game";
         document.getElementById("word-entry").value = "";
         document.getElementById("answer_cell").innerHTML = "";
-        document.getElementById("word-entry").click()
+        document.getElementById("word-entry").click();
         startGame = true;
         timerOn = true;
         build_board();
@@ -53,7 +53,6 @@ function build_board() {
                     tracker[randomNumberForDice] = 1;
                     randomNumberInEachDice = Math.floor(Math.random() * 6);
                     assignedLetter = dice[randomNumberForDice][randomNumberInEachDice];
-                    boggle_graph.add_vertex(assignedLetter);
                     if (assignedLetter == 'Q') {
                         assignedLetter = "Qu";
                     }
@@ -63,6 +62,11 @@ function build_board() {
                 }   
             }
         }
+    }
+
+    for (var i = 0; i < num_of_tiles; i++) {
+        console.log(letter_array[i]);
+        boggle_graph.add_vertex(letter_array[i]);
     }
 }
 
@@ -204,8 +208,6 @@ function boggle_solver() {
 }
 
 function DFS(index, word) {
-
-    console.log("Word: " + word);
 
     if (dictionary.is_word(word)) {
         console.log("Inserted word: " + word);
