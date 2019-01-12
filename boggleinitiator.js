@@ -199,7 +199,7 @@ function create_boggle_graph() {
 function boggle_solver() {
 
     for (var i = 0; i < num_of_tiles; i++) {
-        var word = letter_array[i];
+
         boggle_graph.clear_marks();
 
         DFS(i, word);
@@ -210,7 +210,7 @@ function DFS(index, word) {
 
     word += letter_array[index];
 
-    if (dictionary.is_word(word) && (word.length > 2)) {
+    if (dictionary.is_word(word)) {
         console.log("Inserted word: " + word);
         boggle_answers.insert_word(word);
     }
@@ -232,9 +232,9 @@ function DFS(index, word) {
 
         while (neighbors.length > 0) {
             // For each neighbor, perform depth first search.
-            var item = neighbors.shift();
+            var neighbor_index = neighbors.shift();
 
-            if (!boggle_graph.is_marked(item)) {
+            if (!boggle_graph.is_marked(neighbor_index)) {
                 DFS(item, word);
             }
         }
