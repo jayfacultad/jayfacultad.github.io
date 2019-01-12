@@ -16,6 +16,7 @@ document.getElementById("start-button").addEventListener("click", function() {
         document.getElementById("start-button").innerHTML = "Stop Game";
         document.getElementById("word-entry").value = "";
         document.getElementById("answer_cell").innerHTML = "";
+        document.getElementById("word-entry").click()
         startGame = true;
         timerOn = true;
         build_board();
