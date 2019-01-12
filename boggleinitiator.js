@@ -234,10 +234,8 @@ function DFS(index, word) {
 
         console.log("current index = " + index);
         console.log("current index's neighbors = ");
-        var i = 0;
-        while (neighbors.length > 0) {
+        for (var i = 0; i < neighbors.length; i++) {
             console.log(neighbors[i]);
-            i++;
         }
 
         while (neighbors.length > 0) {
