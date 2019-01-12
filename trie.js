@@ -33,7 +33,6 @@ Trie.prototype.insert_word = function(word) {
         node = node.child[word[i]];  
     }
     // Once iteration reaches the last letter of the word, mark it as the end of the word
-    node.is_prefix = false;
     node.is_end_of_word = true;
 }
 
@@ -69,17 +68,17 @@ Trie.prototype.is_prefix = function(word) {
 
     for (var i = 0; i < word_length; i++) {
 
-        console.log(word + " " + word[i]);
         // If child exists, iterate down to the next letter of the word.
         if (node.child[word[i]]) {
             node = node.child[word[i]];
         }
         // Else, end here and return false.
         else {
+            console.log(word + " is not a prefix");
             return false;
         }
     }
     // If the iteration reaches the end of the word, return bool value of that node signifying if word is a prefix.
-    console.log(word + " " + node.is_prefix);
+    console.log(word + " is a prefix?" + node.is_prefix);
     return node.is_prefix;
 }

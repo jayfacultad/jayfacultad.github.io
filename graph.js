@@ -64,7 +64,7 @@ Graph.prototype.add_edge = function(origin_index, destination_index) {
 // Finds all neighbors of the given vertex and enqueues into passed queue
 Graph.prototype.get_to_vertices = function(origin_index, queue) {
     for (var i = 0; i < this.num_vertices; i++) {
-        if (this.edges[origin_index][i] != null) {
+        if (this.edges[origin_index][i] == 1) {
             if (origin_index != i) {
                 queue.push(i);
             }
