@@ -18,7 +18,7 @@ function Graph(num_vertices) {
 
 Graph.prototype.add_vertex = function(key) {
 
-    this.vertices[curr_vertex_index] = new GraphNode(key);     
+    this.vertices[this.curr_vertex_index] = new GraphNode(key);     
     this.curr_vertex_index++;
 }
 
