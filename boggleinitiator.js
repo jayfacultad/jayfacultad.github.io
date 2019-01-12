@@ -195,14 +195,11 @@ function create_boggle_graph() {
     }
 }
 
-
 function boggle_solver() {
 
     for (var i = 0; i < num_of_tiles; i++) {
-
         var word = "";
         boggle_graph.clear_marks();
-
         DFS(i, word);
     }
 }
@@ -219,7 +216,6 @@ function DFS(index, word) {
     var neighbors = new Array();
 
     if (dictionary.is_prefix(word)) {
-
         // Mark as visited
         boggle_graph.mark_vertex(index);
         // Find all neighbors
@@ -242,7 +238,6 @@ function DFS(index, word) {
         boggle_graph.remove_mark(index); 
     }    
 }
-
 
 // Dice values taken from actual Boggle game pieces
 var dice = new Array(num_of_tiles)
