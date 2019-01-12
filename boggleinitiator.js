@@ -216,6 +216,8 @@ function boggle_solver() {
 
 function DFS(index, word) {
 
+    word += letter_array[index];
+
     if (dictionary.is_word(word) && (word.length > 2)) {
         console.log("Inserted word: " + word);
         boggle_answers.insert_word(word);
@@ -243,13 +245,11 @@ function DFS(index, word) {
             var item = neighbors.shift();
 
             if (!boggle_graph.is_marked(item)) {
-                
-                word += letter_array[item];
                 DFS(item, word);
             }
         }
         boggle_graph.remove_mark(index); 
-    }   
+    }    
 }
 
 
