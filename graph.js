@@ -56,7 +56,6 @@ Graph.prototype.is_marked = function(vertex_index) {
 
 // Updates edges array to have edge weight
 Graph.prototype.add_edge = function(origin_index, destination_index) {
-    console.log(origin_index + " " + destination_index);
      if (this.edges[origin_index][destination_index] == null) {
          this.edges[origin_index][destination_index] = 1;
      }
