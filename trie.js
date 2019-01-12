@@ -68,14 +68,11 @@ Trie.prototype.is_prefix = function(word) {
     word = word.toUpperCase();
 
     for (var i = 0; i < word_length; i++) {
-        
+
         console.log(word[i]);
         // If child exists, iterate down to the next letter of the word.
         if (node.child[word[i]]) {
             node = node.child[word[i]];
-        }
-        if (i == word_length) {
-            return node.is_prefix
         }
         // Else, end here and return false.
         else {
@@ -83,5 +80,6 @@ Trie.prototype.is_prefix = function(word) {
         }
     }
     // If the iteration reaches the end of the word, return bool value of that node signifying if word is a prefix.
+    console.log(word + " " + node.is_prefix);
     return node.is_prefix;
 }
