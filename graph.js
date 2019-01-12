@@ -66,7 +66,7 @@ Graph.prototype.get_to_vertices = function(origin_index, queue) {
     for (var i = 0; i < this.num_vertices; i++) {
         if (this.edges[origin_index][i] != null) {
             if (origin_index != i) {
-                queue.enqueue(i);
+                queue.push(i);
             }
         }
     }
