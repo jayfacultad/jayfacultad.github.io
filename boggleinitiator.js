@@ -225,7 +225,8 @@ function DFS(index, word) {
 
     if (dictionary.is_prefix(word)) {
 
-        
+        // Mark as visited
+        boggle_graph.mark_vertex(index);
         // Find all neighbors
         boggle_graph.get_to_vertices(index, neighbors);
 
@@ -242,8 +243,7 @@ function DFS(index, word) {
             var item = neighbors.shift();
 
             if (!boggle_graph.is_marked(item)) {
-                // Mark as visited
-                boggle_graph.mark_vertex(index);
+                
                 word += letter_array[item];
                 DFS(item, word);
             }
