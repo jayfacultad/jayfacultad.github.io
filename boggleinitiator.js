@@ -221,7 +221,7 @@ function DFS(index, word) {
 
         while (neighbors.length > 0) {
             // For each neighbor, perform depth first search.
-            neighbors.shift(item);
+            var item = neighbors.shift();
 
             if (!boggle_graph.is_marked(item)) {
                 word += letter_array[item];
