@@ -231,7 +231,7 @@ function DFS(index, word) {
             var neighbor_index = neighbors.shift();
 
             if (!boggle_graph.is_marked(neighbor_index)) {
-                DFS(item, word);
+                DFS(neighbor_index, word);
             }
         }
         boggle_graph.remove_mark(index); 
