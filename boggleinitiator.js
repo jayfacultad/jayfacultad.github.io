@@ -134,8 +134,7 @@ function create_dictionary() {
         }
         txtFile.send(null);
     }
-    readTextFile('dictionary.txt');
-    
+    readTextFile('dictionary.txt');   
 }
 
 function create_boggle_graph() {
@@ -240,7 +239,7 @@ function DFS(index, word) {
 }
 
 // Dice values taken from actual Boggle game pieces
-var dice = new Array(num_of_tiles)
+var dice = new Array(num_of_tiles);
 dice[0]  = ["Q", 'B', 'Z', 'J', 'X', 'K'];
 dice[1]  = ['H', 'H', 'L', 'R', 'D', 'O'];
 dice[2]  = ['T', 'E', 'L', 'P', 'C', 'I'];
