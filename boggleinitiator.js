@@ -99,7 +99,13 @@ function start_timer() {
                 document.getElementById("start-button").style.background = "steelblue";
                 document.getElementById("start-button").innerHTML = "Start Game";
                 answers_array.sort();
-                document.getElementById("score_cell").innerHTML = answers_array.join(""); 
+                var answer_set = new Set();
+                array_length = answers_array.length;
+                for (var i = 0; i < array_length; i++) {
+                    answer_set.add(answers_array[i]);
+                } 
+                var new_answer_array = Array.from(answer_set);
+                document.getElementById("score_cell").innerHTML = new_answers_array.join(""); 
             }
         }
         update_clock(); // run function once at first to avoid delay
