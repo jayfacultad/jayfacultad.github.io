@@ -29,7 +29,9 @@ Graph.prototype.clear_marks = function() {
     }
 }
 
-//  Finds the location in the vertices array for predecessor vertex and current vertex. Updates the path array to reflect predecessor relationship.
+// For testing purposes.
+// Finds the location in the vertices array for predecessor vertex and current vertex. 
+// Updates the path array to reflect predecessor relationship.
 Graph.prototype.update_predecessor = function(predecessor_vertex, current_vertex) {
     var pred_index = 0;
     var curr_index = 0;
