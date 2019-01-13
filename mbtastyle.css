@@ -1,0 +1,23 @@
+#map {
+height: 100%;
+}
+/* Makes the sample page fill the window. */
+html, body {
+height: 100%;
+margin: 0;
+padding: 0;
+}
+
+#name {
+font-weight: bold;
+font-size: 25px;
+}
+
+#header {
+font-weight: bold;
+font-size: 18px;
+}
+
+#schedule {
+font-size: 18px;        
+}
