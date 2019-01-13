@@ -6,13 +6,13 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <script>
-      var map;
+      var map, infoWindow;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 42.352271, lng: -71.05524200000001},
           zoom: 14
-
         });
+        infoWindow = new google.maps.InfoWindow;
       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAA0qX7SO1nYGBW3l4t05eKPdd1IMGLsvc&callback=initMap"
