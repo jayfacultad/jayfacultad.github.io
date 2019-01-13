@@ -345,7 +345,7 @@ map.setCenter(pos);
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 infoWindow.setPosition(pos);
 infoWindow.setContent(browserHasGeolocation ?
-                      'Error: The Geolocation service failed.' :
+                      'Your browser doesn\'t support geolocation.' :
                       'Error: Your browser doesn\'t support geolocation.');
 infoWindow.open(map);
 }
