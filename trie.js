@@ -74,11 +74,9 @@ Trie.prototype.is_prefix = function(word) {
         }
         // Else, end here and return false.
         else {
-            console.log(word + " is not a prefix");
             return false;
         }
     }
     // If the iteration reaches the end of the word, return bool value of that node signifying if word is a prefix.
-    console.log(word + " is a prefix? " + node.is_prefix);
     return node.is_prefix;
 }

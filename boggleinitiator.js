@@ -6,6 +6,7 @@ var boggle_answers = new Trie();
 
 var boggle_graph = new Graph(num_of_tiles);
 var letter_array = new Array();
+var answers_array = new Array();
 
 create_dictionary();
 
@@ -97,6 +98,8 @@ function start_timer() {
                 window.alert("Game Over\n\nFinal Score: " + score_total);
                 document.getElementById("start-button").style.background = "steelblue";
                 document.getElementById("start-button").innerHTML = "Start Game";
+                answers_array.sort();
+                document.getElementById("score_cell").innerHTML = answers_array.join(""); 
             }
         }
         update_clock(); // run function once at first to avoid delay
@@ -207,9 +210,9 @@ function DFS(index, word) {
 
     word += letter_array[index];
 
-    if (dictionary.is_word(word)) {
-        console.log("Inserted word: " + word);
+    if (dictionary.is_word(word) && word.length > 2) {
         boggle_answers.insert_word(word);
+        answers_array.push(word);
     }
 
     var neighbors = new Array();
@@ -219,12 +222,6 @@ function DFS(index, word) {
         boggle_graph.mark_vertex(index);
         // Find all neighbors
         boggle_graph.get_to_vertices(index, neighbors);
-
-        console.log("current index = " + index);
-        console.log("current index's neighbors = ");
-        for (var i = 0; i < neighbors.length; i++) {
-            console.log(neighbors[i]);
-        }
 
         while (neighbors.length > 0) {
             // For each neighbor, perform depth first search.
