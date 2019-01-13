@@ -105,7 +105,7 @@ function start_timer() {
                     answer_set.add(answers_array[i]);
                 } 
                 var new_answer_array = Array.from(answer_set);
-                document.getElementById("score_cell").innerHTML = new_answers_array.join(""); 
+                document.getElementById("score_cell").innerHTML = new_answer_array.join(""); 
             }
         }
         update_clock(); // run function once at first to avoid delay
