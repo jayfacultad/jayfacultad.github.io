@@ -83,12 +83,12 @@ Graph.prototype.is_value_in_graph = function(vertex_value) {
     return found;
 }
 
-Graph.prototype.remove_mark = function(vertex_index){
+Graph.prototype.remove_mark = function(vertex_index) {
     this.marks[vertex_index] = false;
 }
 
-Graph.prototype.is_edge = function(x_index, y_index){
-
+// For testing purposes
+Graph.prototype.is_edge = function(x_index, y_index) {
     console.log(x_index + " " + y_index);
     console.log(this.edges[x_index][y_index]);
 }
