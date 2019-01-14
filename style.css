@@ -1,7 +1,6 @@
-/* css file */
+
 
 #frontpage {
-        text-align: center;
         /* background-image: url("background.jpg"); */
         background-repeat: no-repeat;
         background-size: cover;
@@ -9,11 +8,11 @@
         background-attachment: fixed;
 }
 
-#name {
-        text-align: left;
+#heading {
+        text-align: center;
         font-size: 40px;
         padding-left: 10px;
-        font-family: "Tahoma";
+        font-family: "Lucida Sans Unicode";
 }
 
 #bio {
