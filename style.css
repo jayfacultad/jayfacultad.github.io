@@ -10,7 +10,8 @@
 
 #heading {
     text-align: center;
-    font-size: 60px;
+    font-weight: bold;
+    font-size: 70px;
     padding-left: 10px;
     font-family: "Lucida Sans Unicode";
     padding-top: 5%;
@@ -26,14 +27,15 @@
     text-transform: uppercase;
     display: inline-block;
     float: left;
-    width: 60%;
+    width: 50%;
     padding-left: 2%;
 }
 
 .link {
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    font-weight: bold;
+    display: inline;
     padding: 1%;
     margin-left: 1%;
     margin-right: 1%;
@@ -49,13 +51,33 @@ a:link, a:visited {
     text-decoration-color: white;
 }
 
+#current {
+    background-color: red;
+    text-decoration-color: white;
+    color: white;
+}
+
+#current_med {
+    background-color: steelblue;
+    color: white;    
+}
+
 #social_media {
-    display: inline-block;
+    display: inline;
     float: right;
+    text-align: right;
+    width: 40%;
+    padding-right: 2%;
+    display: inline-block;
 }
 
 .button {
-    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+    padding: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
 }
 
 .button:hover {
@@ -63,7 +85,7 @@ a:link, a:visited {
     color: white;
 }
 
-a:hover {
+.special_hover:hover {
     color: white;
 }
 
@@ -71,6 +93,10 @@ a:hover {
     padding-top: 15%;
     padding-bottom: 15%;
     text-align: center;
+}
+
+#message2 {
+    font-size: 12px;
 }
 
 hr {

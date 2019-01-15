@@ -98,6 +98,7 @@ function start_timer() {
                 window.alert("Game Over\n\nFinal Score: " + score_total);
                 document.getElementById("start-button").style.background = "steelblue";
                 document.getElementById("start-button").innerHTML = "Start Game";
+                document.getElementById("score_cell").innerHTML = "Start Game";
                 answers_array.sort();
                 var answer_set = new Set();
                 array_length = answers_array.length;
@@ -105,7 +106,7 @@ function start_timer() {
                     answer_set.add(answers_array[i]);
                 } 
                 var new_answer_array = Array.from(answer_set);
-                document.getElementById("score_cell").innerHTML = new_answer_array.join(""); 
+                document.getElementById("score_cell").innerHTML = '<div style="text-align:center">' + new_answer_array.join("") + '</div>'; 
             }
         }
         update_clock(); // run function once at first to avoid delay

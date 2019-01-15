@@ -1,6 +1,6 @@
 
 body {
-    background-color: #F57921;
+    /* background-color: #F57921; */
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -23,6 +23,7 @@ h3 {
 
 .intro {
     font-size: 12px;
+    font-weight: bold;
 }
 
 #game-container {
@@ -54,7 +55,7 @@ h3 {
 }
 
 .score-heading {
-    color: white;
+    color: black;
     font-family: "Arial";
     font-size: 30px;
     text-align: center;
@@ -62,9 +63,9 @@ h3 {
 
 #score {
     font-family: "Arial";
-    color: white;
+    color: black;
     font-size: 50px; 
-    text-align: right;
+    text-align: center;
 }
 
 #word-submit {
@@ -117,7 +118,7 @@ input {
 }
 
 #score_cell {
-    height: 560px;
+    height: 480px;
     overflow: auto;
 }
 
@@ -126,7 +127,7 @@ input {
 }
 
 #answer_cell {
-    height: 560px;
+    height: 480px;
     overflow: auto;
 }
 
@@ -141,7 +142,7 @@ input {
     border: 5px solid #FFCA08;
     background-color: azure;
     padding: 5px;
-    height: 560px;
+    height: 480px;
     text-align: right;
     vertical-align: text-top;
     table-layout: fixed;
@@ -192,14 +193,14 @@ input {
 
 .time-remaining-heading {
     font-family: "Arial";
-    color: white;
+    color: black;
     font-size: 30px;
     text-align: center;
 }
 
 #time-remaining {
     font-family: "Arial";
-    color: white;
+    color: black;
     font-size: 50px;   
     text-align: center; 
 }
@@ -232,7 +233,7 @@ input {
     background-color: azure;
     text-align: center;
     padding: 5px;
-    height: 560px;
+    height: 480px;
     vertical-align: middle;
     overflow: auto;
 
