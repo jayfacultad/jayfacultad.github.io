@@ -2,15 +2,17 @@
 // prompted by your browser. If you see the error "The Geolocation service
 // failed.", it means you probably did not give permission for the browser to
 // locate you.
-var map, infoWindow;
+
 var mbta_key = "8845d177307541a1847cb860f31e3f14";
 
-function initMap() {
-map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 42.352271, lng: -71.05524200000001},
-    zoom: 14
-    });
-infoWindow = new google.maps.InfoWindow;
+// var map, infoWindow;
+
+// function initMap() {
+// map = new google.maps.Map(document.getElementById('map'), {
+//     center: {lat: 42.352271, lng: -71.05524200000001},
+//     zoom: 14
+//     });
+// infoWindow = new google.maps.InfoWindow;
 
 // Set location for each station.
 var features = [
