@@ -92,7 +92,7 @@ function start_timer() {
             }
             
             if(time.minutes < 0 || timerOn == false) { 
-                timer.innerHTML = "<span style='font-size:50px; color:white;'>0:00</span>";
+                timer.innerHTML = "<span style='font-size:50px; color:black;'>0:00</span>";
                 clearInterval(timeinterval); 
                 startGame = false;
                 window.alert("Game Over\n\nFinal Score: " + score_total);
@@ -106,7 +106,7 @@ function start_timer() {
                     answer_set.add(answers_array[i]);
                 } 
                 var new_answer_array = Array.from(answer_set);
-                document.getElementById("score_cell").innerHTML = '<div style="text-align:center">' + new_answer_array.join("") + '</div>'; 
+                document.getElementById("score_cell").innerHTML = '<div style="text-align:left">' + new_answer_array.join("") + '</div>'; 
             }
         }
         update_clock(); // run function once at first to avoid delay
