@@ -2,13 +2,14 @@
 <html>
   <head>
     <title>MBTA Map</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mbtastyle.css"/>
+    <link rel="stylesheet" href="style.css"/>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
 
+    
   </head>
-  <body>
+
+<body id="frontpage">
 
     <div id="heading">Jay Facultad</div>
         
@@ -31,6 +32,7 @@
 
     <br>
     <hr>
+
     <script>
       var map, infoWindow;
       function initMap() {
@@ -44,6 +46,8 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAA0qX7SO1nYGBW3l4t05eKPdd1IMGLsvc&callback=initMap"
     async defer></script>
     <script type="text/javascript" src="bostonsubway.js"></script>
-    <div id="map"></div>
+
+    <div id="map" style="height: 550px;"></div>
+
   </body>
 </html>

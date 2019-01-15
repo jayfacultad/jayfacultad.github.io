@@ -7,12 +7,13 @@ var mbta_key = "8845d177307541a1847cb860f31e3f14";
 
 // var map, infoWindow;
 
-// function initMap() {
-// map = new google.maps.Map(document.getElementById('map'), {
-//     center: {lat: 42.352271, lng: -71.05524200000001},
-//     zoom: 14
-//     });
-// infoWindow = new google.maps.InfoWindow;
+function initMap() {
+map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 42.352271, lng: -71.05524200000001},
+    zoom: 14
+    });
+infoWindow = new google.maps.InfoWindow;
+
 
 // Set location for each station.
 var features = [
@@ -138,7 +139,7 @@ features.forEach(function(feature) {
   var marker = new google.maps.Marker(
   {
     position: feature.position,
-    icon: 'marker.png',
+    icon: 'icons/mbtaicon.png',
     map: map
   });
   // Info window displaying schedule is displayed when the user clicks on staiton marker.
@@ -264,7 +265,7 @@ if (navigator.geolocation) {
 var geomarker = new google.maps.Marker(
   {
     position: pos,
-    icon: 'geomarker.png',
+    icon: 'icons/geomarker.png',
     map: map
   });
 
@@ -306,32 +307,32 @@ for( i=0; i<features.length; i++ ) {
 
 // Display neartest station and distance from geolocation when user's location is clicked.
 geomarker.addListener('click', function() {
+    // Add dotted polyline from geolocation to nearest station
+    geoLineCoordinates = [ 
+        {lat: closest_lat, lng: closest_lng},
+        {lat: lat2, lng: lon2} ];
+    var geoLine = new google.maps.Polyline({
+        path: geoLineCoordinates,
+        strokeOpacity: 0,
+        icons: [{
+            icon: {
+                path: 'M 0, -1 0, 1',
+                strokeOpacity: 1,
+                scale: 4
+            },
+            offset: '0',
+            repeat: '20px'
+        }]
+        });
+    geoLine.setMap(map); 
     // Convert km to miles
     closest = closest * 0.62137;
     geoClick.setContent(
-        "Closest station is " + closest.toFixed(2) + " miles away: " + station
+        "Closest Red Line station is " + closest.toFixed(2) + " miles away: " + station
         );
     geoClick.open(map, geomarker);
 });
 
-// Add dotted polyline from geolocation to nearest station
-geoLineCoordinates = [ 
-    {lat: closest_lat, lng: closest_lng},
-    {lat: lat2, lng: lon2} ];
-var geoLine = new google.maps.Polyline({
-    path: geoLineCoordinates,
-    strokeOpacity: 0,
-    icons: [{
-        icon: {
-            path: 'M 0, -1 0, 1',
-            strokeOpacity: 1,
-            scale: 4
-        },
-        offset: '0',
-        repeat: '20px'
-    }]
-    });
-geoLine.setMap(map); 
 
 // Center map on current geolocation
 map.setCenter(pos);
