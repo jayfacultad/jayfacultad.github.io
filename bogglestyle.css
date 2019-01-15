@@ -9,6 +9,7 @@ h3 {
     margin-bottom: 5px;
 }
 
+
 #start-button {
     width: 100px;
     background: steelblue;
@@ -19,6 +20,10 @@ h3 {
     line-height: 42px;
     text-align: center;
     margin: 0 auto;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .intro {
@@ -74,6 +79,9 @@ h3 {
     margin-left: auto;
     margin-right: auto;
     display: inline-block;
+    vertical-align: middle;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .word-field {
@@ -118,7 +126,7 @@ input {
 }
 
 #score_cell {
-    height: 480px;
+    height: 430px;
     overflow: auto;
 }
 
@@ -127,7 +135,7 @@ input {
 }
 
 #answer_cell {
-    height: 480px;
+    height: 430px;
     overflow: auto;
 }
 
@@ -142,7 +150,7 @@ input {
     border: 5px solid #FFCA08;
     background-color: azure;
     padding: 5px;
-    height: 480px;
+    height: 430px;
     text-align: right;
     vertical-align: text-top;
     table-layout: fixed;
@@ -233,7 +241,7 @@ input {
     background-color: azure;
     text-align: center;
     padding: 5px;
-    height: 480px;
+    height: 430px;
     vertical-align: middle;
     overflow: auto;
 

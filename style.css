@@ -102,8 +102,3 @@ a:link, a:visited {
 hr {
     margin-top: 2%;
 }
-
-div.infowindow {
-    max-height:250px;
-    overflow-y:auto;
-}
