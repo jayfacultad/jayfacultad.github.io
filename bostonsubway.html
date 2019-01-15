@@ -49,5 +49,27 @@
 
     <div id="map" style="height: 550px;"></div>
 
+    <br>
+    <div id="summary-container">
+    <a class="bold">DESCRIPTION</a>
+    <br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;This app utilizes the Google Maps API and the Boston MBTA API.
+    Each Boston MBTA red line station on the map is represented as a marker. 
+    Upon clicking on a station marker, an information 
+    window appears that displays the associate station's schedule of upcoming 
+    trains and train directions. A red polyline connects each station. Initially, 
+    the map is centered on South Station. When the user's geolocation is determined, 
+    the user's location is represented by a geolocation marker. The map 
+    centers on the user's location automatically. Upon selecting the user's 
+    geolocation on the map, an information window appears that displays the 
+    nearest Boston MBTA red line station, including distance away in miles.
+    A dotted polyline connects the user's geolocation marker to the marker of 
+    the nearest Boston MBTA red line station. 
+    <br><br>
+    <a class="bold">API's Utilized:</a>
+    <ul>
+        <li><a id="apilink" href="https://developers.google.com/maps/documentation/javascript/tutorial">Google Maps</a></li>
+        <li><a id="apilink" href="https://www.mbta.com/developers">Boston MBTA (Massachusetts Bay Transportation Authority)</a></li>
+    </ul>
   </body>
 </html>

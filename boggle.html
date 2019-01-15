@@ -36,6 +36,8 @@
 
     <div id="game-container">
 
+        <!-- End summary container -->
+
         <div id="left-container">
             <div class="score-container">
                 <a class="score-heading">Score:</a><br>
@@ -193,6 +195,54 @@
 
     </div> 
     <!-- End game container -->
+
+    <br>
+    <div id="summary-container">
+    <a class="bold">DESCRIPTION</a>
+    <br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;This app utilizes two data structure classes: Tries and Graphs.  
+    The Trie implementation includes a node structure called TrieNode. 
+    Each node represents a letter of a possible word.
+    The TrieNode consists of two bool variables, one to signify if the 
+    letter is a prefix of an existing word, and one to signify if the letter 
+    is the end of a full word. The TrieNode also contains an array of its children. 
+    There are a total of 26 possible children, with each child representing a letter 
+    of the alphabet. One Trie data structure is used to store a Dictionary of all possible 
+    English words, and another Trie data structure is used to store all answers of the Boggle
+    Board.  The runtime for each Trie function is O(m), where m is the length 
+    of the key or word. A second data structure class utilized in this app is the
+    Graph implementation. This Graph class is used to store the Boggle Board.  
+    Each tile in the Boggle Board is represented as a Vertex in the graph, and each tile
+    is connected to its neighbors (8 neighbors maximum, 3 neighbors minimum for
+    corner tiles) by Edges. Therefore, the Boggle Board is represented as a cyclical, 
+    undirected, unweighed Graph.
+    <br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;Depth First Search is used to find all answers of the Boggle Board.
+    The Depth First Search algorithm starts with one Vertex (the first tile), 
+    and recursively visits all of its unsivisted neighbors. The first neighbor's letter is 
+    appended to the current Vertex's letter, which creates a subword. 
+    If the Vertex's and neighbor's letters append to forma prefix of another word, 
+    the algorithm then continues and finds the neighbor's neighbors and appends one 
+    to the subword. This is performed for all neighbors as long as the
+    subword is a prefix of another word.  If it's not, then that
+    neighbor is marked as visited and does not get appended to the subword, and
+    the algorithm moves on to the next neighboring tile until all neighbors are visited. 
+    If at any point the subword is identified as a full word, then the current
+    letter is marked as an end of word. This algorithm contiunes until the last 
+    tile of the board is reached.  Because the Graph of the Boggle Board is 
+    implemented as an ajacency matrix, the runtime for the Depth First Search 
+    algorithm is O(n*n) where n is the number of nodes.
+    <br><br>
+    <a class="bold">Data Structures Implemented:</a>
+    <ul>
+        <li>Trie / Prefix Trees</li>
+        <li>Graphs / Adjacenty Matrix</li>
+    </ul>
+    <a class="bold">Algorithms:</a>
+    <ul>
+        <li>Depth First Search</li>
+    </ul>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="trie.js"></script>
     <script src="graph.js"></script>
