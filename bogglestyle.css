@@ -231,7 +231,7 @@ input {
 #answers-table td {
     border: 5px solid #FFCA08;
     background-color: azure;
-    text-align: center;
+    text-align: left;
     padding: 5px;
     height: 480px;
     vertical-align: middle;

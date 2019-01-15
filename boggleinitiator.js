@@ -88,7 +88,7 @@ function start_timer() {
         function update_clock() {
             var time = time_remaining(endtime);
             if (timerOn == true) {
-                timer.innerHTML = "<span style='font-size:50px; color:white;'>" + time.minutes + ":" + time.seconds + "</span>";
+                timer.innerHTML = "<span style='font-size:50px; color:black;'>" + time.minutes + ":" + time.seconds + "</span>";
             }
             
             if(time.minutes < 0 || timerOn == false) { 
