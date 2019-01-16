@@ -90,9 +90,13 @@ a:link, a:visited {
 }
 
 #message {
-    padding-top: 10%;
-    padding-bottom: 20%;
+    padding-top: 5%;
     text-align: center;
+    font-family: "Arial";
+}
+
+#secondline {
+    font-size: 12px;
 }
 
 #message2 {
@@ -119,4 +123,8 @@ hr {
 #apilink {
     text-decoration: underline;
     color: blue;
+}
+
+img {
+    position: center;
 }
