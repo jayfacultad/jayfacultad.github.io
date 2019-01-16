@@ -144,7 +144,7 @@ function create_dictionary() {
         }
         txtFile.send(null);
     }
-    readTextFile('dictionary.txt');   
+    readTextFile('text/dictionary.txt');   
 }
 
 function create_boggle_graph() {
