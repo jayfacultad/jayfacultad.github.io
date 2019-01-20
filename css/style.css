@@ -1,4 +1,4 @@
-
+@media (min-width: 1100px) {
 
 #frontpage {
     /* background-image: url("background.jpg"); */
@@ -21,6 +21,7 @@
 #menu {
     width: 100%;
     font-family: "Verdana";
+    overflow: auto;
 }
 
 #links {
@@ -29,6 +30,7 @@
     float: left;
     width: 50%;
     padding-left: 2%;
+    overflow: auto;
 }
 
 .link {
@@ -69,6 +71,7 @@ a:link, a:visited {
     width: 40%;
     padding-right: 2%;
     display: inline-block;
+    overflow: auto;
 }
 
 .button {
@@ -90,13 +93,15 @@ a:link, a:visited {
 }
 
 #message {
-    padding-top: 5%;
+    padding-top: 1%;
     text-align: center;
     font-family: "Arial";
 }
 
+
 #message2 {
     font-size: 12px;
+    text-align: center;
 }
 
 hr {
@@ -122,5 +127,141 @@ hr {
 }
 
 img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    height: 20%;
+}
+
+}
+
+/* MOBILE ----------------------------------------------------------------- */
+
+@media screen and (max-width: 1099px) {
+
+#frontpage {
+    /* background-image: url("background.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#heading {
+    text-align: center;
+    font-weight: bold;
+    font-size: 70px;
+    font-family: "Lucida Sans Unicode";
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+#menu {
+    width: 100%;
+    font-family: "Verdana";
+    overflow: auto;
+}
+
+#links {
+    text-align: center;
+    overflow: auto;
+}
+
+.link {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.link:hover {
+    background-color: red;
+    text-decoration-color: white;
+}
+
+#current {
+    background-color: red;
+    text-decoration-color: white;
+    color: white;
+}
+
+#current_med {
+    background-color: steelblue;
+    color: white;    
+}
+
+#social_media {
+    float: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 2%;
+    overflow: auto;
+}
+
+.button {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 28px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.button:hover {
+    background-color: steelblue;
+    color: white;
+}
+
+.special_hover:hover {
+    color: white;
+}
+
+#message {
+    margin-top: 2%;
+    text-align: center;
+    font-family: "Arial";
+    font-size: 32px;
+}
+
+
+#message2 {
+    font-size: 30px;
+    font-family: "Arial";
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#summary-container {
+    padding: 2% 6% 2% 6%;
+    background-color: gainsboro;
+    text-align: justify;
+    border-style: solid;
+    border-width: 1px;
+    border-color: darkgray;
+    font-size: 12px;
+}
+
+#apilink {
+    text-decoration: underline;
+    color: blue;
+}
+
+img {
     position: center;
+    width: 100%;
+    height: 100%;
+}
+
 }
