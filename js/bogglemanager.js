@@ -11,6 +11,21 @@ document.getElementById("word-entry").addEventListener("keyup", function(event) 
 });
 
 
+for (var row = 0; row < 5; row++) {
+    for (var col = 0; col < 5; col++) {
+        document.getElementById("R" + row + "C" + col).addEventListener("click", addClickedLetter, false);
+    }
+}
+
+function addClickedLetter(tile) {
+    var clickedItem = tile.target.id;
+    var initial_subword = document.getElementById("word-entry").value;
+    var new_subword = initial_subword + document.getElementById(clickedItem).innerHTML;
+    document.getElementById("word-entry").value = new_subword;
+    document.getElementById("word-entry").focus();
+}
+
+
 document.getElementById("submit-button").addEventListener("click", function() {
     if (startGame == true) {
 

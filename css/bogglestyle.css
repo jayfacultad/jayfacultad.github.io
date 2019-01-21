@@ -104,7 +104,7 @@ input {
 #submit-button {
     font-size: 14px;
     vertical-align: middle;
-    background: steelblue;
+    background: lightgray;
     font-weight: bold;
     border-radius: 3px;
     padding: 2px 5px;
@@ -174,7 +174,7 @@ input {
     padding: 3px;
 }
 
-.tile {
+#tile {
     font-size: 35px;
     font-family: "Lucida Sans Unicode";
     color: black;
@@ -187,15 +187,15 @@ input {
     margin:5px;
 }
 
-.tile:hover {
+#tile:hover {
     cursor: pointer;
 }
 
-.tile.selected {
+#tile.selected {
    background-color: #ACCEEC;
 }
 
-.tile span {
+#tile span {
    font-weight: bold;
    display: block;
    position: relative;
@@ -429,7 +429,7 @@ input {
     padding: 3px;
 }
 
-.tile {
+#tile {
     font-size: 35px;
     font-family: "Lucida Sans Unicode";
     color: black;
@@ -442,15 +442,15 @@ input {
     margin:5px;
 }
 
-.tile:hover {
+#tile:hover {
     cursor: pointer;
 }
 
-.tile.selected {
+#tile.selected {
    background-color: #ACCEEC;
 }
 
-.tile span {
+#tile span {
    font-weight: bold;
    display: block;
    position: relative;

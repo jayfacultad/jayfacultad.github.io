@@ -16,8 +16,10 @@ document.getElementById("start-button").addEventListener("click", function() {
         document.getElementById("start-button").style.background = "#8f7a66";
         document.getElementById("start-button").innerHTML = "Stop Game";
         document.getElementById("word-entry").value = "";
+        document.getElementById("word-entry").focus();
         document.getElementById("answer_cell").innerHTML = "";
-        document.getElementById("word-entry").value = "Click here!";
+        document.getElementById("submit-button").style.background = "steelblue";
+        
         startGame = true;
         timerOn = true;
         build_board();
@@ -30,6 +32,7 @@ document.getElementById("start-button").addEventListener("click", function() {
         timerOn = false;
         document.getElementById("start-button").style.background = "steelblue";
         document.getElementById("start-button").innerHTML = "Start Game";
+        document.getElementById("submit-button").style.background = "lightgray";
         user_inputs.length = 0;
     }
 });
@@ -99,6 +102,7 @@ function start_timer() {
                 document.getElementById("start-button").style.background = "steelblue";
                 document.getElementById("start-button").innerHTML = "Start Game";
                 document.getElementById("score_cell").innerHTML = "Start Game";
+                document.getElementById("submit-button").style.background = "lightgray";
                 answers_array.sort();
                 var answer_set = new Set();
                 array_length = answers_array.length;
@@ -142,7 +146,7 @@ function create_dictionary() {
                 }
             }
         }
-        txtFile.send(null);
+        // txtFile.send(null);
     }
     readTextFile('text/dictionary.txt');   
 }
