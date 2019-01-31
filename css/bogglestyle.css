@@ -511,3 +511,32 @@ input {
 }
 
 }
+
+#results-container {
+    display: none;
+    position: absolute;
+    top: 35%;
+    right: 33%;
+    width: 33%;
+    height: 33%;
+    background: gray;
+}
+
+#usernameField {
+    margin-top: 2%;
+}
+
+#username {
+    padding: 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    background-color: lightgray;
+}
+
+#username:hover {
+    cursor: pointer;
+}
+
+#end-message {
+    margin-top: 10%;
+}

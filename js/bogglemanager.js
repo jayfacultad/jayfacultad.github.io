@@ -1,6 +1,7 @@
 var user_inputs = [];
 var word_score;
 var score_total = 0;
+var username_send;
 
 document.getElementById("word-entry").addEventListener("keyup", function(event) {
   // Number 13 is the "Enter" key on the keyboard
@@ -62,6 +63,36 @@ document.getElementById("submit-button").addEventListener("click", function() {
         document.getElementById("answer_cell").innerHTML = user_inputs.join("");            
     }
 });
+
+
+document.getElementById("username").addEventListener("click", function() {
+    document.getElementById("results-container").style.display = "none";
+    username_send = 
+    sendData();
+});
+
+
+function sendData() {
+
+        jQuery.ajax({
+        method: "POST",
+        url: "https://frozen-hamlet-64285.herokuapp.com/submit",
+        data: {
+                username:       username_send,
+                score:          score_total,
+        },
+        // Popup for top 3 scores
+        success: function(data) {
+                var extractData = JSON.stringify(data);
+                extractData = JSON.parse(extractData);
+                var popupContent = "TOP THREE SCORES\nUsername  (Score)  Timestamp\n";
+                for (var i = 0; i < extractData.length; i++) {
+                        popupContent += (i+1) + ". " + extractData[i].username + " (" + extractData[i].score + ") " + extractData[i].created_at + "\n";
+                };
+                alert(popupContent);
+        }
+        });
+}
 
 function calculate_score(word) {
     

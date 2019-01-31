@@ -98,7 +98,9 @@ function start_timer() {
                 timer.innerHTML = "<span style='font-size:50px; color:black;'>0:00</span>";
                 clearInterval(timeinterval); 
                 startGame = false;
-                window.alert("Game Over\n\nFinal Score: " + score_total);
+                document.getElementById("results-container").style.display = "block";
+                document.getElementById("final_score").innerHTML = score_total;
+                document.getElementById("usernameField").focus();
                 document.getElementById("start-button").style.background = "steelblue";
                 document.getElementById("start-button").innerHTML = "Start Game";
                 document.getElementById("score_cell").innerHTML = "Start Game";
