@@ -65,10 +65,10 @@ a:link, a:visited {
 }
 
 #social_media {
-    display: inline;
+    display: inline-block;
     float: right;
     text-align: right;
-    width: 60%;
+    width: 52%;
     padding-right: 2%;
     display: inline-block;
     overflow: auto;
