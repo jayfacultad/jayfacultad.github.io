@@ -79,7 +79,7 @@ function sendData() {
         url: "https://frozen-hamlet-64285.herokuapp.com/submit",
         data: {
                 username:       username_send,
-                score:          score_total,
+                score:          score_total
         },
         // Popup for top 3 scores
         success: function(data) {
