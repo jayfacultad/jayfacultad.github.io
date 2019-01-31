@@ -23,6 +23,7 @@ function addClickedLetter(tile) {
     var new_subword = initial_subword + document.getElementById(clickedItem).innerHTML;
     document.getElementById("word-entry").value = new_subword;
     document.getElementById("word-entry").focus();
+    document.getElementById(clickedItem).style.backgroundColor = "red";
 }
 
 
