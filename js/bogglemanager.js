@@ -67,7 +67,7 @@ document.getElementById("submit-button").addEventListener("click", function() {
 
 document.getElementById("username").addEventListener("click", function() {
     document.getElementById("results-container").style.display = "none";
-    username_send = 
+    username_send = document.getElementById("usernameField").value;
     sendData();
 });
 
@@ -86,7 +86,7 @@ function sendData() {
                 var extractData = JSON.stringify(data);
                 extractData = JSON.parse(extractData);
                 var popupContent = "TOP THREE SCORES\nUsername  (Score)  Timestamp\n";
-                for (var i = 0; i < extractData.length; i++) {
+                for (var i = 0; i < 3; i++) {
                         popupContent += (i+1) + ". " + extractData[i].username + " (" + extractData[i].score + ") " + extractData[i].created_at + "\n";
                 };
                 alert(popupContent);
