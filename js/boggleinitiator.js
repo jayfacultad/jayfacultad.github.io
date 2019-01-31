@@ -13,6 +13,7 @@ create_dictionary();
 document.getElementById("start-button").addEventListener("click", function() {
     
     if (startGame == false) {
+        score_total = 0;
         document.getElementById("start-button").style.background = "#8f7a66";
         document.getElementById("start-button").innerHTML = "Stop Game";
         document.getElementById("word-entry").value = "";
@@ -20,6 +21,7 @@ document.getElementById("start-button").addEventListener("click", function() {
         document.getElementById("answer_cell").innerHTML = "";
         document.getElementById("submit-button").style.background = "steelblue";
         document.getElementById("score_cell").innerHTML = "Displayed when game is over";
+        document.getElementById("score").innerHTML = score_total;
         
         startGame = true;
         timerOn = true;
