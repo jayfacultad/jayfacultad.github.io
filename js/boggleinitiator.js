@@ -148,7 +148,7 @@ function create_dictionary() {
                 }
             }
         }
-        // txtFile.send(null);
+        txtFile.send(null);
     }
     readTextFile('text/dictionary.txt');   
 }
