@@ -19,7 +19,7 @@ document.getElementById("start-button").addEventListener("click", function() {
         document.getElementById("word-entry").focus();
         document.getElementById("answer_cell").innerHTML = "";
         document.getElementById("submit-button").style.background = "steelblue";
-        document.getElementById("score_cell").innerHTLM = "Displayed when game is over";
+        document.getElementById("score_cell").innerHTML = "Displayed when game is over";
         
         startGame = true;
         timerOn = true;
