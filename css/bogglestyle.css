@@ -513,6 +513,7 @@ input {
 }
 
 #results-container {
+    text-align: center;
     display: none;
     position: absolute;
     top: 35%;

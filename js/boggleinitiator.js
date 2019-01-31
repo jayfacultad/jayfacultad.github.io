@@ -103,6 +103,7 @@ function start_timer() {
                 startGame = false;
                 document.getElementById("results-container").style.display = "block";
                 document.getElementById("final_score").innerHTML = score_total;
+                document.getElementById("usernameField").value = "";
                 document.getElementById("usernameField").focus();
                 document.getElementById("start-button").style.background = "steelblue";
                 document.getElementById("start-button").innerHTML = "Start Game";
