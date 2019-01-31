@@ -28,7 +28,7 @@
     text-transform: uppercase;
     display: inline-block;
     float: left;
-    width: 50%;
+    width: 40%;
     padding-left: 2%;
     overflow: auto;
 }
@@ -68,7 +68,7 @@ a:link, a:visited {
     display: inline;
     float: right;
     text-align: right;
-    width: 50%;
+    width: 60%;
     padding-right: 2%;
     display: inline-block;
     overflow: auto;
