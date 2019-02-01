@@ -278,7 +278,7 @@ var closest_lng;
     var lat2 = geomarker.position.lat();
     var lon2 = geomarker.position.lng();
     var R = 6371; // radius of earth in km
-    var closest = 100;
+    var closest = 6371;
     var station;
     Number.prototype.toRad = function() {
          return this * Math.PI / 180;
