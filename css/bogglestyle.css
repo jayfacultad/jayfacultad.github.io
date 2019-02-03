@@ -518,8 +518,8 @@ input {
     position: absolute;
     top: 35%;
     right: 33%;
-    width: 33%;
-    height: 33%;
+    width: 480px;
+    height: 225px;
     background: gray;
 }
 
