@@ -92,8 +92,8 @@ function sendData() {
         success: function(data) {
                 var extractData = JSON.stringify(data);
                 extractData = JSON.parse(extractData);
-                var popupContent = "TOP THREE SCORES\n\n";
-                for (var i = 0; i < 3; i++) {
+                var popupContent = "TOP TEN SCORES\n\n";
+                for (var i = 0; i < 10; i++) {
                         popupContent += (i+1) + ". " + extractData[i].username + " (Score: " + extractData[i].score + ") " + extractData[i].created_at + "\n";
                 };
                 alert(popupContent);
