@@ -95,6 +95,7 @@ a:link, a:visited {
 #message {
     padding-top: 1%;
     text-align: center;
+    font-size: 14px;
     font-family: "Arial";
 }
 
@@ -102,6 +103,7 @@ a:link, a:visited {
 #message2 {
     font-size: 12px;
     text-align: center;
+    font-family: "Arial";
 }
 
 hr {
@@ -234,7 +236,7 @@ a:link, a:visited {
 
 
 #message2 {
-    font-size: 30px;
+    font-size: 28px;
     font-family: "Arial";
     text-align: center;
 }
