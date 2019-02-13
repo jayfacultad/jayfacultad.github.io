@@ -48,7 +48,7 @@ document.getElementById("submit-button").addEventListener("click", function() {
         }
         else {
             word_score = 0;
-            display_text = "<div>" + input_value + "&nbsp;&nbsp;&emsp;" + word_score + "</div>";
+            display_text = "<div><font color='red'>" + input_value + "&nbsp;&nbsp;&emsp;" + word_score + "</font></div>";
         }
 
         score_total += word_score;
