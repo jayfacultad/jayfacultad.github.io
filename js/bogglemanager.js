@@ -48,8 +48,7 @@ document.getElementById("submit-button").addEventListener("click", function() {
         }
         else {
             word_score = 0;
-            display_text = "<div id='incorrect'><font color='red'>" + input_value + "&nbsp;&nbsp;&emsp;" + word_score + "</font></div>";
-            document.getElementById('incorrect').style.color = "red";
+            display_text = "<div><a style='color:red'>" + input_value + "&nbsp;&nbsp;&emsp;" + word_score + "</a></div>";
         }
 
         score_total += word_score;
