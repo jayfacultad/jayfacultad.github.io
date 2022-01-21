@@ -36,3 +36,15 @@
     animation-name: fadeInUp;
     -webkit-animation-name: fadeInUp;
 }
+
+.hero-image {
+    min-width: 100%;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    object-fit: cover;
+}
+
+.intro-block {
+    position: relative;
+    z-index: 250;
