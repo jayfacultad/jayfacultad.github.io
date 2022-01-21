@@ -1,6 +1,6 @@
 @keyframes fadeInUp {
     from {
-        transform: translate3d(0,40px,0)
+        transform: translate3d(0,120px,0)
     }
 
     to {
@@ -11,7 +11,7 @@
 
 @-webkit-keyframes fadeInUp {
     from {
-        transform: translate3d(0,40px,0)
+        transform: translate3d(0,120px,0)
     }
 
     to {
@@ -21,9 +21,9 @@
 }
 
 .animated {
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-fill-mode: both;
-    -webkit-animation-duration: 1s;
+    -webkit-animation-duration: 2s;
     -webkit-animation-fill-mode: both
 }
 
@@ -182,7 +182,7 @@ img {
 
 /* MOBILE ----------------------------------------------------------------- */
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
 
 #frontpage {
     /* background-image: url("background.jpg"); */
