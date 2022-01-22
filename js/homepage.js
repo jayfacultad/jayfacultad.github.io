@@ -19,6 +19,10 @@ function setDesktopOrMobileView() {
     document.getElementById("title").classList.add("title-mobile");
     document.getElementById("hero-image").classList.remove("hero-image");
     document.getElementById("hero-image").classList.add("hero-image-mobile");
+    document.getElementById("scroll-down-container").classList.remove("scroll-down-container");
+    document.getElementById("scroll-down-container").classList.add("scroll-down-container-mobile");
+    document.getElementById("scroll-down-icon").classList.remove("scroll-down-icon");
+    document.getElementById("scroll-down-icon").classList.add("scroll-down-icon-mobile");
   } 
   
 }
