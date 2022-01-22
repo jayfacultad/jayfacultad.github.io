@@ -75,7 +75,7 @@
     .heading {
         color: black;
         font-family: Helvetica, Sans-serif;
-        padding-top: 80px;
+        padding-top: 125px;
         padding-left: 80px;
     }  
     
@@ -91,7 +91,12 @@
 }
 
 @media (max-width: 768px) {
-      
+    .heading {
+        color: black;
+        font-family: Helvetica, Sans-serif;
+        padding-top: 80px;
+        padding-left: 80px;
+    }        
 }
 
 @media (max-width: 480px) {
