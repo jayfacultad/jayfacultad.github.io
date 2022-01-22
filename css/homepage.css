@@ -113,7 +113,13 @@ body {
 }
 
 @media (max-width: 768px) {
+    .eyebrow {
+        font-size: 37.5px;
+    }
 
+    .title {
+        font-size: 72.125px;
+    }
 }
 
 @media (max-width: 480px) {
