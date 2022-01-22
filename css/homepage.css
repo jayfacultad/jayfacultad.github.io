@@ -97,7 +97,7 @@ body {
     font-family: Helvetica, Sans-serif;
     font-size: 16px;
     position:fixed;
-    bottom:50px;
+    bottom:20px;
     left:45%;
     text-align: center;
 }
@@ -109,11 +109,18 @@ body {
 }
 
 .scroll-down-container-mobile {
+    color: WhiteSmoke;
+    font-family: Helvetica, Sans-serif;
     font-size: 54px;
+    position:fixed;
+    bottom:50px;
+    left:45%;
+    text-align: center;
 }
 
 .scroll-down-icon-mobile {
     width: 100px;
+    filter: invert(87%) sepia(0%) saturate(0%) hue-rotate(208deg) brightness(96%) contrast(100%);
 }
 
 .heading {
