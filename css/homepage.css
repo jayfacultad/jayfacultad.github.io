@@ -144,11 +144,11 @@ body {
     }
     
     .eyebrow {
-        font-size: 73.125px;
+        font-size: 54px;
     }
 
     .title {
-        font-size: 175.5px;
+        font-size: 132px;
     }
     
     .scroll-down-container {
@@ -156,6 +156,6 @@ body {
     }
 
     .scroll-down-icon {
-        width: 65px;
+        width: 55px;
     }
 }
