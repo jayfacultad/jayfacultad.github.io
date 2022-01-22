@@ -8,11 +8,9 @@ window.addEventListener('load', (event) => {
 function setDesktopOrMobileView() {
   var width = window.innerWidth;
   if(window.innerWidth <= mobileSize || window.outerWidth <= mobileSize) {
-    console.log('mobile');
     document.getElementById("hero-image").src = "/staticresources/newyorkmobile.jpg";
-  } else {
-    console.log('desktop');
-    document.getElementById("hero-image").src = "/staticresources/newyork.jpg";
-  }
+    document.getElementById("hero-image").classList.remove("fadeInUp");
+    document.getElementById("hero-image").classList.remove("fadeInUp-mobile");
+  } 
   
 }
