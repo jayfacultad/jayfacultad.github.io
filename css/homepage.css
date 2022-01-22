@@ -116,7 +116,7 @@ body {
 .scroll-down-container-mobile {
     color: #E8E8E8;
     font-family: Helvetica, Sans-serif;
-    font-size: 54px;
+    font-size: 48px;
     position:fixed;
     bottom:50px;
     width: 100%;
@@ -124,7 +124,7 @@ body {
 }
 
 .scroll-down-icon-mobile {
-    width: 100px;
+    width: 75px;
     filter: invert(87%) sepia(0%) saturate(0%) hue-rotate(208deg) brightness(96%) contrast(100%);
 }
 
