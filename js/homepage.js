@@ -1,5 +1,5 @@
-var mobileSize = 480;
-var tabletSize = 768;
+const mobileSize = 480;
+const tabletSize = 768;
 
 window.addEventListener('load', (event) => {
   setDesktopOrMobileView();
