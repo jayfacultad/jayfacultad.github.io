@@ -66,3 +66,7 @@
     font-size: 58.5px;
     font-style: normal;
 }
+
+.body {
+    margin-top: 0px !important;
+}
