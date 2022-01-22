@@ -53,4 +53,16 @@
 .heading {
     color: black;
     font-family: Helvetica, Sans-serif;
+    padding-top: 200px;
+    padding-left: 80px;
+}
+
+.eyebrow {
+    font-size: 26px;
+    font-style: italic;
+}
+
+.title {
+    font-size: 58.5px;
+    font-style: normal;
 }
