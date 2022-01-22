@@ -10,4 +10,6 @@ function setDesktopOrMobileView() {
     document.getElementById("hero-image").src = "/staticresources/newyorkmobile.jpg";
   } 
   
+  console.log('height ' + window.screen.height);
+  
 }
