@@ -20,28 +20,6 @@
     }
 }
 
-@keyframes fadeInUp-mobile {
-    from {
-        transform: translate3d(0,720px,0)
-    }
-
-    to {
-        transform: translate3d(0,0,0);
-        opacity: 1
-    }
-}
-
-@-webkit-keyframes fadeInUp-mobile {
-    from {
-        transform: translate3d(0,720px,0)
-    }
-
-    to {
-        transform: translate3d(0,0,0);
-        opacity: 1
-    }
-}
-
 body {
     margin-top: 0px !important;
     background-color: black;
@@ -64,12 +42,6 @@ body {
     -webkit-animation-name: fadeInUp;
 }
 
-.fadeInUp-mobile {
-    opacity: 0;
-    animation-name: fadeInUp-mobile;
-    -webkit-animation-name: fadeInUp-mobile;
-}
-
 .hero-image {
     width: 100%;
     display: inline-block;
@@ -77,14 +49,6 @@ body {
     left: 0;
     object-fit: cover;
     height: 850px;
-}
-
-.hero-image-mobile {
-    width: 100%;
-    display: inline-block;
-    position: absolute;
-    left: 0;
-    object-fit: cover;
 }
 
 .intro-block {
@@ -110,22 +74,6 @@ body {
 .scroll-down-icon {
     margin-top: -5px;
     width: 25px;
-    filter: invert(87%) sepia(0%) saturate(0%) hue-rotate(208deg) brightness(96%) contrast(100%);
-}
-
-.scroll-down-container-mobile {
-    color: #E8E8E8;
-    font-family: Helvetica, Sans-serif;
-    font-size: 36px;
-    position:fixed;
-    bottom:25px;
-    width: 100%;
-    text-align: center;
-}
-
-.scroll-down-icon-mobile {
-    margin-top: -5px;
-    width: 65px;
     filter: invert(87%) sepia(0%) saturate(0%) hue-rotate(208deg) brightness(96%) contrast(100%);
 }
 
@@ -172,9 +120,39 @@ body {
 }
 
 @media (max-width: 480px) {
+    @keyframes fadeInUp {
+        from {
+            transform: translate3d(0,720px,0)
+        }
+
+        to {
+            transform: translate3d(0,0,0);
+            opacity: 1
+        }
+    }
+
+    @-webkit-keyframes fadeInUp {
+        from {
+            transform: translate3d(0,720px,0)
+        }
+
+        to {
+            transform: translate3d(0,0,0);
+            opacity: 1
+        }
+    }
+    
     .heading {
         padding-top: 60px;
         padding-left: 60px;
+    }
+    
+    .hero-image {
+        width: 100%;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        object-fit: cover;
     }
     
     .eyebrow {
@@ -183,7 +161,23 @@ body {
 
     .title {
         font-size: 175.5px;
-    }  
+    }
+    
+    .scroll-down {
+        color: #E8E8E8;
+        font-family: Helvetica, Sans-serif;
+        font-size: 36px;
+        position:fixed;
+        bottom:25px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .scroll-down {
+        margin-top: -5px;
+        width: 65px;
+        filter: invert(87%) sepia(0%) saturate(0%) hue-rotate(208deg) brightness(96%) contrast(100%);
+    }
 }
 
 .heading-mobile {
