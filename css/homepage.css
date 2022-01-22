@@ -92,6 +92,8 @@ body {
 }
 
 .scroll-down-container {
+    color: white;
+    font-family: Helvetica, Sans-serif;
     position:fixed;
     bottom:5px;
     left:50%;
