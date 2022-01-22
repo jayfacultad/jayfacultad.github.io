@@ -11,6 +11,8 @@ function setDesktopOrMobileView() {
     document.getElementById("hero-image").src = "/staticresources/newyorkmobile.jpg";
     document.getElementById("intro-block").classList.remove("fadeInUp");
     document.getElementById("intro-block").classList.add("fadeInUp-mobile");
+    document.getElementById("heading").classList.remove("heading");
+    document.getElementById("heading").classList.add("heading-mobile");
     document.getElementById("eyebrow").classList.remove("eyebrow");
     document.getElementById("eyebrow").classList.add("eyebrow-mobile");
     document.getElementById("title").classList.remove("title");
