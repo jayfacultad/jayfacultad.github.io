@@ -92,7 +92,7 @@ body {
 }
 
 .scroll-down-container {
-    color: light gray;
+    color: LightGray;
     font-family: Helvetica, Sans-serif;
     position:fixed;
     bottom:50px;
