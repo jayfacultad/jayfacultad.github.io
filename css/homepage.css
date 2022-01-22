@@ -59,6 +59,12 @@
     -webkit-animation-name: fadeInUp;
 }
 
+.fadeInUp-mobile {
+    opacity: 0;
+    animation-name: fadeInUp-mobile;
+    -webkit-animation-name: fadeInUp-mobile;
+}
+
 .hero-image {
     width: 100%;
     display: inline-block;
