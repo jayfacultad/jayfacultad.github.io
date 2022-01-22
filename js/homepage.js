@@ -9,8 +9,10 @@ function setDesktopOrMobileView() {
   console.log('finished loading');
   var width = window.innerWidth;
   if(width <= mobileSize && document.getElementById("hero-image") != null) {
+    console.log('mobile');
     document.getElementById("hero-image").src = "/staticresources/newyorkmobile.jpg";
   } else {
+    console.log('desktop');
     document.getElementById("hero-image").src = "/staticresources/newyork.jpg";
   }
   
