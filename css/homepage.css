@@ -157,10 +157,11 @@ body {
     }
     
     .scroll-down-container {
-        bottom:20px;
+        bottom:10px;
     }
 
     .scroll-down-icon {
-        width: 55px;
+        margin-top: -5px;
+        width: 45px;
     }
 }
