@@ -38,7 +38,7 @@
 }
 
 .hero-image {
-    min-width: 100%;
+    width: 100%;
     display: inline-block;
     position: absolute;
     left: 0;
@@ -48,3 +48,4 @@
 .intro-block {
     position: relative;
     z-index: 250;
+}
