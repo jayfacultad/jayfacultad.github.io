@@ -10,7 +10,11 @@ function setDesktopOrMobileView() {
   if(window.innerWidth <= mobileSize || window.outerWidth <= mobileSize) {
     document.getElementById("hero-image").src = "/staticresources/newyorkmobile.jpg";
     document.getElementById("hero-image").classList.remove("fadeInUp");
-    document.getElementById("hero-image").classList.remove("fadeInUp-mobile");
+    document.getElementById("hero-image").classList.add("fadeInUp-mobile");
+    document.getElementById("hero-image").classList.remove("eyebrow");
+    document.getElementById("hero-image").classList.add("eyebrow-mobile");
+    document.getElementById("hero-image").classList.remove("title");
+    document.getElementById("hero-image").classList.add("title-mobile");
   } 
   
 }
