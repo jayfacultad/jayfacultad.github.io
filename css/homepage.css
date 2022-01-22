@@ -181,6 +181,6 @@ body {
     
     .profile-pic-image {
         width: 100%;
-        padding-top: 25px;
+        top: 50%;
     }
 }
