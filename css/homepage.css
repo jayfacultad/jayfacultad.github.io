@@ -93,7 +93,7 @@ body {
 }
 
 .scroll-down-container {
-    color: WhiteSmoke;
+    color: #E8E8E8;
     font-family: Helvetica, Sans-serif;
     font-size: 16px;
     position:fixed;
@@ -109,7 +109,7 @@ body {
 }
 
 .scroll-down-container-mobile {
-    color: WhiteSmoke;
+    color: #E8E8E8;
     font-family: Helvetica, Sans-serif;
     font-size: 54px;
     position:fixed;
