@@ -46,7 +46,6 @@ body {
     position: absolute;
     left: 0;
     object-fit: cover;
-    height: 850px;
 }
 
 .intro-block {
@@ -117,6 +116,12 @@ body {
     }
 }
 
+@media (min-width: 481px) {
+    .hero-image {
+        height: 850px;
+    }
+}
+
 @media (max-width: 480px) {
     @keyframes fadeInUp {
         from {
@@ -144,11 +149,11 @@ body {
     }
     
     .eyebrow {
-        font-size: 54px;
+        font-size: 27px;
     }
 
     .title {
-        font-size: 132px;
+        font-size: 66px;
     }
     
     .scroll-down-container {
