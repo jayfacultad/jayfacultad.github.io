@@ -92,17 +92,26 @@ body {
 }
 
 .scroll-down-container {
-    color: LightGray;
+    color: WhiteSmoke;
     font-family: Helvetica, Sans-serif;
+    font-size: 16px;
     position:fixed;
     bottom:50px;
-    left:50%;
+    left:45%;
     text-align: center;
 }
 
 .scroll-down-icon {
     width: 25px;
     filter: invert(87%) sepia(0%) saturate(0%) hue-rotate(208deg) brightness(96%) contrast(100%);
+}
+
+.scroll-down-container-mobile {
+    font-size: 54px;
+}
+
+.scroll-down-icon-mobile {
+    width: 100px;
 }
 
 .heading {
