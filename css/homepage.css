@@ -128,6 +128,7 @@ body {
         width: 25%;
         float:right;
         padding: 80px 80px 80px 80px;
+        border-radius: 10px;
     }
 }
 
