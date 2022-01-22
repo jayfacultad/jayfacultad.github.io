@@ -102,6 +102,7 @@ body {
 
 .scroll-down-icon {
     width: 25px;
+    filter: invert(87%) sepia(0%) saturate(0%) hue-rotate(208deg) brightness(96%) contrast(100%);
 }
 
 .heading {
