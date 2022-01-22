@@ -95,7 +95,7 @@ body {
     color: light gray;
     font-family: Helvetica, Sans-serif;
     position:fixed;
-    top:800px;
+    bottom:50px;
     left:50%;
     text-align: center;
 }
