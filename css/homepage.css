@@ -19,8 +19,8 @@
 }
 
 body {
-    margin-top: 0px !important;
-    background-color: black;
+    margin: 0px 0px 0px 0px !important;
+    background-color: DimGray;
 }
 
 .animated {
