@@ -141,12 +141,12 @@
     .heading {
         color: black;
         font-family: Helvetica, Sans-serif;
-        padding-top: 80px;
-        padding-left: 80px;
+        padding-top: 60px;
+        padding-left: 60px;
     }
     
     .eyebrow {
-        font-size: 97.5px;
+        font-size: 73.125px;
         font-style: italic;
     }
 
@@ -159,12 +159,12 @@
 .heading-mobile {
     color: black;
     font-family: Helvetica, Sans-serif;
-    padding-top: 80px;
-    padding-left: 80px;
+    padding-top: 60px;
+    padding-left: 60px;
 }
 
 .eyebrow-mobile {
-    font-size: 97.5px;
+    font-size: 73.125px;
     font-style: italic;    
 }
 
