@@ -17,6 +17,8 @@ function setDesktopOrMobileView() {
     document.getElementById("eyebrow").classList.add("eyebrow-mobile");
     document.getElementById("title").classList.remove("title");
     document.getElementById("title").classList.add("title-mobile");
+    document.getElementById("hero-image").classList.remove("hero-image");
+    document.getElementById("hero-image").classList.add("hero-image-mobile");
   } 
   
 }
