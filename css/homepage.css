@@ -20,7 +20,7 @@
 
 body {
     margin: 0px 0px 0px 0px !important;
-    background-color: #404040;
+    background-color: #202020;
 }
 
 .animated {
@@ -179,6 +179,7 @@ body {
     }
     
     .profile-pic-image {
+        diplay: inline-block;
         width: 100%
         padding-top: 30px;
     }
