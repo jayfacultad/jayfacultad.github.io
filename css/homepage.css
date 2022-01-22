@@ -84,16 +84,16 @@
 }
 
 @media (max-width: 768px) {
-    
-}
-
-@media (max-width: 480px) {
     .heading {
         color: black;
         font-family: Helvetica, Sans-serif;
         padding-top: 100px;
         padding-left: 80px;
     }  
+}
+
+@media (max-width: 480px) {
+
 }
 
 
