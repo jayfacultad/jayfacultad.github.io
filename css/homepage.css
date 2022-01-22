@@ -70,6 +70,14 @@ body {
     font-style: normal;
 }
 
+.profile-pic-image {
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    object-fit: cover;
+}
+
 .scroll-down-container {
     color: #E8E8E8;
     font-family: Helvetica, Sans-serif;
