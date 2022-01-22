@@ -72,24 +72,28 @@
 }
 
 @media (max-width: 1250px) {
-.eyebrow {
-    font-size: 26px;
-    font-style: italic;
+    .eyebrow {
+        font-size: 26px;
+        font-style: italic;
+    }
+
+    .title {
+        font-size: 58.5px;
+        font-style: normal;
+    }   
 }
 
-.title {
-    font-size: 58.5px;
-    font-style: normal;
-}   
+@media (max-width: 768px) {
+    
 }
 
 @media (max-width: 480px) {
-.heading {
-    color: black;
-    font-family: Helvetica, Sans-serif;
-    padding-top: 100px;
-    padding-left: 80px;
-}  
+    .heading {
+        color: black;
+        font-family: Helvetica, Sans-serif;
+        padding-top: 100px;
+        padding-left: 80px;
+    }  
 }
 
 
