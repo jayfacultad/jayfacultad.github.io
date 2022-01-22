@@ -22,7 +22,7 @@
 
 @keyframes fadeInUp-mobile {
     from {
-        transform: translate3d(0,72px,0)
+        transform: translate3d(0,720px,0)
     }
 
     to {
@@ -33,7 +33,7 @@
 
 @-webkit-keyframes fadeInUp-mobile {
     from {
-        transform: translate3d(0,72px,0)
+        transform: translate3d(0,720px,0)
     }
 
     to {
