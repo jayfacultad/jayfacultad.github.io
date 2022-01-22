@@ -5,7 +5,7 @@ setDesktopOrMobileView();
 
 function setDesktopOrMobileView() {
   var width = window.innerWidth;
-  if(w <= mobileSize) {
+  if(width <= mobileSize) {
     document.getElementById("hero-image").src = "/staticresources/newyorkmobile.jpg";
   } else {
     document.getElementById("hero-image").src = "/staticresources/newyork.jpg";
