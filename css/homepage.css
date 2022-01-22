@@ -120,11 +120,10 @@ body {
     .hero-image {
         height: 1000px;
     }
-    .hero-block {
+    .block-height {
         height: 1000px;
     }
     .about-me-block {
-        height: 1000px;
         background-color: blue;
     }
 }
@@ -150,9 +149,13 @@ body {
         }
     }
     
+    .block-height {
+        height: 896px;
+    }
+    
     .heading {
-        padding-top: 40px;
-        padding-left: 40px;
+        padding-top: 35px;
+        padding-left: 35px;
     }
     
     .eyebrow {
@@ -169,6 +172,6 @@ body {
 
     .scroll-down-icon {
         margin-top: -5px;
-        width: 35px;
+        width: 30px;
     }
 }
