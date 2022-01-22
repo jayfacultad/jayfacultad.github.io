@@ -20,7 +20,7 @@
 
 body {
     margin: 0px 0px 0px 0px !important;
-    background-color: DimGray;
+    background-color: #404040;
 }
 
 .animated {
@@ -68,11 +68,6 @@ body {
 .title {
     font-size: 118.75px;
     font-style: normal;
-}
-
-.profile-pic-image {
-    top: 0;
-    right: 0;
 }
 
 .scroll-down-container {
@@ -131,6 +126,7 @@ body {
     
     .profile-pic-image {
         width: 25%;
+        float:right;
         padding: 80px 80px 80px 80px;
     }
 }
