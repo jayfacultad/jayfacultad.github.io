@@ -94,22 +94,33 @@ body {
 .heading {
     color: black;
     font-family: Helvetica, Sans-serif;
-    padding-top: 125px;
+    padding-top: 150px;
     padding-left: 80px;
 }
 
 .eyebrow {
-    font-size: 42px;
+    font-size: 52.5px;
     font-style: italic;
 }
 
 .title {
-    font-size: 95px;
+    font-size: 118.75px;
     font-style: normal;
 }
 
 @media (max-width: 1250px) {
+    .heading {
+        padding-top: 125px;
+        padding-left: 80px;
+    }
 
+    .eyebrow {
+        font-size: 42px;
+    }
+
+    .title {
+        font-size: 95px;
+    }
 }
 
 @media (max-width: 768px) {
