@@ -120,22 +120,7 @@ body {
 }
 
 @media (max-width: 768px) {
-    .heading {
-        color: black;
-        font-family: Helvetica, Sans-serif;
-        padding-top: 60px;
-        padding-left: 60px;
-    }
-    
-    .eyebrow {
-        font-size: 26px;
-        font-style: italic;
-    }
 
-    .title {
-        font-size: 58.5px;
-        font-style: normal;
-    } 
 }
 
 @media (max-width: 480px) {
