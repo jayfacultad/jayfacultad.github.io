@@ -71,11 +71,8 @@ body {
 }
 
 .profile-pic-image {
-    width: 100%;
-    display: inline-block;
-    position: absolute;
+    top: 0;
     right: 0;
-    object-fit: cover;
 }
 
 .scroll-down-container {
@@ -131,6 +128,11 @@ body {
     .block-height {
         height: 1000px;
     }
+    
+    .profile-pic-image {
+        width: 25%;
+        padding: 80px 80px 80px 80px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -178,5 +180,10 @@ body {
     .scroll-down-icon {
         margin-top: -5px;
         width: 30px;
+    }
+    
+    .profile-pic-image {
+        width: 100%
+        padding-top: 30px;
     }
 }
