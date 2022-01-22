@@ -91,6 +91,12 @@ body {
     z-index: 250;
 }
 
+.chevron-down-icon {
+    position:fixed;
+    bottom:5px;
+    left:50%;
+}
+
 .heading {
     color: black;
     font-family: Helvetica, Sans-serif;
