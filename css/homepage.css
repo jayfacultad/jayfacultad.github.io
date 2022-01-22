@@ -50,6 +50,10 @@
     z-index: 250;
 }
 
+.body {
+    margin-top: 0px !important;
+}
+
 .heading {
     color: black;
     font-family: Helvetica, Sans-serif;
@@ -58,6 +62,17 @@
 }
 
 .eyebrow {
+    font-size: 32.5px;
+    font-style: italic;
+}
+
+.title {
+    font-size: 73.125px;
+    font-style: normal;
+}
+
+@media (max-width: 1250px) {
+.eyebrow {
     font-size: 26px;
     font-style: italic;
 }
@@ -65,8 +80,17 @@
 .title {
     font-size: 58.5px;
     font-style: normal;
+}   
 }
 
-.body {
-    margin-top: 0px !important;
+@media (max-width: 480px) {
+.heading {
+    color: black;
+    font-family: Helvetica, Sans-serif;
+    padding-top: 100px;
+    padding-left: 80px;
+}  
 }
+
+
+
