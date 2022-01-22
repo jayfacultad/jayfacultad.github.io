@@ -123,9 +123,6 @@ body {
     .block-height {
         height: 1000px;
     }
-    .about-me-block {
-        background-color: blue;
-    }
 }
 
 @media (max-width: 480px) {
