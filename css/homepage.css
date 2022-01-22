@@ -156,5 +156,22 @@
     }  
 }
 
+.heading-mobile {
+    color: black;
+    font-family: Helvetica, Sans-serif;
+    padding-top: 80px;
+    padding-left: 80px;
+}
+
+.eyebrow-mobile {
+    font-size: 97.5px;
+    font-style: italic;    
+}
+
+.title-mobile {
+    font-size: 175.5px;
+    font-style: normal;
+}
+
 
 
