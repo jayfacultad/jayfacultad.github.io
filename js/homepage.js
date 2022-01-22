@@ -11,5 +11,6 @@ function setDesktopOrMobileView() {
   } 
   
   console.log('height ' + window.screen.height);
+  document.getElementById('height-value').innerHTML = 'height ' + window.screen.height;
   
 }
