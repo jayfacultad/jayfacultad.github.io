@@ -180,7 +180,7 @@ body {
     }
     
     .profile-pic-image {
-        diplay: inline-block;
+        position: fixed;
         width: 100%
         padding-top: 30px;
     }
