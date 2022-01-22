@@ -49,3 +49,8 @@
     position: relative;
     z-index: 250;
 }
+
+.heading {
+    color: black;
+    font-family: Helvetica, Sans-serif;
+}
