@@ -69,6 +69,11 @@ body {
     -webkit-animation-name: fadeInUp-mobile;
 }
 
+.hero-block {
+    max-height: 500px;
+    
+}
+
 .hero-image {
     width: 100%;
     display: inline-block;
