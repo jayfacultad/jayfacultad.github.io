@@ -6,8 +6,7 @@ window.addEventListener('load', (event) => {
 });
 
 function setDesktopOrMobileView() {
-  var width = window.screen.width;
-  if(window.innerWidth <= mobileSize ) {
+  if(window.screen.width <= mobileSize ) {
     document.getElementById("hero-image").src = "/staticresources/newyorkmobile.jpg";
   } 
   
