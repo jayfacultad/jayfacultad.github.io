@@ -72,6 +72,13 @@
 }
 
 @media (max-width: 1250px) {
+    .heading {
+        color: black;
+        font-family: Helvetica, Sans-serif;
+        padding-top: 80px;
+        padding-left: 80px;
+    }  
+    
     .eyebrow {
         font-size: 26px;
         font-style: italic;
@@ -84,12 +91,7 @@
 }
 
 @media (max-width: 768px) {
-    .heading {
-        color: black;
-        font-family: Helvetica, Sans-serif;
-        padding-top: 100px;
-        padding-left: 80px;
-    }  
+      
 }
 
 @media (max-width: 480px) {
