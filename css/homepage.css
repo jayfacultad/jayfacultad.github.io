@@ -42,6 +42,11 @@
     }
 }
 
+body {
+    position: relative;
+    top: -8px !important;
+}
+
 .animated {
     animation-duration: 1.5s;
     animation-fill-mode: both;
@@ -76,11 +81,6 @@
 .intro-block {
     position: relative;
     z-index: 250;
-}
-
-.body {
-    position: relative;
-    top: -8px !important;
 }
 
 .heading {
