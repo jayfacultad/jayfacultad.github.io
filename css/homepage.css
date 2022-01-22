@@ -80,12 +80,12 @@
     }  
     
     .eyebrow {
-        font-size: 26px;
+        font-size: 32.5px;
         font-style: italic;
     }
 
     .title {
-        font-size: 58.5px;
+        font-size: 73.125px;
         font-style: normal;
     }   
 }
@@ -96,11 +96,36 @@
         font-family: Helvetica, Sans-serif;
         padding-top: 80px;
         padding-left: 80px;
-    }        
+    }
+    
+    .eyebrow {
+        font-size: 26px;
+        font-style: italic;
+    }
+
+    .title {
+        font-size: 58.5px;
+        font-style: normal;
+    } 
 }
 
 @media (max-width: 480px) {
+    .heading {
+        color: black;
+        font-family: Helvetica, Sans-serif;
+        padding-top: 80px;
+        padding-left: 80px;
+    }
+    
+    .eyebrow {
+        font-size: 32.5px;
+        font-style: italic;
+    }
 
+    .title {
+        font-size: 73.125px;
+        font-style: normal;
+    }  
 }
 
 
