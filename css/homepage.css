@@ -149,6 +149,8 @@ body {
 }
 
 .heading-mobile {
+    color: black;
+    font-family: Helvetica, Sans-serif;
     padding-top: 60px;
     padding-left: 60px;
     padding-right: 60px;
