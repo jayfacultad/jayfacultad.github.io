@@ -2,7 +2,6 @@
     from {
         transform: translate3d(0,240px,0)
     }
-
     to {
         transform: translate3d(0,0,0);
         opacity: 1
@@ -13,7 +12,6 @@
     from {
         transform: translate3d(0,240px,0)
     }
-
     to {
         transform: translate3d(0,0,0);
         opacity: 1
@@ -124,7 +122,6 @@ body {
         from {
             transform: translate3d(0,720px,0)
         }
-
         to {
             transform: translate3d(0,0,0);
             opacity: 1
@@ -135,7 +132,6 @@ body {
         from {
             transform: translate3d(0,720px,0)
         }
-
         to {
             transform: translate3d(0,0,0);
             opacity: 1
@@ -148,11 +144,7 @@ body {
     }
     
     .hero-image {
-        width: 100%;
-        display: inline-block;
-        position: absolute;
-        left: 0;
-        object-fit: cover;
+        height: 812px;
     }
     
     .eyebrow {
@@ -163,35 +155,11 @@ body {
         font-size: 175.5px;
     }
     
-    .scroll-down {
-        color: #E8E8E8;
-        font-family: Helvetica, Sans-serif;
-        font-size: 36px;
-        position:fixed;
-        bottom:25px;
-        width: 100%;
-        text-align: center;
+    .scroll-down-container {
+        bottom:20px;
     }
 
-    .scroll-down {
-        margin-top: -5px;
+    .scroll-down-icon {
         width: 65px;
-        filter: invert(87%) sepia(0%) saturate(0%) hue-rotate(208deg) brightness(96%) contrast(100%);
     }
-}
-
-.heading-mobile {
-    color: black;
-    font-family: Helvetica, Sans-serif;
-    padding-top: 60px;
-    padding-left: 60px;
-    padding-right: 60px;
-}
-
-.eyebrow-mobile {
-    font-size: 73.125px;  
-}
-
-.title-mobile {
-    font-size: 175.5px;
 }
