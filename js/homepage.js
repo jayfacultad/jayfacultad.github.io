@@ -7,7 +7,7 @@ window.addEventListener('load', (event) => {
 
 function setDesktopOrMobileView() {
   var width = window.innerWidth;
-  if( (window.innerWidth || window.outerWidth) <= mobileSize) {
+  if(window.innerWidth <= mobileSize || window.outerWidth <= mobileSize) {
     console.log('mobile');
     document.getElementById("hero-image").src = "/staticresources/newyorkmobile.jpg";
   } else {
