@@ -120,6 +120,9 @@ body {
     .hero-image {
         height: 1000px;
     }
+    .hero-block {
+        height: 1000px;
+    }
 }
 
 @media (max-width: 480px) {
