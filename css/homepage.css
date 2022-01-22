@@ -119,6 +119,7 @@ body {
     font-size: 54px;
     position:fixed;
     bottom:50px;
+    width: 100%;
     text-align: center;
 }
 
