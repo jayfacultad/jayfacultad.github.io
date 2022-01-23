@@ -1,6 +1,8 @@
 const mobileSize = 480;
 const tabletSize = 768;
 
+var lastScrollTop = 0;
+
 window.addEventListener('load', function() {
   if(window.screen.width <= mobileSize ) {
     document.getElementById("mobile").classList.remove('hide');
@@ -26,5 +28,7 @@ var st = window.pageYOffset;
    } else {
       window.alert('scrolled up');
    }
+
+lastScrollTop = st <= 0 ? 0 : st;
 
 });
