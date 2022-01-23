@@ -44,16 +44,6 @@ body {
     -webkit-animation-name: fadeInUp;
 }
 
-.inView {
-    opacity: 1;
-    transition: opacity 2s;
-}
-
-.outView {
-    opacity: 0;
-    transition: opacity 2s;
-}
-
 .hero-image {
     width: 100%;
     display: inline-block;
