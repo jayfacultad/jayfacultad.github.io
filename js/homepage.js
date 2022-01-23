@@ -11,5 +11,5 @@ window.addEventListener('load', function() {
 
 window.addEventListener('scroll', function(){
     document.getElementById("scroll-down-container").style.opacity = '0';
-    document.getElementById("hero-block").css("opacity", 0);
+    document.getElementById("hero-block").style.opacity = '0';
 });
