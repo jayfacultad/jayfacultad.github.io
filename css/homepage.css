@@ -91,6 +91,19 @@ body {
     filter: invert(87%) sepia(0%) saturate(0%) hue-rotate(208deg) brightness(96%) contrast(100%);
 }
 
+@media (min-width: 1251px) {
+    .block-height {
+        height: 1000px;
+    }
+    
+    .profile-pic-image {
+        height: 800px;
+        float: left;
+        padding: 100px 100px 100px 100px;
+        border-radius: 25px;
+    }
+}
+
 @media (max-width: 1250px) {
     .heading {
         padding-top: 125px;
@@ -103,6 +116,19 @@ body {
 
     .title {
         font-size: 95px;
+    }
+    
+    .block-height {
+        height: 750px;
+    }
+    
+    .profile-pic-image {
+        height: 600px;
+        float: left;
+        padding: 75px 75px 75px 75px;
+        border-radius: 25px;
+        border-collapse: separate; 
+        overflow: hidden;
     }
 }
 
@@ -186,5 +212,8 @@ body {
     .profile-pic-image {
         width: 100%;
         top: 50%;
+        float: left;
+        padding: 0px 0px 0px 0px;
+        border-radius: 0px;
     }
 }
