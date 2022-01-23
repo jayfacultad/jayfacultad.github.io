@@ -44,7 +44,8 @@ body {
     width: 100%;
     display: inline-block;
     position: absolute;
-    left: 0;
+    right: 0;
+    float: right;
     object-fit: cover;
 }
 
