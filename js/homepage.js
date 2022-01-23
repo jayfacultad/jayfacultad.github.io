@@ -23,9 +23,11 @@ var left = viewportOffset.left;
 */
 
    if (this.oldScroll > this.scrollY){
-      window.alert('scrolled up');
+      //scrolled up
+      document.getElementById("hero-block").style.opacity = '1';
    } else {
-      window.alert('scrolled down');
+      //scrolled down
+      document.getElementById("hero-block").style.opacity = '0';
    }
 
    this.oldScroll = this.scrollY;
