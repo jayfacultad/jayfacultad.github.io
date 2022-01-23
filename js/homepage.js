@@ -40,7 +40,9 @@ for (var i = 0; i < elementsArray.length; i++) {
         var distInView = elem.getBoundingClientRect().top - window.innerHeight + 20;
         if (distInView < 0) {
             elem.classList.add("inView");
+            elem.classList.remove("outView");
         } else {
+            elem.classList.add("outView");
             elem.classList.remove("inView");
         }
     }
