@@ -96,6 +96,10 @@ body {
         height: 1000px;
     }
     
+    .about-me-block-height {
+        height: 750px;
+    }
+    
     .profile-pic-image {
         height: 800px;
         float: left;
@@ -118,7 +122,7 @@ body {
         font-size: 95px;
     }
     
-    .block-height {
+    .about-me-block-height {
         height: 750px;
     }
     
@@ -145,16 +149,6 @@ body {
 @media (min-width: 481px) {
     .hero-image {
         height: 1000px;
-    }
-    .block-height {
-        height: 1000px;
-    }
-    
-    .profile-pic-image {
-        height: 800px;
-        float: left;
-        padding: 100px 100px 100px 100px;
-        border-radius: 25px;
     }
 }
 
