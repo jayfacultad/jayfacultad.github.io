@@ -13,3 +13,7 @@ function setDesktopOrMobileView() {
   }
   
 }
+
+window.onscroll = function (e) {  
+  document.getElementById("scroll-down-container").style.opacity = '0';
+} 
