@@ -108,16 +108,6 @@ body {
    
 }
 
-@media (max-width: 768px) {
-    .eyebrow {
-        font-size: 37.5px;
-    }
-
-    .title {
-        font-size: 72.125px;
-    }
-}
-
 @media (min-width: 481px) {
     .hero-image {
         height: 920px;
