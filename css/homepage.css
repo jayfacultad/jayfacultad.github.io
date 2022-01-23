@@ -177,6 +177,23 @@ body {
     .title {
         font-size: 72px;
     }
+
+    .profile-pic-image {
+        width: 100%;
+        float: left;
+        padding: 0px 0px 0px 0px;
+        border-radius: 0px;
+    }
+    
+    .about-me-block {
+        margin: auto;
+        padding: 12px;
+    }
+    
+    .about-me-title {
+        text-align: center;
+        font-size: 48px;
+    }
     
     .scroll-down-container {
         bottom:10px;
@@ -187,16 +204,4 @@ body {
         width: 30px;
     }
     
-    .profile-pic-image {
-        width: 100%;
-        float: left;
-        padding: 0px 0px 0px 0px;
-        border-radius: 0px;
-    }
-    
-    .about-me-title {
-        text-align: center;
-        font-size: 48px;
-        padding-top: 12px;
-    }
 }
