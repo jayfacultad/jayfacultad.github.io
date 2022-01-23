@@ -187,7 +187,8 @@ body {
     
     .about-me-block {
         margin: auto;
-        padding: 12px;
+        padding: 35px;
+        text-align: center;
     }
     
     .about-me-title {
