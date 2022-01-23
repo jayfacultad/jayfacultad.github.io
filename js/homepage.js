@@ -1,19 +1,14 @@
 const mobileSize = 480;
 const tabletSize = 768;
 
-window.addEventListener('load', (event) => {
-  setDesktopOrMobileView();
-});
-
-function setDesktopOrMobileView() {
+window.addEventListener('load', function() {
   if(window.screen.width <= mobileSize ) {
     document.getElementById("mobile").classList.remove('hide');
   } else {
     document.getElementById("desktop").classList.remove('hide');
   }
-  
-}
+});
 
-window.onscroll = function (e) {  
-  document.getElementById("scroll-down-container").style.opacity = '0';
-} 
+window.addEventListener('scroll', function(){
+    document.getElementById("scroll-down-container").style.opacity = '0';
+});
