@@ -23,6 +23,10 @@ body {
     background-color: #202020;
 }
 
+.hide {
+    display: none;
+}
+
 .animated {
     animation-duration: 1.5s;
     animation-fill-mode: both;
