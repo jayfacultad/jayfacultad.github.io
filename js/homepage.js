@@ -33,6 +33,7 @@ var left = viewportOffset.left;
    }
 */
 
+/*
    this.oldScroll = this.scrollY;
 
 for (var i = 0; i < elementsArray.length; i++) {
@@ -46,5 +47,6 @@ for (var i = 0; i < elementsArray.length; i++) {
             elem.classList.remove("inView");
         }
     }
+*/
 
 });
