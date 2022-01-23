@@ -162,6 +162,10 @@ body {
         height: 720px;
     }
     
+    .hero-block {
+        transition: opacity 2s;
+    }
+    
     .hero-image {
         height: 720px;
     }
