@@ -12,4 +12,19 @@ window.addEventListener('load', function() {
 window.addEventListener('scroll', function(){
     document.getElementById("scroll-down-container").style.opacity = '0';
     document.getElementById("hero-block").style.opacity = '0';
+
+/*
+var viewportOffset = el.getBoundingClientRect();
+// these are relative to the viewport
+var top = viewportOffset.top;
+var left = viewportOffset.left;
+*/
+
+var st = window.pageYOffset;
+   if (st > lastScrollTop){
+      window.alert('scrolled down');
+   } else {
+      window.alert('scrolled up');
+   }
+
 });
