@@ -1,9 +1,7 @@
 const mobileSize = 480;
 const tabletSize = 768;
 
-window.addEventListener('load', (event) => {
-  setDesktopOrMobileView();
-});
+setDesktopOrMobileView();
 
 function setDesktopOrMobileView() {
   if(window.screen.width <= mobileSize ) {
