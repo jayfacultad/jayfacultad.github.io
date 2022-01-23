@@ -10,7 +10,7 @@ function setDesktopOrMobileView() {
     document.getElementById("mobile").classList.remove('hide');
     var imgHeight = document.getElementById("profile-pic-image").height;
     window.alert(imgHeight);
-    document.getElementById("profile-pic-block").height = imgHeight;
+    document.getElementById("profile-pic-block").style.height = imgHeight + "px";
   } else {
     document.getElementById("desktop").classList.remove('hide');
   }
