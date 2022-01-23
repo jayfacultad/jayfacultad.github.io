@@ -1,6 +1,7 @@
 const mobileSize = 480;
 const tabletSize = 768;
 
+let elementsArray = document.querySelectorAll(".block");
 var lastScrollTop = 0;
 
 window.addEventListener('load', function() {
@@ -22,6 +23,7 @@ var top = viewportOffset.top;
 var left = viewportOffset.left;
 */
 
+/*
    if (this.oldScroll > this.scrollY){
       //scrolled up
       document.getElementById("hero-block").style.opacity = '1';
@@ -29,7 +31,18 @@ var left = viewportOffset.left;
       //scrolled down
       document.getElementById("hero-block").style.opacity = '0';
    }
+*/
 
    this.oldScroll = this.scrollY;
+
+for (var i = 0; i < elementsArray.length; i++) {
+        var elem = elementsArray[i]
+        var distInView = elem.getBoundingClientRect().top - window.innerHeight + 20;
+        if (distInView < 0) {
+            elem.classList.add("inView");
+        } else {
+            elem.classList.remove("inView");
+        }
+    }
 
 });
