@@ -1,8 +1,8 @@
 const mobileSize = 480;
 const tabletSize = 768;
 
-let elementsArray = document.querySelectorAll(".block");
-var lastScrollTop = 0;
+//let elementsArray = document.querySelectorAll(".block");
+//var lastScrollTop = 0;
 
 window.addEventListener('load', function() {
   if(window.screen.width <= mobileSize ) {
