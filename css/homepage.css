@@ -200,5 +200,6 @@ body {
         text-align: center;
         font-family: Gill Sans, Andale Mono, Helvetica, Sans-serif;
         font-size: 48px;
+        padding-top: 12px;
     }
 }
