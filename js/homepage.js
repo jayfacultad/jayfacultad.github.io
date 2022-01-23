@@ -30,6 +30,4 @@ var left = viewportOffset.left;
 
    this.oldScroll = this.scrollY;
 
-lastScrollTop = st <= 0 ? 0 : st;
-
 });
