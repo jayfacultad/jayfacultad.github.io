@@ -22,12 +22,13 @@ var top = viewportOffset.top;
 var left = viewportOffset.left;
 */
 
-var st = window.pageYOffset;
-   if (st > lastScrollTop){
-      window.alert('scrolled down');
-   } else {
+   if (this.oldScroll > this.scrollY){
       window.alert('scrolled up');
+   } else {
+      window.alert('scrolled down');
    }
+
+   this.oldScroll = this.scrollY;
 
 lastScrollTop = st <= 0 ? 0 : st;
 
