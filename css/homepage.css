@@ -194,4 +194,11 @@ body {
         padding: 0px 0px 0px 0px;
         border-radius: 0px;
     }
+    
+    .about-me-title {
+        color: WhiteSmoke;
+        text-align: center;
+        font-family: Gill Sans, Andale Mono, Helvetica, Sans-serif;
+        font-size: 48px;
+    }
 }
