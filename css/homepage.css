@@ -177,6 +177,10 @@ body {
     .title {
         font-size: 72px;
     }
+    
+    .profile-pic-block {
+        display: block;
+    }
 
     .profile-pic-image {
         width: 100%;
