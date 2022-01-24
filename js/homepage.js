@@ -33,6 +33,10 @@ function fadeOutOnScroll(element) {
   var elementHeight = element.offsetHeight;
   var scrollTop = window.pageYOffset ? window.pageYOffset : document.documentElement.scrollTop;
   
+  console.log('distanceToTop ' + distanceToTop);
+  console.log('elementHeight ' + elementHeight);
+  console.log('scrollTop ' + scrollTop);
+  
   var opacity = 1;
   
   if (scrollTop > distanceToTop) {
