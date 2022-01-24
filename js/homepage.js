@@ -9,7 +9,37 @@ window.addEventListener('load', function() {
   }
 });
 
+/*
 window.addEventListener('scroll', function(){
     document.getElementById("scroll-down-container").style.opacity = '0';
     document.getElementById("hero-block").style.opacity = '0';
 });
+
+var header = document.getElementById('header');
+*/
+
+window.addEventListener('scroll', scrollHandler);
+
+function scrollHandler() {
+  fadeOutOnScroll(document.getElementById("hero-block"));
+}
+
+function fadeOutOnScroll(element) {
+  if (!element) {
+    return;
+  }
+  
+  var distanceToTop = window.pageYOffset + element.getBoundingClientRect().top;
+  var elementHeight = element.offsetHeight;
+  var scrollTop = document.documentElement.scrollTop;
+  
+  var opacity = 1;
+  
+  if (scrollTop > distanceToTop) {
+    opacity = 1 - (scrollTop - distanceToTop) / elementHeight;
+  }
+  
+  if (opacity >= 0) {
+    element.style.opacity = opacity;
+  }
+}
