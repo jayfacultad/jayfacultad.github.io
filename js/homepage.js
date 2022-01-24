@@ -21,7 +21,11 @@ var header = document.getElementById('header');
 window.addEventListener('scroll', scrollHandler);
 
 function scrollHandler() {
-  fadeOutOnScroll(document.getElementById("hero-block"));
+  var elements = document.getElementsByClassName("block");
+  for(var i = 0; i < elements.length; i++) {
+    fadeOutOnScroll(elements[i]);
+  }
+ 
 }
 
 function fadeOutOnScroll(element) {
