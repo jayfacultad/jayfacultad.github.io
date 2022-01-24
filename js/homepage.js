@@ -29,6 +29,13 @@ function fadeOutOnScroll(element) {
     return;
   }
   
+  console.log('--------------------------------------------');
+  
+  console.log('element.getBoundingClientRect().top ' + element.getBoundingClientRect().top);
+  console.log('document.documentElement.scrollTop ' + document.documentElement.scrollTop);
+  
+  console.log('----');
+  
   var distanceToTop = window.pageYOffset + element.getBoundingClientRect().top;
   var elementHeight = element.offsetHeight;
   var scrollTop = window.pageYOffset ? window.pageYOffset : document.documentElement.scrollTop;
@@ -36,6 +43,8 @@ function fadeOutOnScroll(element) {
   console.log('distanceToTop ' + distanceToTop);
   console.log('elementHeight ' + elementHeight);
   console.log('scrollTop ' + scrollTop);
+  
+  console.log('--------------------------------------------');
   
   var opacity = 1;
   
