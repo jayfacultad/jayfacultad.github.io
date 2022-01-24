@@ -88,7 +88,6 @@ body {
     bottom:20px;
     width: 100%;
     text-align: center;
-    transition: opacity 1s;
 }
 
 .scroll-down-content {
@@ -160,10 +159,6 @@ body {
     
     .block-height {
         height: 720px;
-    }
-    
-    .hero-block {
-        transition: opacity 2s;
     }
     
     .hero-image {
