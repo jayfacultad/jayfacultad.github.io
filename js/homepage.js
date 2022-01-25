@@ -33,27 +33,33 @@ function fadeOutOnScroll(element) {
     return;
   }
   
-  console.log('--------------------------------------------');
+  setTimeout(function() {
+      console.log('--------------------------------------------');
+      var distanceToTop = window.pageYOffset + element.getBoundingClientRect().top;
+      var elementHeight = element.offsetHeight;
+      var scrollTop = window.pageYOffset ? window.pageYOffset : document.documentElement.scrollTop;
+    
+      var opacity = 1;
   
-  var distanceToTop = window.pageYOffset + element.getBoundingClientRect().top;
-  var elementHeight = element.offsetHeight;
-  var scrollTop = window.pageYOffset ? window.pageYOffset : document.documentElement.scrollTop;
+      if (scrollTop > distanceToTop) {
+        opacity = 1 - (scrollTop - distanceToTop) / elementHeight;
+      }
+
+      if (opacity >= 0) {
+        element.style.opacity = opacity;
+      }
+    
+    console.log('window.pageYOffset + element.getBoundingClientRect().top');
+    console.log(window.pageYOffset + ' + ' + element.getBoundingClientRect().top);
+    console.log('elementHeight ' + elementHeight);
+    console.log('window.pageYOffset ? window.pageYOffset : document.documentElement.scrollTop');
+    console.log(window.pageYOffset + ' ? ' + window.pageYOffset + ' : ' + document.documentElement.scrollTop);
+
+    console.log('--------------------------------------------');
+    }, 60);
+
   
-  console.log('window.pageYOffset + element.getBoundingClientRect().top');
-  console.log(window.pageYOffset + ' + ' + element.getBoundingClientRect().top);
-  console.log('elementHeight ' + elementHeight);
-  console.log('window.pageYOffset ? window.pageYOffset : document.documentElement.scrollTop');
-  console.log(window.pageYOffset + ' ? ' + window.pageYOffset + ' : ' + document.documentElement.scrollTop);
   
-  console.log('--------------------------------------------');
   
-  var opacity = 1;
-  
-  if (scrollTop > distanceToTop) {
-    opacity = 1 - (scrollTop - distanceToTop) / elementHeight;
-  }
-  
-  if (opacity >= 0) {
-    element.style.opacity = opacity;
-  }
+
 }
