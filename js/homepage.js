@@ -35,15 +35,15 @@ function fadeOutOnScroll(element) {
   
   console.log('--------------------------------------------');
   
+  var distanceToTop = window.pageYOffset + element.getBoundingClientRect().top;
+  var elementHeight = element.offsetHeight;
+  var scrollTop = window.pageYOffset ? window.pageYOffset : document.documentElement.scrollTop;
+  
   console.log('window.pageYOffset + element.getBoundingClientRect().top');
   console.log(window.pageYOffset + ' + ' + element.getBoundingClientRect().top);
   console.log('elementHeight ' + elementHeight);
   console.log('window.pageYOffset ? window.pageYOffset : document.documentElement.scrollTop');
   console.log(window.pageYOffset + ' ? ' + window.pageYOffset + ' : ' + document.documentElement.scrollTop);
-  
-  var distanceToTop = window.pageYOffset + element.getBoundingClientRect().top;
-  var elementHeight = element.offsetHeight;
-  var scrollTop = window.pageYOffset ? window.pageYOffset : document.documentElement.scrollTop;
   
   console.log('--------------------------------------------');
   
