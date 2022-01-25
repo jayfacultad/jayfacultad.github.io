@@ -44,10 +44,7 @@ function fadeOutOnScroll(element) {
   }
 
   if (opacity >= 0) {
-    element.style.opacity = opacity / 2;
-  }
-  if (opacity == 1) {
-    element.style.opacity = 1;
+    element.style.opacity = opacity;
   }
 
 }
