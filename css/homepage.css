@@ -101,7 +101,7 @@ body {
     font-style: normal;
 }
 
-.about-me-title .about-me-text {
+.about-me-title, .about-me-text {
     color: WhiteSmoke;
     font-family: Gill Sans, Andale Mono, Helvetica, Sans-serif;
 }
