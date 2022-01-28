@@ -101,7 +101,7 @@ body {
     font-style: normal;
 }
 
-.about-me-title {
+.about-me-title .about-me-text {
     color: WhiteSmoke;
     font-family: Gill Sans, Andale Mono, Helvetica, Sans-serif;
 }
@@ -176,6 +176,26 @@ body {
     @-webkit-keyframes fadeInUp {
         from {
             transform: translate3d(0,720px,0)
+        }
+        to {
+            transform: translate3d(0,0,0);
+            opacity: 1
+        }
+    }
+    
+    @keyframes fadeInRight {
+        from {
+            transform: translate3d(80px,0,0)
+        }
+        to {
+            transform: translate3d(0,0,0);
+            opacity: 1
+        }
+    }
+
+    @-webkit-keyframes fadeInRight {
+        from {
+            transform: translate3d(80px,0,0)
         }
         to {
             transform: translate3d(0,0,0);
