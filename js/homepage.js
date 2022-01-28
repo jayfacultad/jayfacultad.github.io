@@ -41,6 +41,11 @@ function scrollHandler() {
         aboutMeElement.classList.add('animatedQuick','animatedFadeIn','fadeInRight');
       }
     }
+    else {
+      if(element.classList.contains('animatedFadeIn')) {
+        aboutMeElement.classList.remove('animatedQuick','animatedFadeIn','fadeInRight');
+      }
+    }
   }
   
  
