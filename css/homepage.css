@@ -186,14 +186,18 @@ body {
         width: 100%;
     }
     
-    .about-me-block {
-        height: 360px;
-        margin-top: 35px;
+    .about-me-title-block {
+        position:absolute; 
+        height: 180px; 
+        width:100%;
+        display: table;
         text-align: center;
     }
     
     .about-me-title {
-        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+        text-align:center;
         font-size: 48px;
     }
     
