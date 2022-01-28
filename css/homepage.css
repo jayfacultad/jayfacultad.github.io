@@ -187,7 +187,6 @@ body {
     }
     
     .about-me-title-block {
-        position:absolute; 
         height: 180px; 
         width:100%;
         display: table;
