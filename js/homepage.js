@@ -27,6 +27,10 @@ function scrollHandler() {
   }
   
   var aboutMeElements = [];
+  var aboutMeElementClassNames = ['about-me-title','profile-pic-image','about-me-text'];
+  for(var i = 0; i < document.getElementsByClassName("about-me-title").length; i++) {
+    aboutMeElements.push();
+  }
   aboutMeElements = aboutMeElements.concat(document.getElementsByClassName("about-me-title"));
   aboutMeElements = aboutMeElements.concat(document.getElementsByClassName("profile-pic-image"));
   aboutMeElements = aboutMeElements.concat(document.getElementsByClassName("about-me-text"));
