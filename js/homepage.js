@@ -37,7 +37,9 @@ function scrollHandler() {
 
     // Only executes for visible elements
     if((elemTop >= 0) && (elemBottom <= window.innerHeight)) {
-      aboutMeElement.classList.add('animatedQuick','animatedFadeIn','fadeInRight');
+      if(!element.classList.contains('animatedFadeIn')) {
+        aboutMeElement.classList.add('animatedQuick','animatedFadeIn','fadeInRight');
+      }
     }
   }
   
