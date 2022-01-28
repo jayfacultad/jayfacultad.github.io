@@ -18,13 +18,24 @@
     }
 }
 
-body {
-    margin: 0px 0px 0px 0px !important;
-    background-color: #202020;
+@keyframes fadeInRight {
+    from {
+        transform: translate3d(80px,0,0)
+    }
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
 }
 
-.hide {
-    display: none;
+@-webkit-keyframes fadeInRight {
+    from {
+        transform: translate3d(80px,0,0)
+    }
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
 }
 
 .animated {
@@ -38,10 +49,29 @@ body {
     opacity: 0
 }
 
+.animatedFadeInRight {
+    opacity: 0
+}
+
 .fadeInUp {
     opacity: 0;
     animation-name: fadeInUp;
     -webkit-animation-name: fadeInUp;
+}
+
+.fadeInRight {
+    opacity: 0;
+    animation-name: fadeInRight;
+    -webkit-animation-name: fadeInRight;
+}
+
+body {
+    margin: 0px 0px 0px 0px !important;
+    background-color: #202020;
+}
+
+.hide {
+    display: none;
 }
 
 .hero-image {
