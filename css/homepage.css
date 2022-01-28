@@ -45,11 +45,7 @@
     -webkit-animation-fill-mode: both
 }
 
-.animatedFadeInUp {
-    opacity: 0
-}
-
-.animatedFadeInRight {
+.animatedFadeIn {
     opacity: 0
 }
 
