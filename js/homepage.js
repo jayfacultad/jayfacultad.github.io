@@ -27,9 +27,10 @@ function scrollHandler() {
   }
   
   var aboutMeElements = [];
-  aboutMeElements.concat(document.getElementsByClassName("about-me-title"));
-  aboutMeElements.concat(document.getElementsByClassName("profile-pic-image"));
-  aboutMeElements.concat(document.getElementsByClassName("about-me-text"));
+  aboutMeElements = aboutMeElements.concat(document.getElementsByClassName("about-me-title"));
+  aboutMeElements = aboutMeElements.concat(document.getElementsByClassName("profile-pic-image"));
+  aboutMeElements = aboutMeElements.concat(document.getElementsByClassName("about-me-text"));
+  console.log(aboutMeElements);
   for(var i = 0; i < aboutMeElements.length; i++) {
     var aboutMeElement = aboutMeElements[i].getBoundingClientRect();
     var elemTop = aboutMeElement.top;
