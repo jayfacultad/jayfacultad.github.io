@@ -30,8 +30,6 @@ function scrollHandler() {
   aboutMeElements.concat(document.getElementsByClassName("about-me-title"));
   aboutMeElements.concat(document.getElementsByClassName("profile-pic-image"));
   aboutMeElements.concat(document.getElementsByClassName("about-me-text"));
-  console.log(aboutMeElements[0] instanceof Element);
-  console.log(aboutMeElements[0]);
   for(var i = 0; i < aboutMeElements.length; i++) {
     var aboutMeElement = aboutMeElements[i].getBoundingClientRect();
     var elemTop = aboutMeElement.top;
