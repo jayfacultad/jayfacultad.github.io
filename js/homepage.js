@@ -28,33 +28,37 @@ function scrollHandler() {
   
   var aboutMeElements = [];
   var aboutMeElementClassNames = ['about-me-title','profile-pic-image','about-me-text'];
-  for(var i = 0; i < document.getElementsByClassName("about-me-title").length; i++) {
-    aboutMeElements.push();
+  for(var i = 0; i < document.aboutMeElementClassNames.length; i++) {
+    var aboutMeElementList = document.getElementsByClassName(aboutMeElementClassNames[i]);
+    for(var j=0; j < aboutMeElementList.length; j++) {
+      aboutMeElements.push(aboutMeElementList[j]);
+    }
   }
-  aboutMeElements = aboutMeElements.concat(document.getElementsByClassName("about-me-title"));
-  aboutMeElements = aboutMeElements.concat(document.getElementsByClassName("profile-pic-image"));
-  aboutMeElements = aboutMeElements.concat(document.getElementsByClassName("about-me-text"));
+
   console.log(aboutMeElements);
   for(var i = 0; i < aboutMeElements.length; i++) {
-    var aboutMeElement = aboutMeElements[i].getBoundingClientRect();
-    var elemTop = aboutMeElement.top;
-    var elemBottom = aboutMeElement.bottom;
+    if(aboutMeElements[i]) {
+      var aboutMeElement = aboutMeElements[i].getBoundingClientRect();
+      var elemTop = aboutMeElement.top;
+      var elemBottom = aboutMeElement.bottom;
 
-    // Only executes for visible elements
-    if((elemTop >= 0) && (elemBottom <= window.innerHeight)) {
-      if(!aboutMeElement.classList.contains('animatedFadeIn')) {
-        console.log(aboutMeElement);
-        consoel.log('in view');
-        aboutMeElement.classList.add('animatedQuick','animatedFadeIn','fadeInRight');
+      // Only executes for visible elements
+      if((elemTop >= 0) && (elemBottom <= window.innerHeight)) {
+        if(!aboutMeElement.classList.contains('animatedFadeIn')) {
+          console.log(aboutMeElement);
+          consoel.log('in view');
+          aboutMeElement.classList.add('animatedQuick','animatedFadeIn','fadeInRight');
+        }
+      }
+      else {
+        if(aboutMeElement.classList.contains('animatedFadeIn')) {
+          console.log(aboutMeElement);
+          consoel.log('not in view');
+          aboutMeElement.classList.remove('animatedQuick','animatedFadeIn','fadeInRight');
+        }
       }
     }
-    else {
-      if(aboutMeElement.classList.contains('animatedFadeIn')) {
-        console.log(aboutMeElement);
-        consoel.log('not in view');
-        aboutMeElement.classList.remove('animatedQuick','animatedFadeIn','fadeInRight');
-      }
-    }
+    
   }
   
  
