@@ -25,6 +25,22 @@ function scrollHandler() {
   for(var i = 0; i < elements.length; i++) {
     fadeOutOnScroll(elements[i]);
   }
+  
+  var aboutMeElements = [];
+  aboutMeElements.push(document.getElementsByClassName("about-me-title"));
+  aboutMeElements.push(document.getElementsByClassName("profile-pic-image"));
+  aboutMeElements.push(document.getElementsByClassName("about-me-text"));
+  for(var i = 0; i < aboutMeElements.length; i++) {
+    var aboutMeElement = aboutMeElements[i];
+    var elemTop = aboutMeElement.top;
+    var elemBottom = aboutMeElement.bottom;
+
+    // Only executes for visible elements
+    if((elemTop >= 0) && (elemBottom <= window.innerHeight)) {
+      aboutMeElement.classList.add('animatedQuick','animatedFadeIn','fadeInRight');
+    }
+  }
+  
  
 }
 
