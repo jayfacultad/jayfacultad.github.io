@@ -45,6 +45,13 @@
     -webkit-animation-fill-mode: both
 }
 
+.animatedQuick {
+    animation-duration: 0.75s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 0.75s;
+    -webkit-animation-fill-mode: both
+}
+
 .animatedFadeIn {
     opacity: 0
 }
