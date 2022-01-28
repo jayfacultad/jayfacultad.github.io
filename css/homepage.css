@@ -183,26 +183,6 @@ body {
         }
     }
     
-    @keyframes fadeInRight {
-        from {
-            transform: translate3d(80px,0,0)
-        }
-        to {
-            transform: translate3d(0,0,0);
-            opacity: 1
-        }
-    }
-
-    @-webkit-keyframes fadeInRight {
-        from {
-            transform: translate3d(80px,0,0)
-        }
-        to {
-            transform: translate3d(0,0,0);
-            opacity: 1
-        }
-    }
-    
     .block-height {
         height: 720px;
     }
