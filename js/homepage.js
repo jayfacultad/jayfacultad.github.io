@@ -31,7 +31,7 @@ function scrollHandler() {
   aboutMeElements.push(document.getElementsByClassName("profile-pic-image"));
   aboutMeElements.push(document.getElementsByClassName("about-me-text"));
   for(var i = 0; i < aboutMeElements.length; i++) {
-    var aboutMeElement = aboutMeElements[i];
+    var aboutMeElement = aboutMeElements[i].getBoundingClientRect();
     var elemTop = aboutMeElement.top;
     var elemBottom = aboutMeElement.bottom;
 
