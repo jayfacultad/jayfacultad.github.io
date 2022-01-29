@@ -42,10 +42,16 @@ function scrollHandler() {
       var aboutMeElement = aboutMeElements[i];
       var elemTop = aboutMeElement.getBoundingClientRect().top;
       var elemBottom = aboutMeElement.getBoundingClientRect().bottom;
-      if((elemTop >= 0) && (elemBottom <= window.innerHeight)) {
+      if((elemTop >= 0 && elemBottom <= window.innerHeight) || (elemTop < 0 && elemBottom > 0)) {
         if(!aboutMeElement.classList.contains('animated')) {
           aboutMeElement.classList.remove('hide');
           aboutMeElement.classList.add('animated','animatedFadeIn','fadeInRight');
+        }
+      }
+      if((elemBottom < 0) {
+         if(aboutMeElement.classList.contains('animated')) {
+          aboutMeElement.classList.add('hide');
+          aboutMeElement.classList.remove('animated','animatedFadeIn','fadeInRight');
         }
       }
     }
