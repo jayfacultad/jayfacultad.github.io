@@ -45,8 +45,8 @@ function scrollHandler() {
 
       // Add animation to visible elements and remove hide
       if((elemTop >= 0) && (elemBottom <= window.innerHeight)) {
-        if(!aboutMeElement.classList.contains('animatedFadeIn')) {
-          aboutMeElement.classList.add('animatedQuick','animatedFadeIn','fadeInRight');
+        if(!aboutMeElement.classList.contains('animated')) {
+          aboutMeElement.classList.add('animated','animatedFadeIn','fadeInRight');
           aboutMeElement.classList.remove('hide');
         }
       }
