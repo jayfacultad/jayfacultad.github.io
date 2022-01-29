@@ -209,10 +209,12 @@ body {
     
     .profile-pic-block {
         width: 100%;
+        display: table;
     }
 
     .profile-pic-image {
         width: 100%;
+        display: table-cell;
     }
     
     .about-me-title-block {
