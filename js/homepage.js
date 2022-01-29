@@ -29,18 +29,18 @@ function scrollHandler() {
   var aboutMeElements = [];
   var aboutMeElementClassNames = ['about-me-title','profile-pic-image','about-me-text'];
   for(var i = 0; i < aboutMeElementClassNames.length; i++) {
-    var aboutMeElementList = document.getElementsByClassName(aboutMeElementClassNames[i]);
-    for(var j=0; j < aboutMeElementList.length; j++) {
-      aboutMeElements.push(aboutMeElementList[j]);
+    var aboutMeElementsFromClasses = document.getElementsByClassName(aboutMeElementClassNames[i]);
+    for(var j=0; j < aboutMeElementsFromClasses.length; j++) {
+      aboutMeElements.push(aboutMeElementsFromClasses[j]);
     }
   }
 
   console.log(aboutMeElements);
   for(var i = 0; i < aboutMeElements.length; i++) {
     if(aboutMeElements[i]) {
-      var aboutMeElement = aboutMeElements[i].getBoundingClientRect();
-      var elemTop = aboutMeElement.top;
-      var elemBottom = aboutMeElement.bottom;
+      var aboutMeElement = aboutMeElements[i];
+      var elemTop = aboutMeElement.getBoundingClientRect().top;
+      var elemBottom = aboutMeElement.getBoundingClientRect().bottom;
 
       // Only executes for visible elements
       if((elemTop >= 0) && (elemBottom <= window.innerHeight)) {
