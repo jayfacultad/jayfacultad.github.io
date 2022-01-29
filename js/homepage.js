@@ -35,14 +35,15 @@ function scrollHandler() {
     }
   }
 
-  console.log(aboutMeElements);
+
   for(var i = 0; i < aboutMeElements.length; i++) {
     if(aboutMeElements[i]) {
+      // Check if elment is in view
       var aboutMeElement = aboutMeElements[i];
       var elemTop = aboutMeElement.getBoundingClientRect().top;
       var elemBottom = aboutMeElement.getBoundingClientRect().bottom;
 
-      // Only executes for visible elements
+      // Add animation to visible elements and remove hide
       if((elemTop >= 0) && (elemBottom <= window.innerHeight)) {
         if(!aboutMeElement.classList.contains('animatedFadeIn')) {
           aboutMeElement.classList.add('animatedQuick','animatedFadeIn','fadeInRight');
@@ -51,6 +52,7 @@ function scrollHandler() {
           }
         }
       }
+      // Remove animation from invisible elements and add hide
       else {
         if(aboutMeElement.classList.contains('animatedFadeIn')) {
           aboutMeElement.classList.remove('animatedQuick','animatedFadeIn','fadeInRight');
