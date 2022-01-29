@@ -48,6 +48,7 @@ function scrollHandler() {
           aboutMeElement.classList.add('animated','animatedFadeIn','fadeInRight');
         }
       }
+      // Remove animation if element is out of view
       if((elemBottom < 0) {
          if(aboutMeElement.classList.contains('animated')) {
           aboutMeElement.classList.add('hide');
