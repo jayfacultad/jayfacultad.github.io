@@ -42,7 +42,7 @@ function scrollHandler() {
       var aboutMeElement = aboutMeElements[i];
       var elemTop = aboutMeElement.getBoundingClientRect().top;
       var elemBottom = aboutMeElement.getBoundingClientRect().bottom;
-      if((elemTop >= 0 && elemBottom <= window.innerHeight)) {
+      if((elemTop >= 0 && elemBottom <= window.innerHeight * 1.5)) {
         if(!aboutMeElement.classList.contains('animated')) {
           aboutMeElement.classList.remove('hide');
           aboutMeElement.classList.add('animated','animatedFadeIn','fadeInRight');
