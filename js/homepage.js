@@ -47,24 +47,15 @@ function scrollHandler() {
       if((elemTop >= 0) && (elemBottom <= window.innerHeight)) {
         if(!aboutMeElement.classList.contains('animatedFadeIn')) {
           aboutMeElement.classList.add('animatedQuick','animatedFadeIn','fadeInRight');
-          if(aboutMeElement.classList.contains('hide')) {
-            aboutMeElement.classList.remove('hide');
-          }
+          aboutMeElement.classList.remove('hide');
         }
       }
-      // Remove animation from invisible elements and add hide
+      // Remove animation from invisible elements
       else {
-        if(aboutMeElement.classList.contains('animatedFadeIn')) {
-          aboutMeElement.classList.remove('animatedQuick','animatedFadeIn','fadeInRight');
-          if(!aboutMeElement.classList.contains('hide')) {
-            aboutMeElement.classList.add('hide');
-          }
-        }
+        aboutMeElement.classList.remove('animatedQuick','animatedFadeIn','fadeInRight');
       }
     }
-    
   }
-  
  
 }
 
