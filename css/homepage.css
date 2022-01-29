@@ -223,6 +223,15 @@ body {
     }
     
     .about-me-title {
+        margin: 20px;
+        border-radius: 25px;
+        border-width: 2px;
+        border-style: solid;
+        padding: 20px;
+        background-color: WhiteSmoke;
+        color: black;
+        font-family: font-family: Helvetica, Sans-serif;
+        
         display: table-cell;
         vertical-align: middle;
         text-align:center;
