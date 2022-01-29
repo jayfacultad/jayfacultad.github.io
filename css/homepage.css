@@ -215,6 +215,7 @@ body {
     .profile-pic-image {
         width: 100%;
         display: table-cell;
+        opacity: 0;
     }
     
     .about-me-title-block {
