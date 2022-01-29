@@ -44,12 +44,20 @@ function scrollHandler() {
       var elemBottom = aboutMeElement.getBoundingClientRect().bottom;
 
       // Add animation to visible elements and remove hide
-      if((elemTop >= 0) && (elemBottom <= window.innerHeight)) {
+      // if((elemTop >= window.innerHeight / 2) && (elemBottom <= window.innerHeight)) {
+      if(elemTop == window.innerHeight / 2) {
         if(!aboutMeElement.classList.contains('animated')) {
           aboutMeElement.classList.add('animated','animatedFadeIn','fadeInRight');
           aboutMeElement.classList.remove('hide');
         }
       }
+      /*
+      if(elemBottom == window.innerHeight / 2) {
+        if(aboutMeElement.classList.contains('animated')) {
+          aboutMeElement.classList.remove('animated','animatedFadeIn','fadeInRight');
+        }
+      }
+      */
     }
   }
  
