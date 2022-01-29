@@ -45,15 +45,11 @@ function scrollHandler() {
       // Only executes for visible elements
       if((elemTop >= 0) && (elemBottom <= window.innerHeight)) {
         if(!aboutMeElement.classList.contains('animatedFadeIn')) {
-          console.log(aboutMeElement);
-          consoel.log('in view');
           aboutMeElement.classList.add('animatedQuick','animatedFadeIn','fadeInRight');
         }
       }
       else {
         if(aboutMeElement.classList.contains('animatedFadeIn')) {
-          console.log(aboutMeElement);
-          consoel.log('not in view');
           aboutMeElement.classList.remove('animatedQuick','animatedFadeIn','fadeInRight');
         }
       }
