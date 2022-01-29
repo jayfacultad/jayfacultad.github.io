@@ -46,6 +46,9 @@ function scrollHandler() {
         if(!aboutMeElement.classList.contains('animated')) {
           aboutMeElement.classList.remove('hide');
           aboutMeElement.classList.add('animated','animatedFadeIn','fadeInRight');
+          if(aboutMeElement.style.opacity != 1) {
+            aboutMeElement.style.opacity = 1;
+          }
         }
       }
     }
