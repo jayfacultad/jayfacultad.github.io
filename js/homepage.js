@@ -38,24 +38,16 @@ function scrollHandler() {
 
   for(var i = 0; i < aboutMeElements.length; i++) {
     if(aboutMeElements[i]) {
-      // Check if elment is in view
+      // Check if elment is in view. Add animation if so.
       var aboutMeElement = aboutMeElements[i];
       var elemTop = aboutMeElement.getBoundingClientRect().top;
       var elemBottom = aboutMeElement.getBoundingClientRect().bottom;
-
       if((elemTop >= 0) && (elemBottom <= window.innerHeight)) {
         if(!aboutMeElement.classList.contains('animated')) {
           aboutMeElement.classList.remove('hide');
           aboutMeElement.classList.add('animated','animatedFadeIn','fadeInRight');
         }
       }
-      /*
-      if(elemBottom == window.innerHeight / 2) {
-        if(aboutMeElement.classList.contains('animated')) {
-          aboutMeElement.classList.remove('animated','animatedFadeIn','fadeInRight');
-        }
-      }
-      */
     }
   }
  
