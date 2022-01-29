@@ -50,10 +50,6 @@ function scrollHandler() {
           aboutMeElement.classList.remove('hide');
         }
       }
-      // Remove animation from invisible elements
-      else {
-        aboutMeElement.classList.remove('animatedQuick','animatedFadeIn','fadeInRight');
-      }
     }
   }
  
