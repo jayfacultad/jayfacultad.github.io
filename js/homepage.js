@@ -21,11 +21,6 @@ var header = document.getElementById('header');
 window.addEventListener('scroll', scrollHandler);
 
 function scrollHandler() {
-  var aboutMeText = document.getElementsByClassName("about-me-text");
-  console.log('Top: ' + aboutMeText[0].getBoundingClientRect().top);
-  console.log('Bottom: ' + aboutMeText[0].getBoundingClientRect().bottom);
-  
-  
   var elements = document.getElementsByClassName("block");
   for(var i = 0; i < elements.length; i++) {
     fadeOutOnScroll(elements[i]);
@@ -47,7 +42,7 @@ function scrollHandler() {
       var aboutMeElement = aboutMeElements[i];
       var elemTop = aboutMeElement.getBoundingClientRect().top;
       var elemBottom = aboutMeElement.getBoundingClientRect().bottom;
-      if((elemTop >= 0 && elemBottom <= window.innerHeight) || (elemTop < 0 && elemBottom > 0)) {
+      if((elemTop >= 0 && elemBottom <= window.innerHeight)) {
         if(!aboutMeElement.classList.contains('animated')) {
           aboutMeElement.classList.remove('hide');
           aboutMeElement.classList.add('animated','animatedFadeIn','fadeInRight');
