@@ -27,7 +27,7 @@ function scrollHandler() {
   }
   
   var aboutMeElements = [];
-  var aboutMeElementClassNames = ['about-me-title','profile-pic-image','about-me-text'];
+  var aboutMeElementClassNames = ['about-me-title','about-me-text'];
   for(var i = 0; i < aboutMeElementClassNames.length; i++) {
     var aboutMeElementsFromClasses = document.getElementsByClassName(aboutMeElementClassNames[i]);
     for(var j=0; j < aboutMeElementsFromClasses.length; j++) {
