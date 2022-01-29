@@ -49,11 +49,11 @@ function scrollHandler() {
         }
       }
       // Remove animation if element is out of view
-      if((elemBottom < 0) {
+      if(elemBottom < 0) {
          if(aboutMeElement.classList.contains('animated')) {
           aboutMeElement.classList.add('hide');
           aboutMeElement.classList.remove('animated','animatedFadeIn','fadeInRight');
-        }
+         }
       }
     }
   }
