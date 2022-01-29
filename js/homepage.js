@@ -21,6 +21,11 @@ var header = document.getElementById('header');
 window.addEventListener('scroll', scrollHandler);
 
 function scrollHandler() {
+  var aboutMeText = document.getElementsByClassName("about-me-text");
+  console.log('Top: ' + aboutMeText[0].getBoundingClientRect().top);
+  console.log('Bottom: ' + aboutMeText[0].getBoundingClientRect().bottom);
+  
+  
   var elements = document.getElementsByClassName("block");
   for(var i = 0; i < elements.length; i++) {
     fadeOutOnScroll(elements[i]);
