@@ -28,7 +28,7 @@ function scrollHandler() {
   
   var aboutMeElements = [];
   var aboutMeElementClassNames = ['about-me-title','profile-pic-image','about-me-text'];
-  for(var i = 0; i < document.aboutMeElementClassNames.length; i++) {
+  for(var i = 0; i < aboutMeElementClassNames.length; i++) {
     var aboutMeElementList = document.getElementsByClassName(aboutMeElementClassNames[i]);
     for(var j=0; j < aboutMeElementList.length; j++) {
       aboutMeElements.push(aboutMeElementList[j]);
