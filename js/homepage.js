@@ -43,12 +43,10 @@ function scrollHandler() {
       var elemTop = aboutMeElement.getBoundingClientRect().top;
       var elemBottom = aboutMeElement.getBoundingClientRect().bottom;
 
-      // Add animation to visible elements and remove hide
-      // if((elemTop >= window.innerHeight / 2) && (elemBottom <= window.innerHeight)) {
-      if(elemTop == window.innerHeight / 2) {
+      if((elemTop >= 0) && (elemBottom <= window.innerHeight)) {
         if(!aboutMeElement.classList.contains('animated')) {
-          aboutMeElement.classList.add('animated','animatedFadeIn','fadeInRight');
           aboutMeElement.classList.remove('hide');
+          aboutMeElement.classList.add('animated','animatedFadeIn','fadeInRight');
         }
       }
       /*
