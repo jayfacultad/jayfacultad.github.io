@@ -73,10 +73,6 @@ body {
     background-color: #202020;
 }
 
-.hide {
-    display: none;
-}
-
 .hero-image {
     width: 100%;
     display: inline-block;
@@ -242,4 +238,8 @@ body {
         width: 30px;
     }
     
+}
+
+.hide {
+    display: none;
 }
