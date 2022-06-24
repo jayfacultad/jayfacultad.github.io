@@ -96,6 +96,12 @@
     color: white;
 }
 
+.salesforce-icon {
+    background: url('https://cdn-icons-png.flaticon.com/512/873/873194.png');
+    fill: #00a1df;
+    color: white;
+}
+
 ul.no-bullets {
   list-style-type: none; /* Remove bullets */
   padding: 0; /* Remove padding */
