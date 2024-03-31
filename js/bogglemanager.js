@@ -9,7 +9,7 @@ let touchStartY = 0;
 let previouslySwipedTile = '';
 let wordFromSwipe = '';
 
-console.log("start10");
+console.log("start12");
 
 function startup() {
   const board = document.getElementById("board");
@@ -60,15 +60,21 @@ function handleTouchMove(event) {
             //selectedTile.setAttribute("visited", true);
 
             let currentSwipedTile = div.id.replace('tile-','');
-            let currentSwipedTileRow = Number(currentSwipedTile.substring(1,2));
-            let currentSwipedTileCol = Number(currentSwipedTile.substring(3));
+            let currentSwipedTileRow = Number(currentSwipedTile[1]);
+            let currentSwipedTileCol = Number(currentSwipedTile[3]);
 
             console.log('currentSwipedTile: ' + currentSwipedTile);
             console.log('previouslySwipedTile: ' + previouslySwipedTile);
+            console.log('------------------------------');
 
             if(previouslySwipedTile && !selectedTile.getAttribute('visited')){
-                let previouslySwipedTileRow = Number(previouslySwipedTile.substring(1,2));
-                let previouslySwipedTileCol = Number(previouslySwipedTile.substring(3));
+                let previouslySwipedTileRow = Number(previouslySwipedTile[1]);
+                let previouslySwipedTileCol = Number(previouslySwipedTile[3]));
+
+                console.log('currentSwipedTileRow: ' + currentSwipedTileRow);
+                console.log('currentSwipedTileCol: ' + currentSwipedTileCol);
+                console.log('previouslySwipedTileRow: ' + previouslySwipedTileRow);
+                console.log('previouslySwipedTileCol: ' + previouslySwipedTileCol);
                 
                 if((currentSwipedTileRow + 1 == previouslySwipedTileRow || currentSwipedTileRow - 1 == previouslySwipedTileRow) 
                    && (currentSwipedTileCol + 1 == previouslySwipedTileCol || currentSwipedTileCol - 1 == previouslySwipedTileCol)) {
