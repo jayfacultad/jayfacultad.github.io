@@ -3,7 +3,7 @@ var word_score;
 var score_total = 0;
 var username_send;
 
-console.log("start2");
+console.log("start3");
 
 // Add touch event listeners to all divs with class "swipe-div"
 const swipeDivs = document.querySelectorAll('.swipe-div');
