@@ -35,6 +35,12 @@ function handleTouchMove(event) {
             touchMoveY <= rect.bottom
         ) {
             console.log(`Swiped on div with id: ${div.id}`);
+            var selectedTile = document.getElementById(div.id);
+
+            // Css styling
+            selectedTile.style.background-color = "orange";
+            selectedTile.style.color = "white";
+
         }
     });
 }
@@ -96,7 +102,14 @@ document.getElementById("submit-button").addEventListener("click", function() {
         // Clear input field
         document.getElementById("word-entry").value = "";
         // Display user's inputted words in word table
-        document.getElementById("answer_cell").innerHTML = user_inputs.join("");            
+        document.getElementById("answer_cell").innerHTML = user_inputs.join("");
+
+        // Reset Tile Colors
+        const swipeDivs = document.querySelectorAll('.swipe-div');
+        swipeDivs.forEach(div => {
+            div.background-color = "gainsboro";
+            div.color = "black";
+        });
     }
 });
 
