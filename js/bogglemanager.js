@@ -9,7 +9,7 @@ let touchStartY = 0;
 let previouslySwipedTile = '';
 let wordFromSwipe = '';
 
-console.log("start5");
+console.log("start6");
 
 function startup() {
   const board = document.getElementById("board");
@@ -29,8 +29,6 @@ swipeDivs.forEach(div => {
     div.addEventListener('touchstart', handleTouchStart);
     div.addEventListener('touchmove', handleTouchMove);
 });
-
-
 
 // Function to handle touch start event
 function handleTouchStart(event) {
