@@ -3,7 +3,25 @@ var word_score;
 var score_total = 0;
 var username_send;
 
+// Variables to track touch start position
+let touchStartX = 0;
+let touchStartY = 0;
+let previouslySwipedTile = '';
+let wordFromSwipe = '';
+
 console.log("start5");
+
+function startup() {
+  const board = document.getElementById("board");
+  board.addEventListener("touchend", handleTouchEnd);
+  board.addEventListener("touchcancel", handleTouchEnd);
+}
+
+document.addEventListener("DOMContentLoaded", startup);
+
+function handleTouchEnd(evt) {
+    document.getElementById("submit-button").click();
+}
 
 // Add touch event listeners to all divs with class "swipe-div"
 const swipeDivs = document.querySelectorAll('.swipe-div');
@@ -12,11 +30,7 @@ swipeDivs.forEach(div => {
     div.addEventListener('touchmove', handleTouchMove);
 });
 
-// Variables to track touch start position
-let touchStartX = 0;
-let touchStartY = 0;
-let previouslySwipedTile = '';
-let wordFromSwipe = '';
+
 
 // Function to handle touch start event
 function handleTouchStart(event) {
@@ -60,6 +74,7 @@ function handleTouchMove(event) {
                     selectedTile.style.color = "white";
                     selectedTile.setAttribute("visited", true);
                     wordFromSwipe += document.getElementById(div.id).replace('tile-','').innerHTML;
+                    document.getElementById("word-entry").value = wordFromSwipe;
                 }
             } else {
                 selectedTile.style.background = "orange";
@@ -67,6 +82,7 @@ function handleTouchMove(event) {
                 selectedTile.setAttribute("visited", true);
                 previouslySwipedTile = currentSwipedTile;
                 wordFromSwipe += document.getElementById(div.id).replace('tile-','').innerHTML;
+                document.getElementById("word-entry").value = wordFromSwipe;
             }
 
             console.log(wordFromSwipe);
@@ -96,7 +112,7 @@ function addClickedLetter(tile) {
     var initial_subword = document.getElementById("word-entry").value;
     var new_subword = initial_subword + document.getElementById(clickedItem).innerHTML;
     document.getElementById("word-entry").value = new_subword;
-    document.getElementById("word-entry").focus();
+    //document.getElementById("word-entry").focus();
 }
 
 
@@ -105,7 +121,6 @@ document.getElementById("submit-button").addEventListener("click", function() {
 
         var input_value = document.getElementById("word-entry").value;
         input_value = input_value.toUpperCase();
-
 
         var display_text;
 
