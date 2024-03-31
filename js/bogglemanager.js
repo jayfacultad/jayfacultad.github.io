@@ -79,7 +79,7 @@ function handleTouchMove(event) {
                     wordFromSwipe += document.getElementById(div.id.replace('tile-','')).innerHTML;
                     document.getElementById("word-entry").value = wordFromSwipe;
                 }
-            } else {
+            } else if(wordFromSwipe == '')  {
                 selectedTile.style.background = "orange";
                 selectedTile.style.color = "white";
                 selectedTile.setAttribute("visited", true);
