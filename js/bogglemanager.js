@@ -111,8 +111,8 @@ document.getElementById("submit-button").addEventListener("click", function() {
         // Reset Tile Colors
         const swipeDivs = document.querySelectorAll('.swipe-div');
         swipeDivs.forEach(div => {
-            div.background-color = "gainsboro";
-            div.color = "black";
+            div.style.background-color = "gainsboro";
+            div.style.color = "black";
         });
     }
 });
