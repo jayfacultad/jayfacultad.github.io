@@ -3,7 +3,7 @@ var word_score;
 var score_total = 0;
 var username_send;
 
-console.log("start3");
+console.log("start4");
 
 // Add touch event listeners to all divs with class "swipe-div"
 const swipeDivs = document.querySelectorAll('.swipe-div');
@@ -50,8 +50,8 @@ function handleTouchMove(event) {
             //selectedTile.setAttribute("visited", true);
 
             let currentSwipedTile = div.id.replace('tile-','');
-            let currentSwipedTileRow = Number(currentSwipedTile.substring(1,3));
-            let currentSwipedTileCol = Number(currentSwipedTile.substring(4));
+            let currentSwipedTileRow = Number(currentSwipedTile.substring(1,2));
+            let currentSwipedTileCol = Number(currentSwipedTile.substring(3));
 
             if(previouslySwipedTile && !selectedTile.visited){
                 let previouslySwipedTileRow = Number(previouslySwipedTile.substring(1,3));
