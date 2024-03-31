@@ -11,6 +11,8 @@ var answers_array = new Array();
 create_dictionary();
 
 document.getElementById("start-button").addEventListener("click", function() {
+
+    console.log("click");
     
     if (startGame == false) {
         score_total = 0;
