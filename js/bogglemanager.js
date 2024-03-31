@@ -3,6 +3,43 @@ var word_score;
 var score_total = 0;
 var username_send;
 
+// Add touch event listeners to all divs with class "swipe-div"
+const swipeDivs = document.querySelectorAll('.swipe-div');
+swipeDivs.forEach(div => {
+    div.addEventListener('touchstart', handleTouchStart);
+    div.addEventListener('touchmove', handleTouchMove);
+});
+
+// Variables to track touch start position
+let touchStartX = 0;
+let touchStartY = 0;
+
+// Function to handle touch start event
+function handleTouchStart(event) {
+    touchStartX = event.touches[0].clientX;
+    touchStartY = event.touches[0].clientY;
+}
+
+// Function to handle touch move event
+function handleTouchMove(event) {
+    const touchMoveX = event.touches[0].clientX;
+    const touchMoveY = event.touches[0].clientY;
+
+    // Check if the touch move event occurs within the div
+    swipeDivs.forEach(div => {
+        const rect = div.getBoundingClientRect();
+        if (
+            touchMoveX >= rect.left &&
+            touchMoveX <= rect.right &&
+            touchMoveY >= rect.top &&
+            touchMoveY <= rect.bottom
+        ) {
+            console.log(`Swiped on div with id: ${div.id}`);
+        }
+    });
+}
+
+
 document.getElementById("word-entry").addEventListener("keyup", function(event) {
   // Number 13 is the "Enter" key on the keyboard
   if (event.keyCode == 13) {
