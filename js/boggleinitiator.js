@@ -118,7 +118,14 @@ function start_timer() {
                     answer_set.add(answers_array[i]);
                 } 
                 var new_answer_array = Array.from(answer_set);
-                document.getElementById("score_cell").innerHTML = '<div style="text-align:left">' + new_answer_array.join("") + '</div>'; 
+                document.getElementById("score_cell").innerHTML = '<div style="text-align:left">' + new_answer_array.join("") + '</div>';
+
+                // Reset Tile Colors
+                const tiles = document.querySelectorAll('.tile');
+                tiles.forEach(div => {
+                    div.style.background = "gainsboro";
+                    div.style.color = "black";
+                });
             }
         }
         update_clock(); // run function once at first to avoid delay
