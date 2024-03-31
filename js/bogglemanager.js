@@ -15,6 +15,8 @@ swipeDivs.forEach(div => {
 // Variables to track touch start position
 let touchStartX = 0;
 let touchStartY = 0;
+let previouslySwipedTile = '';
+let wordFromSwipe = '';
 
 // Function to handle touch start event
 function handleTouchStart(event) {
@@ -43,9 +45,27 @@ function handleTouchMove(event) {
             console.log(selectedTile.style.background);
 
             // Css styling
-            selectedTile.style.background = "orange";
-            selectedTile.style.color = "white";
+            //selectedTile.style.background = "orange";
+            //selectedTile.style.color = "white";
+            //selectedTile.setAttribute("visited", true);
 
+            let currentSwipedTile = div.id.replace('tile-','');
+            let currentSwipedTileRow = Number(currentSwipedTile.substring(1,3));
+            let currentSwipedTileCol = Number(currentSwipedTile.substring(4));
+
+            if(previouslySwipedTile && !selectedTile.visited){
+                let previouslySwipedTileRow = Number(previouslySwipedTile.substring(1,3));
+                let previouslySwipedTileCol = Number(previouslySwipedTile.substring(4));
+                
+                if((currentSwipedTileRow + 1 == previouslySwipedTileRow || currentSwipedTileRow - 1 == previouslySwipedTileRow) 
+                   && (currentSwipedTileCol + 1 == previouslySwipedTileCol || currentSwipedTileCol - 1 == previouslySwipedTileCol)) {
+                    selectedTile.style.background = "orange";
+                    selectedTile.style.color = "white";
+                    selectedTile.setAttribute("visited", true);
+                }
+            }
+        
+            previouslySwipedTile = currentSwipedTile;
         }
     });
 }
