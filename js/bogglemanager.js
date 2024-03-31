@@ -9,7 +9,7 @@ let touchStartY = 0;
 let previouslySwipedTile = '';
 let wordFromSwipe = '';
 
-console.log("start6");
+console.log("start7");
 
 function startup() {
   const board = document.getElementById("board");
@@ -28,6 +28,7 @@ const swipeDivs = document.querySelectorAll('.swipe-div');
 swipeDivs.forEach(div => {
     div.addEventListener('touchstart', handleTouchStart);
     div.addEventListener('touchmove', handleTouchMove);
+    div.setAttribute("visited", false);
 });
 
 // Function to handle touch start event
@@ -61,6 +62,9 @@ function handleTouchMove(event) {
             let currentSwipedTile = div.id.replace('tile-','');
             let currentSwipedTileRow = Number(currentSwipedTile.substring(1,2));
             let currentSwipedTileCol = Number(currentSwipedTile.substring(3));
+
+            console.log('currentSwipedTile: ' + currentSwipedTile);
+            console.log('previouslySwipedTile: ' + previouslySwipedTile);
 
             if(previouslySwipedTile && !selectedTile.visited){
                 let previouslySwipedTileRow = Number(previouslySwipedTile.substring(1,3));
@@ -157,6 +161,10 @@ document.getElementById("submit-button").addEventListener("click", function() {
         // Reset word obtained from swipe
         wordFromSwipe = '';
         previouslySwipedTile = '';
+        let divsForSwipe = document.querySelectorAll('.swipe-div');
+        divsForSwipe.forEach(div => {
+            div.setAttribute("visited", false);
+        });
     }
 });
 
