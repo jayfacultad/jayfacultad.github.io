@@ -42,7 +42,7 @@ function handleTouchMove(event) {
             console.log(selectedTile.style.background-color);
 
             // Css styling
-            selectedTile.style.background-color = "orange";
+            selectedTile.style.background = "orange";
             selectedTile.style.color = "white";
 
         }
@@ -111,7 +111,7 @@ document.getElementById("submit-button").addEventListener("click", function() {
         // Reset Tile Colors
         const swipeDivs = document.querySelectorAll('.swipe-div');
         swipeDivs.forEach(div => {
-            div.style.background-color = "gainsboro";
+            div.style.background = "gainsboro";
             div.style.color = "black";
         });
     }
