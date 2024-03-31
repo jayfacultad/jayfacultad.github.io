@@ -75,6 +75,7 @@ function handleTouchMove(event) {
                     selectedTile.style.background = "orange";
                     selectedTile.style.color = "white";
                     selectedTile.setAttribute("visited", true);
+                    previouslySwipedTile = currentSwipedTile;
                     wordFromSwipe += document.getElementById(div.id.replace('tile-','')).innerHTML;
                     document.getElementById("word-entry").value = wordFromSwipe;
                 }
