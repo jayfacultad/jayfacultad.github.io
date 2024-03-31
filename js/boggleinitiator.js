@@ -39,6 +39,13 @@ document.getElementById("start-button").addEventListener("click", function() {
         document.getElementById("start-button").innerHTML = "Start Game";
         document.getElementById("submit-button").style.background = "lightgray";
         user_inputs.length = 0;
+
+        // Reset Tile Colors
+        const tiles = document.querySelectorAll('.tile');
+        tiles.forEach(div => {
+            div.style.background = "gainsboro";
+            div.style.color = "black";
+        });
     }
 });
 
