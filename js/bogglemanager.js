@@ -3,7 +3,7 @@ var word_score;
 var score_total = 0;
 var username_send;
 
-console.log("start4");
+console.log("start5");
 
 // Add touch event listeners to all divs with class "swipe-div"
 const swipeDivs = document.querySelectorAll('.swipe-div');
@@ -63,9 +63,13 @@ function handleTouchMove(event) {
                     selectedTile.style.color = "white";
                     selectedTile.setAttribute("visited", true);
                 }
+            } else {
+                selectedTile.style.background = "orange";
+                selectedTile.style.color = "white";
+                selectedTile.setAttribute("visited", true);
+                previouslySwipedTile = currentSwipedTile;
             }
-        
-            previouslySwipedTile = currentSwipedTile;
+            
         }
     });
 }
