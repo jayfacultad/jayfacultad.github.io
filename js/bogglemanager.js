@@ -37,6 +37,8 @@ function handleTouchMove(event) {
             console.log(`Swiped on div with id: ${div.id}`);
             var selectedTile = document.getElementById(div.id);
 
+            console.log(selectedTile.style.background-color);
+
             // Css styling
             selectedTile.style.background-color = "orange";
             selectedTile.style.color = "white";
