@@ -3,7 +3,7 @@ var word_score;
 var score_total = 0;
 var username_send;
 
-console.log("start");
+console.log("start1");
 
 // Add touch event listeners to all divs with class "swipe-div"
 const swipeDivs = document.querySelectorAll('.swipe-div');
@@ -37,9 +37,10 @@ function handleTouchMove(event) {
             touchMoveY <= rect.bottom
         ) {
             console.log(`Swiped on div with id: ${div.id}`);
+            consol.log(div.id);
             var selectedTile = document.getElementById(div.id);
 
-            console.log(selectedTile.style.background-color);
+            console.log(selectedTile.style.background);
 
             // Css styling
             selectedTile.style.background = "orange";
