@@ -39,10 +39,7 @@ function handleTouchMove(event) {
             touchMoveY <= rect.bottom
         ) {
             console.log(`Swiped on div with id: ${div.id}`);
-            console.log(div.id);
             var selectedTile = document.getElementById(div.id);
-
-            console.log(selectedTile.style.background);
 
             // Css styling
             //selectedTile.style.background = "orange";
@@ -71,6 +68,8 @@ function handleTouchMove(event) {
                 previouslySwipedTile = currentSwipedTile;
                 wordFromSwipe += document.getElementById(div.id).replace('tile-','').innerHTML;
             }
+
+            console.log(wordFromSwipe);
             
         }
     });
