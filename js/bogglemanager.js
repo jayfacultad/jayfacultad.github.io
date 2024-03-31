@@ -9,7 +9,7 @@ let touchStartY = 0;
 let previouslySwipedTile = '';
 let wordFromSwipe = '';
 
-console.log("start7");
+console.log("start8");
 
 function startup() {
   const board = document.getElementById("board");
@@ -66,7 +66,7 @@ function handleTouchMove(event) {
             console.log('currentSwipedTile: ' + currentSwipedTile);
             console.log('previouslySwipedTile: ' + previouslySwipedTile);
 
-            if(previouslySwipedTile && !selectedTile.visited){
+            if(previouslySwipedTile && !selectedTile.getAttribute('visited')){
                 let previouslySwipedTileRow = Number(previouslySwipedTile.substring(1,3));
                 let previouslySwipedTileCol = Number(previouslySwipedTile.substring(4));
                 
