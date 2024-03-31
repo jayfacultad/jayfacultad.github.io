@@ -9,7 +9,7 @@ let touchStartY = 0;
 let previouslySwipedTile = '';
 let wordFromSwipe = '';
 
-console.log("start8");
+console.log("start9");
 
 function startup() {
   const board = document.getElementById("board");
@@ -75,7 +75,7 @@ function handleTouchMove(event) {
                     selectedTile.style.background = "orange";
                     selectedTile.style.color = "white";
                     selectedTile.setAttribute("visited", true);
-                    wordFromSwipe += document.getElementById(div.id).replace('tile-','').innerHTML;
+                    wordFromSwipe += document.getElementById(div.id.replace('tile-','')).innerHTML;
                     document.getElementById("word-entry").value = wordFromSwipe;
                 }
             } else {
@@ -83,7 +83,7 @@ function handleTouchMove(event) {
                 selectedTile.style.color = "white";
                 selectedTile.setAttribute("visited", true);
                 previouslySwipedTile = currentSwipedTile;
-                wordFromSwipe += document.getElementById(div.id).replace('tile-','').innerHTML;
+                wordFromSwipe += document.getElementById(div.id.replace('tile-','')).innerHTML;
                 document.getElementById("word-entry").value = wordFromSwipe;
             }
 
