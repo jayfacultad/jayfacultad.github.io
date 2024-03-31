@@ -62,12 +62,14 @@ function handleTouchMove(event) {
                     selectedTile.style.background = "orange";
                     selectedTile.style.color = "white";
                     selectedTile.setAttribute("visited", true);
+                    wordFromSwipe += document.getElementById(div.id).replace('tile-','').innerHTML;
                 }
             } else {
                 selectedTile.style.background = "orange";
                 selectedTile.style.color = "white";
                 selectedTile.setAttribute("visited", true);
                 previouslySwipedTile = currentSwipedTile;
+                wordFromSwipe += document.getElementById(div.id).replace('tile-','').innerHTML;
             }
             
         }
@@ -139,6 +141,10 @@ document.getElementById("submit-button").addEventListener("click", function() {
             div.style.background = "gainsboro";
             div.style.color = "black";
         });
+
+        // Reset word obtained from swipe
+        wordFromSwipe = '';
+        previouslySwipedTile = '';
     }
 });
 
