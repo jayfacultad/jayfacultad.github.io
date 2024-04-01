@@ -45,6 +45,7 @@ document.getElementById("start-button").addEventListener("click", function() {
         tiles.forEach(div => {
             div.style.background = "gainsboro";
             div.style.color = "black";
+            div.setAttribute('visited', 'false');
         });
     }
 });
@@ -132,6 +133,7 @@ function start_timer() {
                 tiles.forEach(div => {
                     div.style.background = "gainsboro";
                     div.style.color = "black";
+                    div.setAttribute('visited', 'false');
                 });
             }
         }
