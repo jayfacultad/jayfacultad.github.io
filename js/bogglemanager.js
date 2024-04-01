@@ -76,8 +76,8 @@ function handleTouchMove(event) {
                 console.log('previouslySwipedTileRow: ' + previouslySwipedTileRow);
                 console.log('previouslySwipedTileCol: ' + previouslySwipedTileCol);
                 
-                if((currentSwipedTileRow + 1 == previouslySwipedTileRow || currentSwipedTileRow - 1 == previouslySwipedTileRow) 
-                   && (currentSwipedTileCol + 1 == previouslySwipedTileCol || currentSwipedTileCol - 1 == previouslySwipedTileCol)) {
+                if((currentSwipedTileRow == previouslySwipedTileRow || currentSwipedTileRow + 1 == previouslySwipedTileRow || currentSwipedTileRow - 1 == previouslySwipedTileRow) 
+                   && (currentSwipedTileCol == previouslySwipedTileCol || currentSwipedTileCol + 1 == previouslySwipedTileCol || currentSwipedTileCol - 1 == previouslySwipedTileCol)) {
                     selectedTile.style.background = "orange";
                     selectedTile.style.color = "white";
                     selectedTile.setAttribute("visited", true);
