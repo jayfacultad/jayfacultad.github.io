@@ -53,7 +53,7 @@ function handleTouchMove(event) {
         ) {
             console.log(`Swiped on div with id: ${div.id}`);
             var selectedTile = document.getElementById(div.id);
-            console.log('selectedTile.getAttribute('visited') = ' + selectedTile.getAttribute('visited'));
+            console.log('selectedTile.getAttribute(\'visited\') = ' + selectedTile.getAttribute('visited'));
 
             // Css styling
             //selectedTile.style.background = "orange";
