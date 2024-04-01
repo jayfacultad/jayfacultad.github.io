@@ -9,7 +9,7 @@ let touchStartY = 0;
 let previouslySwipedTile = '';
 let wordFromSwipe = '';
 
-console.log("start13");
+console.log("start14");
 
 function startup() {
   const board = document.getElementById("board");
@@ -69,11 +69,11 @@ function handleTouchMove(event) {
             console.log('------------------------------');
 
             if(previouslySwipedTile != '' && !selectedTile.getAttribute('visited')){
+                console.log('enter 1');
+                 console.log('currentSwipedTileRow: ' + currentSwipedTileRow);
+                console.log('currentSwipedTileCol: ' + currentSwipedTileCol);
                 let previouslySwipedTileRow = Number(previouslySwipedTile[1]);
                 let previouslySwipedTileCol = Number(previouslySwipedTile[3]);
-
-                console.log('currentSwipedTileRow: ' + currentSwipedTileRow);
-                console.log('currentSwipedTileCol: ' + currentSwipedTileCol);
                 console.log('previouslySwipedTileRow: ' + previouslySwipedTileRow);
                 console.log('previouslySwipedTileCol: ' + previouslySwipedTileCol);
                 
@@ -85,18 +85,19 @@ function handleTouchMove(event) {
                     previouslySwipedTile = currentSwipedTile;
                     wordFromSwipe += document.getElementById(div.id.replace('tile-','')).innerHTML;
                     document.getElementById("word-entry").value = wordFromSwipe;
+                    console.log(wordFromSwipe);
                 }
             } else if(wordFromSwipe == '')  {
+                console.log('enter 2');
                 selectedTile.style.background = "orange";
                 selectedTile.style.color = "white";
                 selectedTile.setAttribute('visited', true);
                 previouslySwipedTile = currentSwipedTile;
                 wordFromSwipe += document.getElementById(div.id.replace('tile-','')).innerHTML;
                 document.getElementById("word-entry").value = wordFromSwipe;
-            }
-
-            console.log(wordFromSwipe);
-            
+                console.log(wordFromSwipe);
+            } else {
+                console.log('enter 3');
         }
     });
 }
