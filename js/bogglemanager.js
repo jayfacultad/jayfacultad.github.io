@@ -9,7 +9,7 @@ let touchStartY = 0;
 let previouslySwipedTile = '';
 let wordFromSwipe = '';
 
-console.log("start15");
+console.log("start16");
 
 function startup() {
   const board = document.getElementById("board");
@@ -28,7 +28,7 @@ const swipeDivs = document.querySelectorAll('.swipe-div');
 swipeDivs.forEach(div => {
     div.addEventListener('touchstart', handleTouchStart);
     div.addEventListener('touchmove', handleTouchMove);
-    div.setAttribute('visited', false);
+    div.setAttribute('visited', 'false');
 });
 
 // Function to handle touch start event
@@ -58,7 +58,7 @@ function handleTouchMove(event) {
             // Css styling
             //selectedTile.style.background = "orange";
             //selectedTile.style.color = "white";
-            //selectedTile.setAttribute('visited', true);
+            //selectedTile.setAttribute('visited', 'true');
 
             let currentSwipedTile = div.id.replace('tile-','');
             let currentSwipedTileRow = Number(currentSwipedTile[1]);
@@ -67,9 +67,9 @@ function handleTouchMove(event) {
             console.log('currentSwipedTile: ' + currentSwipedTile);
             console.log('previouslySwipedTile: ' + previouslySwipedTile);
             console.log(previouslySwipedTile != '');
-            console.log(selectedTile.getAttribute('visited') == false);
+            console.log(selectedTile.getAttribute('visited') == 'false');
 
-            if(previouslySwipedTile != '' && selectedTile.getAttribute('visited') == false){
+            if(previouslySwipedTile != '' && selectedTile.getAttribute('visited') == 'false'){
                 console.log('enter 1');
                 console.log('currentSwipedTileRow: ' + currentSwipedTileRow);
                 console.log('currentSwipedTileCol: ' + currentSwipedTileCol);
@@ -82,7 +82,7 @@ function handleTouchMove(event) {
                    && (currentSwipedTileCol == previouslySwipedTileCol || currentSwipedTileCol + 1 == previouslySwipedTileCol || currentSwipedTileCol - 1 == previouslySwipedTileCol)) {
                     selectedTile.style.background = "orange";
                     selectedTile.style.color = "white";
-                    selectedTile.setAttribute('visited', true);
+                    selectedTile.setAttribute('visited', 'true');
                     previouslySwipedTile = currentSwipedTile;
                     wordFromSwipe += document.getElementById(div.id.replace('tile-','')).innerHTML;
                     document.getElementById("word-entry").value = wordFromSwipe;
@@ -92,7 +92,7 @@ function handleTouchMove(event) {
                 console.log('enter 2');
                 selectedTile.style.background = "orange";
                 selectedTile.style.color = "white";
-                selectedTile.setAttribute('visited', true);
+                selectedTile.setAttribute('visited', 'true');
                 previouslySwipedTile = currentSwipedTile;
                 wordFromSwipe += document.getElementById(div.id.replace('tile-','')).innerHTML;
                 document.getElementById("word-entry").value = wordFromSwipe;
@@ -174,7 +174,7 @@ document.getElementById("submit-button").addEventListener("click", function() {
         previouslySwipedTile = '';
         let divsForSwipe = document.querySelectorAll('.swipe-div');
         divsForSwipe.forEach(div => {
-            div.setAttribute('visited', false);
+            div.setAttribute('visited', 'false');
         });
     }
 });
