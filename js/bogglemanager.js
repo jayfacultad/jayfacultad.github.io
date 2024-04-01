@@ -69,7 +69,7 @@ function handleTouchMove(event) {
 
             if(previouslySwipedTile && !selectedTile.getAttribute('visited')){
                 let previouslySwipedTileRow = Number(previouslySwipedTile[1]);
-                let previouslySwipedTileCol = Number(previouslySwipedTile[3]));
+                let previouslySwipedTileCol = Number(previouslySwipedTile[3]);
 
                 console.log('currentSwipedTileRow: ' + currentSwipedTileRow);
                 console.log('currentSwipedTileCol: ' + currentSwipedTileCol);
