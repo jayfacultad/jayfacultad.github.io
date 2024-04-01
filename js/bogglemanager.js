@@ -98,6 +98,7 @@ function handleTouchMove(event) {
                 console.log(wordFromSwipe);
             } else {
                 console.log('enter 3');
+            }
         }
     });
 }
