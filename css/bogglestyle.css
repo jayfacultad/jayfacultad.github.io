@@ -3,6 +3,7 @@
 body {
     /* background-color: #F57921; */
     font-family: Arial, Helvetica, sans-serif;
+    overscroll-behavior-y: contain;
 }
 
 h3 {
