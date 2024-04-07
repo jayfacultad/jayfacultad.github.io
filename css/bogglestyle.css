@@ -297,6 +297,7 @@ h3 {
     position: fixed;
     overscroll-behavior: contain;
     overflow: auto;
+    height: 50%;
 }
 
 .boggle-sumamry {
