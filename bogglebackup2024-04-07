@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bogglestyle.css">
+    <title>Boggle Game</title>
+</head>
+
+<body id="frontpage">
+
+    <div id="heading">Jay Facultad</div>
+        
+    <div id="menu">
+
+        <div id="links">
+            <div class="link"><a class="special_hover" href="index.html">Home</a></div>
+            <div class="link" id="current"><a class="special_hover" id="current" href="boggle.html">Boggle Game</a></div>
+            <div class="link"><a class="special_hover" href="bostonsubway.html">Boston Subway</a></div>
+        </div>
+
+        <div id="social_media">
+            <div class="button"><a class="special_hover" href="contact.html">Contact & Resume</a></div>
+            <div class="button"><a class="special_hover" href="https://github.com/jayfacultad">GitHub</a></div>
+            <div class="button"><a class="special_hover" href="https://www.linkedin.com/in/jayfacultad">LinkedIn</a></div>
+            <div class="button"><a class="special_hover" href="https://www.twitter.com/jay_facultad/">Twitter</a></div>
+
+    </div>
+    <br>
+    <hr>
+
+    <div id="game-container" class="boggle-body-container">
+
+        <div id="left-container">
+
+            <div class="score-container">
+                <a class="score-heading">Score:</a><br>
+                <a id="score">0</a>
+            </div>
+
+            <table id="score-table">
+                <tr>
+                    <th>Your Words</th>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div id="answer_cell"></div>
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+        <!-- End left container -->
+
+        <div id="center-container">
+
+            <a class="intro">
+                To Play: find words by connecting 3+ sequentially adjacent tiles<br>
+            </a>
+
+            <div id="button-section">
+
+            <div id="start-button">Start Game</div>
+
+            <div id="word-submit">
+                <input class="word-field" type="text" id="word-entry" pattern="[A-Z]">
+                <div id="submit-button">ENTER WORD</div>
+            </div>
+
+            </div>
+
+            <div id="board">
+
+                <div class="row R0">
+                    <div id="tile-R0C0" class="tile swipe-div">
+                        <span id="R0C0"></span>
+                    </div> 
+                    <div id="tile-R0C1" class="tile swipe-div">
+                        <span id="R0C1"></span>
+                    </div> 
+                    <div id="tile-R0C2" class="tile swipe-div">
+                        <span id="R0C2"></span>
+                    </div> 
+                    <div id="tile-R0C3" class="tile swipe-div">
+                        <span id="R0C3"></span>
+                    </div> 
+                    <div id="tile-R0C4" class="tile swipe-div">
+                        <span id="R0C4"></span>
+                    </div>
+                </div>
+
+                <div class="row R1">
+                    <div id="tile-R1C0" class="tile swipe-div">
+                        <span id="R1C0"></span>
+                    </div> 
+                    <div id="tile-R1C1" class="tile swipe-div">
+                        <span id="R1C1"></span>
+                    </div> 
+                    <div id="tile-R1C2" class="tile swipe-div">
+                        <span id="R1C2"></span>
+                    </div> 
+                    <div id="tile-R1C3" class="tile swipe-div">
+                        <span id="R1C3"></span>
+                    </div> 
+                    <div id="tile-R1C4" class="tile swipe-div">
+                        <span id="R1C4"></span>
+                    </div>
+                </div>
+
+                <div class="row R2">
+                    <div id="tile-R2C0" class="tile swipe-div">
+                        <span id="R2C0"></span>
+                    </div> 
+                    <div id="tile-R2C1" class="tile swipe-div">
+                        <span id="R2C1"></span>
+                    </div> 
+                    <div id="tile-R2C2" class="tile swipe-div">
+                        <span id="R2C2"></span>
+                    </div> 
+                    <div id="tile-R2C3" class="tile swipe-div">
+                        <span id="R2C3"></span>
+                    </div> 
+                    <div id="tile-R2C4" class="tile swipe-div">
+                        <span id="R2C4"></span>
+                    </div>
+                </div>
+
+                <div class="row R3">
+                    <div id="tile-R3C0" class="tile swipe-div">
+                        <span id="R3C0"></span>
+                    </div> 
+                    <div id="tile-R3C1" class="tile swipe-div">
+                        <span id="R3C1"></span>
+                    </div> 
+                    <div id="tile-R3C2" class="tile swipe-div">
+                        <span id="R3C2"></span>
+                    </div> 
+                    <div id="tile-R3C3" class="tile swipe-div">
+                        <span id="R3C3"></span>
+                    </div> 
+                    <div id="tile-R3C4" class="tile swipe-div">
+                        <span id="R3C4"></span>
+                    </div>
+                </div>
+
+                <div class="row R4">
+                    <div id="tile-R4C0" class="tile swipe-div">
+                        <span id="R4C0"></span>
+                    </div> 
+                    <div id="tile-R4C1" class="tile swipe-div">
+                        <span id="R4C1"></span>
+                    </div> 
+                    <div id="tile-R4C2" class="tile swipe-div">
+                        <span id="R4C2"></span>
+                    </div> 
+                    <div id="tile-R4C3" class="tile swipe-div">
+                        <span id="R4C3"></span>
+                    </div> 
+                    <div id="tile-R4C4" class="tile swipe-div">
+                        <span id="R4C4"></span>
+                    </div>
+                </div>
+
+            </div> <!-- End board -->
+
+        </div> <!-- End center container -->
+
+        <div id="right-container">
+
+            <div class="time-container">
+                <a class="time-remaining-heading">Time Left:</a><br>
+                <a id="time-remaining">2:00</a>
+            </div>
+
+            <table id="answers-table">
+                <tr>
+                    <th>All Possible Words</th>
+                </tr>
+                <tr>
+                    <td><div id="score_cell">Displayed when game is over</div></td>
+                </tr>
+            </table>
+        </div> <!-- End right container -->
+
+
+        <div id="results-container">
+            <div id="end-message">Game over! Final score: 
+                <br><br><div id="final_score"></div> </div><br>
+                <form>
+                        <input type="text" name="username" id="usernameField">
+                </form>
+                <br>
+            <a id="username">Enter a username above and click here</a>
+        </div>
+
+
+    </div> 
+    <!-- End game container -->
+
+    <br>
+    <div id="summary-container" class="boggle-summary">
+    <a class="bold">DESCRIPTION</a>
+    <br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;Web application game that utilizes HTML, CSS, JavaScript, 
+    Node.js, and MongoDB via client side and server side implementations.  
+    The web application integrates adjacency matrix graphs and trie/prefix trees 
+    as data structures and depth first search as the primary algorithm.  
+    When the game is over, the app sends the user's inputted
+    username and final score to a <a href="https://frozen-hamlet-64285.herokuapp.com/">database server</a> for storage via MongoDB: 
+    <a href="https://frozen-hamlet-64285.herokuapp.com/">https://frozen-hamlet-64285.herokuapp.com/</a>
+    <br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;This app utilizes two data structure classes: Tries and Graphs.  
+    The Trie implementation includes a node structure called TrieNode. 
+    Each node represents a letter of a possible word.
+    The TrieNode consists of two bool variables, one to signify if the 
+    letter is a prefix of an existing word, and one to signify if the letter 
+    is the end of a full word. The TrieNode also contains an array of its children. 
+    There are a total of 26 possible children, with each child representing a letter 
+    of the alphabet. One Trie data structure is used to store a Dictionary of all possible 
+    English words, and another Trie data structure is used to store all answers of the Boggle
+    Board.  The runtime for each Trie function is O(m), where m is the length 
+    of the key or word. A second data structure class utilized in this app is the
+    Graph implementation. This Graph class is used to store the Boggle Board.  
+    Each tile in the Boggle Board is represented as a Vertex in the graph, and each tile
+    is connected to its neighbors (8 neighbors maximum, 3 neighbors minimum for
+    corner tiles) by Edges. Therefore, the Boggle Board is represented as a cyclical, 
+    undirected, unweighed Graph.
+    <br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;Depth First Search is used to find all answers of the Boggle Board.
+    The Depth First Search algorithm starts with one Vertex (the first tile), 
+    and recursively visits all of its unsivisted neighbors. The first neighbor's letter is 
+    appended to the current Vertex's letter, which creates a subword. 
+    If the Vertex's and neighbor's letters append to forma prefix of another word, 
+    the algorithm then continues and finds the neighbor's neighbors and appends one 
+    to the subword. This is performed for all neighbors as long as the
+    subword is a prefix of another word.  If it's not, then that
+    neighbor is marked as visited and does not get appended to the subword, and
+    the algorithm moves on to the next neighboring tile until all neighbors are visited. 
+    If at any point the subword is identified as a full word, then the current
+    letter is marked as an end of word. This algorithm contiunes until the last 
+    tile of the board is reached.  Because the Graph of the Boggle Board is 
+    implemented as an ajacency matrix, the runtime for the Depth First Search 
+    algorithm is O(n*n) where n is the number of nodes.
+    <br><br>
+    <a class="bold">Data Structures Implemented:</a>
+    <ul>
+        <li>Trie / Prefix Trees</li>
+        <li>Graphs / Adjacency Matrix</li>
+    </ul>
+    <a class="bold">Algorithms:</a>
+    <ul>
+        <li>Depth First Search</li>
+    </ul>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/trie.js"></script>
+    <script src="js/graph.js"></script>
+    <script src="js/boggleinitiator.js"></script>
+    <script src="js/bogglemanager.js"></script>
+
+</body>
+</html>
