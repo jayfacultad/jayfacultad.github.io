@@ -240,8 +240,8 @@ function boggle_solver() {
         DFS(i, word);
     }
 
-    // Sort: longest word to shortest
-    answers_array.sort((a, b) => b.length - a.length);
+    // Sort: longest word to shortest, then alphabetically if equal length
+    answers_array.sort((a, b) => a.length - b.length || a.localeCompare(b));
 }
 
 function DFS(index, word) {
