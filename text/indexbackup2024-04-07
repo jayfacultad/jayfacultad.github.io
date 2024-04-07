@@ -1,0 +1,146 @@
+<!doctype html> 
+
+<html lang="en">
+
+<head>
+  <title>Jay Facultad</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+
+  <link href="/css/homepage.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <meta property="og:site_name" content="Jay Facultad"/>
+  <meta property="og:image" content="/staticresources/newyork.jpg"/>
+  <meta property="og:url" content="http://jayfacultad.com/">
+  <meta property="og:type" content="website"/>
+  
+  <link rel="shortcut icon" href="#"/>
+</head>
+
+<body>   
+  <script src="/js/homepage.js"></script>
+  
+  <!-- desktop -->
+
+  <!--
+  <div id="desktop" class="hide">
+    <div class="block hero-block block-height">
+      <img src="/staticresources/newyork.jpg" alt="Picture of New York City" class="hero-image" id="hero-image"/>
+      <div class="intro-block animated animatedFadeInUp fadeInUp">
+        <div id="heading" class="heading">
+          <span class="eyebrow">Hello, I'm</span>
+          <br/>
+          <span class="title">Jay Facultad</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="block about-me-block block-height">
+      <!--
+      <img src="/staticresources/profilepic.jpg" alt="A picture of Jay" class="profile-pic-image"/>
+      -->
+      <span class="about-me-title">About me</span>
+      <br/>
+      <span class="about-me-content">Software developer</span>
+    </div>
+
+    <div class="block block-height" style="background-color:#004b49;">
+      Another section
+    </div>
+  </div>
+  -->
+
+  <div>
+
+    <div id="heading">Jay Facultad</div>
+        
+    <div id="menu">
+
+        <div id="links">
+            <div class="link" id="current"><a class="special_hover" id="current" href="index.html">Home</a></div>
+            <div class="link"><a class="special_hover" href="boggle.html">Boggle Game</a></div>
+            <div class="link"><a class="special_hover" href="bostonsubway.html">Boston Subway</a></div>
+        </div>
+
+        <div id="social_media">
+            <div class="button"><a class="special_hover" href="contact.html">Contact & Resume</a></div>
+            <div class="button"><a class="special_hover" href="https://github.com/jayfacultad/">GitHub</a></div>
+            <div class="button"><a class="special_hover" href="https://www.linkedin.com/in/jayfacultad/">LinkedIn</a></div>
+            <div class="button"><a class="special_hover" href="https://www.twitter.com/jay_facultad/">Twitter</a></div>
+
+    </div>
+    <br>
+    <hr> 
+    <div id="message">Hello, my name is Jay.</div>
+            <div id="message2">Here are a few examples of my work.
+            <br>Scroll to the bottom of each page for details.
+            </div>
+            <br>
+            <div class="center animated animatedFadeInUp fadeInUp"><img src="profilepic.jpg" alt="Picture of Jay Facultad"></div>
+
+     
+</div>
+  
+  <!-- end desktop -->
+  
+  <!-- mobile -->
+  
+  <div id="mobile" class="hide">
+      <div class="block hero-block block-height" id="hero-block">
+        <img src="/staticresources/newyorkmobile.jpg" alt="Picture of New York City" class="hero-image"/>
+        <div class="intro-block animated animatedFadeIn fadeInUp">
+          <div id="heading" class="heading">
+            <span class="eyebrow">Hello, I'm</span>
+            <br/>
+            <span class="title">Jay Facultad</span>
+          </div>
+        </div>
+      </div>
+    
+    <div class="block about-me-title-block block-height">
+        <div class="about-me-title hide">
+          <div class="about-me-container">Let's connect</div>
+        </div>
+      </div>
+    
+    <div class="block about-me-text-block">
+        <div class="about-me-text hide">
+          <ul style="list-style-type:none;">
+            <li style="padding-bottom: 20px;"><a href="https://www.linkedin.com/in/jayfacultad" class="fa fa-linkedin"></a><a style="text-decoration:none; color:inherit;" href="https://www.linkedin.com/in/jayfacultad">&nbsp;&nbsp;LinkedIn</a></li>
+            <li style="padding-bottom: 20px;"><a href="fb://profile/3619468" class="fa fa-facebook"></a><a style="text-decoration:none; color:inherit;" href="fb://profile/3619468">&nbsp;&nbsp;Facebook</a></li>
+            <li style="padding-bottom: 20px;"><a href="instagram://user?username=jayfacultad" class="fa fa-instagram"></a><a style="text-decoration:none; color:inherit;" href="instagram://user?username=jayfacultad">&nbsp;&nbsp;Instagram</a></li>
+            <!-- 
+            <li><a href="https://trailblazer.me/id/jayfacultad" class="fa salesforce-icon"><img src="https://cdn-icons-png.flaticon.com/512/873/873194.png" class="fa salesforce-icon"></a><a style="text-decoration:none; color:inherit;" href="https://trailblazer.me/id/jayfacultad">&nbsp;&nbsp;Salesforce</a></li>
+             -->
+          </ul>
+        </div>
+      </div>
+    
+      
+
+      <div class="block profile-pic-block" id="profile-pic-block">
+        <img src="/staticresources/profilepic.jpg" alt="A picture of Jay" id="profile-pic-image" class="profile-pic-image"/>
+      </div>
+    
+    <div class="block about-me-title-block block-height">
+        <div class="about-me-title hide">
+          <div class="about-me-text">That's all for now! Check back later for more cool stuff.</div>
+        </div>
+      </div>
+
+      
+    
+  </div>
+  
+  <!-- end mobile -->
+  
+  <div class="scroll-down-container animated animatedFadeIn fadeInUp" id="scroll-down-container">
+    <div class="scroll-down-content">
+      <span>SCROLL DOWN</span><br/>
+      <img src="/staticresources/chevrondown.jpg" alt="Chevron down icon" class="scroll-down-icon"/>       
+    </div>
+  </div>
+</body>
+
+</html>
