@@ -294,6 +294,7 @@ h3 {
     width: 100%;
     display: inline-flex;
     position: fixed;
+    overflow-y: hidden;
 }
 
 #left-container {
