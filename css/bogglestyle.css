@@ -34,6 +34,7 @@ h3 {
 #game-container {
     width: 100%;
     text-align: center;
+    margin-top: 50%;
 }
 
 #left-container {
@@ -423,7 +424,6 @@ input {
     background-color: #398BD4;
     padding: 5px;
     margin-top: 5px;
-    margin-top: 50%;
 }
 
 .row {
