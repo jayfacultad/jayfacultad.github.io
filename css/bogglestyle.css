@@ -293,7 +293,7 @@ h3 {
 
 #game-container {
     width: 100%;
-    /* display: inline-flex; */
+    display: inline-flex;
     position: fixed;
     overflow-y: hidden;
 }
