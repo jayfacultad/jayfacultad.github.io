@@ -1,0 +1,311 @@
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,240px,0)
+    }
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,240px,0)
+    }
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        transform: translate3d(-200px,0,0)
+    }
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInRight {
+    from {
+        transform: translate3d(-200px,0,0)
+    }
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.animated {
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-fill-mode: both
+}
+
+.animatedQuick {
+    animation-duration: 0.75s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 0.75s;
+    -webkit-animation-fill-mode: both
+}
+
+.animatedFadeIn {
+    opacity: 0
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
+
+.fadeInRight {
+    opacity: 0;
+    animation-name: fadeInRight;
+    -webkit-animation-name: fadeInRight;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+.salesforce-icon {
+    background: url('https://cdn-icons-png.flaticon.com/512/873/873194.png');
+    fill: #00a1df;
+    color: white;
+}
+
+ul.no-bullets {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
+
+body {
+    margin: 0px 0px 0px 0px !important;
+    background-color: #202020;
+}
+
+.hero-image {
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    float: right;
+    object-fit: cover;
+}
+
+.intro-block {
+    position: relative;
+    z-index: 250;
+}
+
+.heading {
+    color: black;
+    font-family: Helvetica, Sans-serif;
+    padding-top: 150px;
+    padding-left: 80px;
+}
+
+.eyebrow {
+    font-size: 52.5px;
+    font-style: italic;
+}
+
+.title {
+    font-size: 118.75px;
+    font-style: normal;
+}
+
+.about-me-title, .about-me-text {
+    color: WhiteSmoke;
+    font-family: Gill Sans, Andale Mono, Helvetica, Sans-serif;
+}
+
+.scroll-down-container {
+    color: #E8E8E8;
+    font-family: Helvetica, Sans-serif;
+    font-size: 16px;
+    position:fixed;
+    bottom:20px;
+    width: 100%;
+    text-align: center;
+}
+
+.scroll-down-content {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.scroll-down-icon {
+    margin-top: -5px;
+    width: 25px;
+    filter: invert(87%) sepia(0%) saturate(0%) hue-rotate(208deg) brightness(96%) contrast(100%);
+}
+
+@media (max-width: 1250px) {
+    .heading {
+        padding-top: 125px;
+        padding-left: 80px;
+    }
+
+    .eyebrow {
+        font-size: 42px;
+    }
+
+    .title {
+        font-size: 95px;
+    }
+   
+}
+
+@media (min-width: 481px) {
+    .hero-image {
+        height: 920px;
+    }
+    
+    .block-height {
+        height: 920px;
+    }
+    
+    .profile-pic-image {
+        height: 750px;
+        float: left;
+        padding: 85px 85px 85px 85px;
+        border-radius: 25px;
+        border-collapse: separate; 
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 480px) {
+    @keyframes fadeInUp {
+        from {
+            transform: translate3d(0,720px,0)
+        }
+        to {
+            transform: translate3d(0,0,0);
+            opacity: 1
+        }
+    }
+
+    @-webkit-keyframes fadeInUp {
+        from {
+            transform: translate3d(0,720px,0)
+        }
+        to {
+            transform: translate3d(0,0,0);
+            opacity: 1
+        }
+    }
+    
+    .block-height {
+        height: 720px;
+    }
+    
+    .hero-image {
+        height: 720px;
+    }
+    
+    .heading {
+        padding-top: 35px;
+        padding-left: 35px;
+    }
+    
+    .eyebrow {
+        font-size: 28px;
+    }
+
+    .title {
+        font-size: 72px;
+    }
+    
+    .profile-pic-block {
+        width: 100%;
+        display: table;
+    }
+
+    .profile-pic-image {
+        width: 100%;
+        display: table-cell;
+        opacity: 0;
+    }
+    
+    .about-me-title-block {
+        height: 180px; 
+        width:100%;
+        display: table;
+        text-align: center;
+    }
+    
+    .about-me-title {
+        display: table-cell;
+        vertical-align: middle;
+        text-align:center;
+        font-size: 48px;
+    }
+    
+    .about-me-container {
+        margin: 20px;
+        border-radius: 25px;
+        border-width: 2px;
+        border-style: solid;
+        padding: 15px;
+        background-color: WhiteSmoke;
+        color: black;
+        font-family: font-family: Helvetica, Sans-serif;
+    }
+    
+    .about-me-text {
+        margin: 20px;
+        border-radius: 25px;
+        border-width: 2px;
+        border-style: solid;
+        padding: 20px;
+        background-color: WhiteSmoke;
+        color: black;
+        font-family: font-family: Helvetica, Sans-serif;
+        font-size: 24px;
+    }
+    
+    .scroll-down-container {
+        bottom:10px;
+    }
+
+    .scroll-down-icon {
+        margin-top: -5px;
+        width: 30px;
+    }
+    
+}
+
+.hide {
+    display: none !important;
+}
