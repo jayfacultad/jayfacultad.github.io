@@ -119,7 +119,7 @@ function start_timer() {
                 document.getElementById("start-button").innerHTML = "Start Game";
                 document.getElementById("score_cell").innerHTML = "Start Game";
                 document.getElementById("submit-button").style.background = "lightgray";
-                answers_array.sort();
+                //answers_array.sort();
                 var answer_set = new Set();
                 array_length = answers_array.length;
                 for (var i = 0; i < array_length; i++) {
