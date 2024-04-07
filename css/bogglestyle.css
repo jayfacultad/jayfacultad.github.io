@@ -300,7 +300,7 @@ h3 {
     height: 50%;
 }
 
-.boggle-sumamry {
+.boggle-summary {
   overflow: auto;
   overscroll-behavior: contain;
   height: 100%;
