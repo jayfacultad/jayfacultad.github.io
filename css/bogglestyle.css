@@ -125,7 +125,7 @@ input {
     border-collapse: collapse;
     text-align: left;
     table-layout: fixed;
-    font-family: "Courier";
+    font-family: "Monospace";
 }
 
 #score_cell {
@@ -229,7 +229,7 @@ input {
     border-collapse: collapse;
     text-align: left;
     table-layout: fixed;
-    font-family: "Courier";
+    font-family: "Monospace";
 }
 
 #answers-table th {
@@ -392,7 +392,7 @@ input {
     border-collapse: collapse;
     text-align: left;
     table-layout: fixed;
-    font-family: "Courier";
+    font-family: "Monospace";
 }
 
 #score_cell {
@@ -497,7 +497,7 @@ input {
     border-collapse: collapse;
     text-align: left;
     table-layout: fixed;
-    font-family: "Courier";
+    font-family: "Monospace";
 }
 
 #answers-table th {
