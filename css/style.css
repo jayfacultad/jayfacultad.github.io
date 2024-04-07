@@ -204,7 +204,7 @@ img {
 #menu {
     width: 100%;
     font-family: "Verdana";
-    overflow: auto;
+    /* overflow: auto; */
 }
 
 #links {
