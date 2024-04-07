@@ -301,7 +301,9 @@ h3 {
 }
 
 .boggle-sumamry {
-    overflow-y: hidden;
+  overflow: auto;
+  overscroll-behavior: contain;
+  height: 100%;
 }
 
 #left-container {
