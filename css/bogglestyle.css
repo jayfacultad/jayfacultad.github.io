@@ -34,7 +34,6 @@ h3 {
 #game-container {
     width: 100%;
     text-align: center;
-    position: fixed;
 }
 
 #left-container {
@@ -294,6 +293,7 @@ h3 {
 #game-container {
     width: 100%;
     display: inline-flex;
+    position: fixed;
 }
 
 #left-container {
