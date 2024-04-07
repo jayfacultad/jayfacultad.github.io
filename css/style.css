@@ -296,9 +296,6 @@ a:link, a:visited {
     border-width: 1px;
     border-color: darkgray;
     font-size: 12px;
-    overflow: auto;
-    overscroll-behavior: contain;
-    height: 100%;
 }
 
 #apilink {
