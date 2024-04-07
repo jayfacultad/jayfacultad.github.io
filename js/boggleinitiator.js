@@ -239,6 +239,9 @@ function boggle_solver() {
         boggle_graph.clear_marks();
         DFS(i, word);
     }
+
+    // Sort: longest word to shortest
+    answers_array.sort((a, b) => b.length - a.length);
 }
 
 function DFS(index, word) {
