@@ -295,7 +295,7 @@ h3 {
 #game-container {
     width: 100%;
     display: inline-flex;
-    position: fixed;
+    position: sticky;
 }
 
 #left-container {
