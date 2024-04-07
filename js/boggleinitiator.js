@@ -241,7 +241,7 @@ function boggle_solver() {
     }
 
     // Sort: longest word to shortest, then alphabetically if equal length
-    answers_array.sort((a, b) => a.length - b.length || a.localeCompare(b));
+    answers_array.sort((a, b) => b.length - a.length || a.localeCompare(b));
 }
 
 function DFS(index, word) {
