@@ -1,0 +1,319 @@
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,120px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,120px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
+
+
+
+
+@media (min-width: 481px) {
+
+#frontpage {
+    /* background-image: url("background.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#heading {
+    text-align: center;
+    font-weight: bold;
+    font-size: 70px;
+    padding-left: 10px;
+    font-family: "Lucida Sans Unicode";
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#menu {
+    width: 100%;
+    font-family: "Verdana";
+    overflow: auto;
+}
+
+#links {
+    text-transform: uppercase;
+    display: inline-block;
+    float: left;
+    width: 40%;
+    padding-left: 2%;
+    overflow: auto;
+}
+
+.link {
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline;
+    padding: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.link:hover {
+    background-color: red;
+    text-decoration-color: white;
+}
+
+#current {
+    background-color: red;
+    text-decoration-color: white;
+    color: white;
+}
+
+#current_med {
+    background-color: steelblue;
+    color: white;    
+}
+
+#social_media {
+    display: inline-block;
+    float: right;
+    text-align: right;
+    width: 52%;
+    padding-right: 2%;
+    display: inline-block;
+    overflow: auto;
+}
+
+.button {
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+    padding: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.button:hover {
+    background-color: steelblue;
+    color: white;
+}
+
+.special_hover:hover {
+    color: white;
+}
+
+#message {
+    padding-top: 1%;
+    text-align: center;
+    font-size: 14px;
+    font-family: "Arial";
+}
+
+
+#message2 {
+    font-size: 12px;
+    text-align: center;
+    font-family: "Arial";
+}
+
+hr {
+    margin-top: 2%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#summary-container {
+    padding: 2% 6% 2% 6%;
+    background-color: gainsboro;
+    text-align: justify;
+    border-style: solid;
+    border-width: 1px;
+    border-color: darkgray;
+}
+
+#apilink {
+    text-decoration: underline;
+    color: blue;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    height: 20%;
+}
+
+}
+
+/* MOBILE ----------------------------------------------------------------- */
+
+@media (max-width: 480px) {
+
+#frontpage {
+    /* background-image: url("background.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#heading {
+    text-align: center;
+    font-weight: bold;
+    font-size: 70px;
+    font-family: "Lucida Sans Unicode";
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+#menu {
+    width: 100%;
+    font-family: "Verdana";
+    /* overflow: auto; */
+}
+
+#links {
+    text-align: center;
+    overflow: auto;
+}
+
+.link {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.link:hover {
+    background-color: red;
+    text-decoration-color: white;
+}
+
+#current {
+    background-color: red;
+    text-decoration-color: white;
+    color: white;
+}
+
+#current_med {
+    background-color: steelblue;
+    color: white;    
+}
+
+#social_media {
+    float: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 2%;
+    overflow: auto;
+}
+
+.button {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 28px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.button:hover {
+    background-color: steelblue;
+    color: white;
+}
+
+.special_hover:hover {
+    color: white;
+}
+
+#message {
+    margin-top: 2%;
+    text-align: center;
+    font-family: "Arial";
+    font-size: 26px;
+}
+
+
+#message2 {
+    font-size: 26px;
+    font-family: "Arial";
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#summary-container {
+    margin-top: 2%;
+    padding: 2% 6% 2% 6%;
+    background-color: gainsboro;
+    text-align: justify;
+    border-style: solid;
+    border-width: 1px;
+    border-color: darkgray;
+    font-size: 12px;
+}
+
+#apilink {
+    text-decoration: underline;
+    color: blue;
+}
+
+img {
+    text-align: center;
+    position: center;
+    width: 50%;
+    height: 50%;
+}
+
+.center {
+    text-align: center;
+    position: center;
+}
+
+}
