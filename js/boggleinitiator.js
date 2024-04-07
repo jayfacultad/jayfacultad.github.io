@@ -19,7 +19,7 @@ document.getElementById("start-button").addEventListener("click", function() {
         document.getElementById("start-button").style.background = "#8f7a66";
         document.getElementById("start-button").innerHTML = "Stop Game";
         document.getElementById("word-entry").value = "";
-        document.getElementById("word-entry").focus();
+        //document.getElementById("word-entry").focus();
         document.getElementById("answer_cell").innerHTML = "";
         document.getElementById("submit-button").style.background = "steelblue";
         document.getElementById("score_cell").innerHTML = "Displayed when game is over";
