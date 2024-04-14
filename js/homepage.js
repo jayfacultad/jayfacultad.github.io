@@ -10,8 +10,9 @@ window.addEventListener('load', function() {
 });
 
 function navBarClick(x) {
-  x.classList.toggle("change");
   console.log('Menu bar clicked');
+  
+  x.classList.toggle("change");
   var x = document.getElementById("myLinks");
   if (x.style.display === "block") {
     x.style.display = "none";
