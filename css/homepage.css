@@ -98,6 +98,12 @@ body{
     background-color: black;
     margin-top: 48px;
     text-align: right;
+    opacity: 0;
+}
+
+.change .navbar-links {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Nav Bar - End*/
