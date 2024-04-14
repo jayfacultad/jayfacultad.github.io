@@ -14,14 +14,15 @@ ul {
 /* Nav Bar - Start*/
 .top-navbar{
     position: fixed;
-    width: 100%;
+    width: 102%;
 }
 
 .navbar-hamburger {
     display: inline-block;
     cursor: pointer;
     float: right;
-    margin-right: 18px;
+    left: -8px;
+    margin-right: 2%;
 }
 
 .bar1, .bar2, .bar3 {
