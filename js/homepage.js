@@ -15,10 +15,8 @@ function navBarClick(x) {
   var myLinks = document.getElementById("myLinks");
   if (myLinks.style.display === "block") {
     myLinks.style.display = "none";
-    myLinks.style.opacity = 0;
   } else {
     myLinks.style.display = "block";
-    myLinks.style.opacity = 1;
   }
   
   x.classList.toggle("change");
