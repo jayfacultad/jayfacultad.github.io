@@ -9,10 +9,6 @@ body{
     margin-right: -8px;
 }
 
-.hide {
-    display: none !important;
-}
-
 .background-image{
     height: 100$;
     float: right;
