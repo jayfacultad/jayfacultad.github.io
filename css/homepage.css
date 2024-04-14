@@ -1,6 +1,7 @@
 body{
     overscroll-behavior-y: none;
     overflow: hidden;
+    top: -8px;
 }
 
 ul {
