@@ -23,7 +23,7 @@ body{
 .top-navbar{
     position: fixed;
     width: 100%;
-    background: gray;
+    /* background: gray; */
     min-height: 48px;
     z-index: 100;
 }
@@ -104,6 +104,7 @@ body{
     display: block;
     overflow: hidden;
     max-height: 0; 
+    opacity: 90%;
 }
 
 .navbar-links.show-nav {
@@ -119,7 +120,7 @@ body{
 /* Nav Bar - End*/
 
 .welcome-body {
-    padding-top: 48px;
+    padding-top: 96px;
     padding-left: 20px;
     position: absolute;
     font-size: 20px;
