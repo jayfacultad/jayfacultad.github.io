@@ -2,6 +2,7 @@ body{
     overscroll-behavior-y: none;
     overflow: hidden;
     top: -8px;
+    left: -8px;
 }
 
 ul {
@@ -22,8 +23,6 @@ ul {
     display: inline-block;
     cursor: pointer;
     float: right;
-    left: -8px;
-    margin-right: 2%;
 }
 
 .bar1, .bar2, .bar3 {
