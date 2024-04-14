@@ -18,6 +18,12 @@ window.addEventListener('scroll', function(){
 var header = document.getElementById('header');
 */
 
+function menuBarClick(x) {
+  x.classList.toggle("change");
+  console.log('Menu bar clicked');
+}
+
+
 window.addEventListener('scroll', scrollHandler);
 
 function scrollHandler() {
