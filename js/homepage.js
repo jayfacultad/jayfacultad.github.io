@@ -11,14 +11,15 @@ window.addEventListener('load', function() {
 
 function navBarClick(x) {
   console.log('Menu bar clicked');
-  
-  x.classList.toggle("change");
+
   var x = document.getElementById("myLinks");
   if (x.style.display === "block") {
     x.style.display = "none";
   } else {
     x.style.display = "block";
   }
+  
+  x.classList.toggle("change");
 }
 
 window.addEventListener('scroll', scrollHandler);
