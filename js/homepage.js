@@ -15,7 +15,7 @@ function navBarClick(x) {
   var myLinks = document.getElementById("myLinks");
   if (myLinks.classList.contains("show")) {
     myLinks.classList.add("hide");
-    myLinks.classList.remove("hide");
+    myLinks.classList.remove("show");
   } else {
     myLinks.classList.add("show");
     myLinks.classList.remove("hide");
