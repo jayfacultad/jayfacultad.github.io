@@ -1,6 +1,9 @@
 body{
     overscroll-behavior-y: none;
     overflow: hidden;
+}
+
+.mobile-container{
     top: -8px;
     left: -8px;
 }
