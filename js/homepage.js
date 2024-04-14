@@ -21,6 +21,7 @@ var header = document.getElementById('header');
 function navBarClick(x) {
   x.classList.toggle("change");
   console.log('Menu bar clicked');
+  this.openNav();
 }
 
 function openNav() {
