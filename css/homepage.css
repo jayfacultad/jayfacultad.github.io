@@ -117,3 +117,12 @@ body{
 }
 
 /* Nav Bar - End*/
+
+.welcome-body {
+    padding-top: 100px;
+    padding-left: 20px;
+    position: absolute;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-style: italic;
+}
