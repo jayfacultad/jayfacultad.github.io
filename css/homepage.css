@@ -95,11 +95,11 @@ body{
     background-color: black;
     margin-top: 48px;
     text-align: right;
+    display: block;
     max-height: 0; 
 }
 
 .navbar-links.show-nav {
-    display: block;
     max-height: 500px;
     transition: max-height 1s ease-in;
 }
