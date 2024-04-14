@@ -97,13 +97,13 @@ body{
 .navbar-links.show {
     display: block;
     max-height: 100%;
-    transition: max-height 0.3s ease-in;
+    transition: max-height 1s ease-in;
 }
 
 .navbar-links.hide {
   overflow: hidden;
   max-height: 0;
-  transition: max-height 0.3s ease-out;
+  transition: max-height 1s ease-out;
 }
 
 /* Nav Bar - End*/
