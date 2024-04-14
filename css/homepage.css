@@ -82,6 +82,7 @@ body{
 
 .link-container{
     height: 46px;
+    display: flex;
 }
 
 .navbar-links {
