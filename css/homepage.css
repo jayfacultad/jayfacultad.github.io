@@ -26,6 +26,8 @@ ul {
     display: inline-block;
     cursor: pointer;
     float: right;
+    margin-top: 6px;
+    margin-right: 12px;
 }
 
 .bar1, .bar2, .bar3 {
