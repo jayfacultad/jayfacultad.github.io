@@ -40,28 +40,28 @@ body{
 
 /* Hide the links inside the navigation menu (except for logo/home) */
 .top-navbar #myLinks {
-  display: none;
+    display: none;
 }
 
 /* Style navigation menu links */
 .top-navbar a {
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    ont-size: 17px;
+    display: block;
 }
 
 /* Add a grey background color on mouse-over */
 .top-navbar a:hover {
-  background-color: #ddd;
-  color: black;
+    background-color: #ddd;
+    color: black;
 }
 
 /* Style the active link (or home/logo) */
 .active {
-  background-color: #04AA6D;
-  color: white;
+    background-color: #04AA6D;
+    color: white;
 }
 
 .navbar-links {
