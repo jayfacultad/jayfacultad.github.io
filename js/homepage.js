@@ -13,10 +13,10 @@ function navBarClick(x) {
   console.log('Menu bar clicked');
 
   var myLinks = document.getElementById("myLinks");
-  if (myLinks.style.width === "0%") {
-    myLinks.style.width = "0%";
+  if (myLinks.style.display === "block") {
+    myLinks.style.display = "none";
   } else {
-    myLinks.style.width = "100%";
+    myLinks.style.display = "block";
   }
   
   x.classList.toggle("change");
