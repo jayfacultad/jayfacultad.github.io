@@ -8,11 +8,6 @@ body{
     margin-left: -8px;
 }
 
-ul {
-  list-style-type: none;
-  margin-bottom; 0;
-}
-
 .hide {
     display: none !important;
 }
@@ -58,8 +53,8 @@ ul {
 
 /* Style navigation menu links */
 .navlink-icon {
-    width: 35px;
-    height: 35px;
+    width: 20px;
+    height: 20px;
     filter: invert();
 }
 
