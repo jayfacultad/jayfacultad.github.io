@@ -56,6 +56,8 @@ body{
     width: 20px;
     height: 20px;
     filter: invert();
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 .top-navbar a {
