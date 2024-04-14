@@ -102,12 +102,12 @@ body{
 
 .navbar-links.show-nav {
     max-height: 500px;
-    transition: max-height 1s ease-in;
+    transition: max-height .75s ease-in;
 }
 
 .navbar-links.hide-nav {
     max-height: 0;
-    transition: max-height 1s ease-out;
+    transition: max-height .75s ease-out;
 }
 
 /* Nav Bar - End*/
