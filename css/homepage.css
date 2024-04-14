@@ -65,6 +65,7 @@ body{
     text-decoration: none;
     font-size: 17px;
     display: inline-block;
+    margin-left: auto;
 }
 
 /* Add a grey background color on mouse-over */
