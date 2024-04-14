@@ -89,15 +89,23 @@ body{
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
-.top-navbar #myLinks {
-    display: none;
-}
 
 .navbar-links {
     font-family: Arial, Helvetica, sans-serif;
     background-color: black;
     margin-top: 48px;
     text-align: right;
+}
+
+.navbar-links.show {
+  max-height: 100%;
+  transition: max-height 0.3s ease-in;
+}
+
+.navbar-links.hide {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-out;
 }
 
 /* Nav Bar - End*/
