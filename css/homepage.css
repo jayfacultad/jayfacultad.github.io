@@ -3,6 +3,10 @@ body{
     overflow: hidden;
 }
 
+.hide{
+    display:none !important;
+}
+
 .mobile-container{
     margin-top: -8px;
     margin-left: -8px;
@@ -94,13 +98,13 @@ body{
     max-height: 0; 
 }
 
-.navbar-links.show {
+.navbar-links.show-nav {
     display: block;
     max-height: 100%;
     transition: max-height 1s ease-in;
 }
 
-.navbar-links.hide {
+.navbar-links.hide-nav {
   overflow: hidden;
   max-height: 0;
   transition: max-height 1s ease-out;
