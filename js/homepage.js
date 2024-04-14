@@ -13,12 +13,12 @@ function navBarClick(x) {
   console.log('Menu bar clicked');
 
   var myLinks = document.getElementById("myLinks");
-  if (myLinks.classList.contains("show")) {
-    myLinks.classList.add("hide");
-    myLinks.classList.remove("show");
+  if (myLinks.classList.contains("show-nav")) {
+    myLinks.classList.add("hide-nav");
+    myLinks.classList.remove("show-nav");
   } else {
-    myLinks.classList.add("show");
-    myLinks.classList.remove("hide");
+    myLinks.classList.add("show-nav");
+    myLinks.classList.remove("hide-nav");
   }
   
   x.classList.toggle("change");
