@@ -100,14 +100,14 @@ body{
 
 .navbar-links.show-nav {
     display: block;
-    max-height: 100%;
-    transition: 1s;
+    max-height: 1000px;
+    transition: max-height 1s;
 }
 
 .navbar-links.hide-nav {
   overflow: hidden;
   max-height: 0;
-  transition: 1s;
+  transition: max-height 1s;
 }
 
 /* Nav Bar - End*/
