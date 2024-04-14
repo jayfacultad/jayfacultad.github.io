@@ -18,9 +18,18 @@ window.addEventListener('scroll', function(){
 var header = document.getElementById('header');
 */
 
-function menuBarClick(x) {
+function navBarClick(x) {
   x.classList.toggle("change");
   console.log('Menu bar clicked');
+}
+
+function openNav() {
+  document.getElementById("navbar-container").style.height = "100%";
+}
+
+/* Close */
+function closeNav() {
+  document.getElementById("navbar-container").style.height = "0%";
 }
 
 
