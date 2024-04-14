@@ -25,6 +25,7 @@ body{
     width: 100%;
     background: gray;
     min-height: 48px;
+    z-index: 100;
 }
 
 .navbar-hamburger {
