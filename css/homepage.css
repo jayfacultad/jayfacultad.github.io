@@ -21,6 +21,7 @@ ul {
 .top-navbar{
     position: fixed;
     width: 100%;
+    background: gray;
 }
 
 .navbar-hamburger {
