@@ -314,6 +314,7 @@ body {
 .navbar-hamburger {
   display: inline-block;
   cursor: pointer;
+  float: right;
 }
 
 .bar1, .bar2, .bar3 {
