@@ -108,7 +108,7 @@ body{
 
 .navbar-links.show-nav {
     max-height: 500px;
-    transition: max-height .5 ease-in;
+    transition: max-height .5s ease-in;
 }
 
 .navbar-links.hide-nav {
@@ -118,7 +118,6 @@ body{
 
 /* Nav Bar - End*/
 
-/*
 .welcome-body {
     padding-top: 48px;
     padding-left: 20px;
@@ -127,4 +126,3 @@ body{
     font-family: sans-serif;
     font-style: italic;
 }
-*/
