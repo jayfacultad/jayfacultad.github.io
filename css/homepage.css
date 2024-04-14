@@ -4,7 +4,7 @@
 
 /* Nav Bar - Start*/
 .top-navbar{
-    position-fixed;
+    position: fixed;
     width: 100%;
 }
 
