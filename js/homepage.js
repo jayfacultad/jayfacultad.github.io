@@ -9,30 +9,16 @@ window.addEventListener('load', function() {
   }
 });
 
-/*
-window.addEventListener('scroll', function(){
-    document.getElementById("scroll-down-container").style.opacity = '0';
-    document.getElementById("hero-block").style.opacity = '0';
-});
-
-var header = document.getElementById('header');
-*/
-
 function navBarClick(x) {
   x.classList.toggle("change");
   console.log('Menu bar clicked');
-  this.openNav();
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
 }
-
-function openNav() {
-  document.getElementById("navbar-container").style.height = "100%";
-}
-
-/* Close */
-function closeNav() {
-  document.getElementById("navbar-container").style.height = "0%";
-}
-
 
 window.addEventListener('scroll', scrollHandler);
 
