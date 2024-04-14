@@ -22,6 +22,7 @@ ul {
     position: fixed;
     width: 100%;
     background: gray;
+    min-height: 48px;
 }
 
 .navbar-hamburger {
@@ -56,10 +57,6 @@ ul {
 }
 
 /* Style navigation menu links */
-.top-navbar {
-    min-height: 48px;
-}
-
 .top-navbar a {
     color: white;
     padding: 14px 16px;
