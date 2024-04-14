@@ -83,6 +83,7 @@ body{
 .link-container{
     height: 46px;
     display: flex;
+    align-items: center;
 }
 
 .navbar-links {
