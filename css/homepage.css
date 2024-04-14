@@ -53,11 +53,6 @@ body{
     transform: translate(0, -11px) rotate(45deg);
 }
 
-/* Hide the links inside the navigation menu (except for logo/home) */
-.top-navbar #myLinks {
-    display: none;
-}
-
 /* Style navigation menu links */
 .navlink-icon {
     width: 22px;
@@ -93,17 +88,16 @@ body{
     align-items: center;
 }
 
+/* Hide the links inside the navigation menu (except for logo/home) */
+.top-navbar #myLinks {
+    display: none;
+}
+
 .navbar-links {
     font-family: Arial, Helvetica, sans-serif;
     background-color: black;
     margin-top: 48px;
     text-align: right;
-    opacity: 0;
-}
-
-.change .navbar-links {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 /* Nav Bar - End*/
