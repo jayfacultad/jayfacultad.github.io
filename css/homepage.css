@@ -107,7 +107,7 @@ body{
 }
 
 .navbar-links.show-nav {
-    max-height: 500px;
+    max-height: 1000px;
     transition: max-height .5s ease-in;
 }
 
