@@ -101,13 +101,13 @@ body{
 .navbar-links.show-nav {
     display: block;
     max-height: 100%;
-    transition: max-height 1s ease-in;
+    transition: 1s;
 }
 
 .navbar-links.hide-nav {
   overflow: hidden;
   max-height: 0;
-  transition: max-height 1s ease-out;
+  transition: 1s;
 }
 
 /* Nav Bar - End*/
