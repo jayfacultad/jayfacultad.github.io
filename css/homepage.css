@@ -119,11 +119,16 @@ body{
 
 /* Nav Bar - End*/
 
-.welcome-body {
-    padding-top: 96px;
-    padding-left: 20px;
+.welcome-container {
+    margin-top: 48px;
+    margin-left: 20px;
     position: absolute;
     font-size: 20px;
     font-family: sans-serif;
     font-style: italic;
+    background: rgba(204, 204, 204, 0.5);
+}
+
+.welcome-body{
+    margin-left: 16px;
 }
