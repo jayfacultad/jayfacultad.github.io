@@ -10,6 +10,21 @@ var answers_array = new Array();
 
 create_dictionary();
 
+function navBarClick(x) {
+  console.log('Menu bar clicked');
+
+  var myLinks = document.getElementById("myLinks");
+  if (myLinks.classList.contains("show-nav")) {
+    myLinks.classList.add("hide-nav");
+    myLinks.classList.remove("show-nav");
+  } else {
+    myLinks.classList.add("show-nav");
+    myLinks.classList.remove("hide-nav");
+  }
+  
+  x.classList.toggle("change");
+}
+
 document.getElementById("start-button").addEventListener("click", function() {
 
     console.log("click");
