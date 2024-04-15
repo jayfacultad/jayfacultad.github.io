@@ -129,8 +129,9 @@ body{
     background: rgba(204, 204, 204, 0.7);
     width: 90%;
     height: 75%;
+    border-radius: 18px;
 }
 
 .welcome-body{
-    margin-left: 16px;]
+    margin-left: 16px;
 }
