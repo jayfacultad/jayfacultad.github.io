@@ -15,6 +15,7 @@ body{
 
 .background-image{
     height: 100%;
+    float: left;
     object-fit: cover;
 }
 
