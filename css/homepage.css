@@ -120,14 +120,15 @@ body{
 /* Nav Bar - End*/
 
 .welcome-container {
-    margin-top: 48px;
-    margin-left: 5%;
+    margin-top: 20%;
+    margin-left: 20px;
     position: absolute;
     font-size: 20px;
     font-family: sans-serif;
     font-style: italic;
     background: rgba(204, 204, 204, 0.7);
-    width: 90%
+    width: 90%;
+    height: 75%;
 }
 
 .welcome-body{
