@@ -127,9 +127,9 @@ body{
     font-family: sans-serif;
     font-style: italic;
     background: rgba(204, 204, 204, 0.7);
+    width: 90%
 }
 
 .welcome-body{
-    margin-left: 16px;
-    margin-right: -16px;
+    margin-left: 16px;]
 }
