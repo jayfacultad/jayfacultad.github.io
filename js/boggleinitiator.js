@@ -185,7 +185,7 @@ function start_timer() {
         function update_clock() {
             var time = time_remaining(endtime);
             if (timerOn == true) {
-                timer.innerHTML = "<span style='font-size:24px; color:black;'>Time: " + time.minutes + ":" + time.seconds + "</span>";
+                timer.innerHTML = "<span style='font-size:24px; color:black;'>" + time.minutes + ":" + time.seconds + "</span>";
                 timer.style.backgroundColor = "white";
                 timer.style.borderColor = "white";
             }
