@@ -62,11 +62,6 @@ function handleTouchMove(event) {
         ) {
             var selectedTile = document.getElementById(div.id);
 
-            // Css styling
-            //selectedTile.style.background = "orange";
-            //selectedTile.style.color = "white";
-            //selectedTile.setAttribute('visited', 'true');
-
             let currentSwipedTile = div.id.replace('tile-','');
             let currentSwipedTileRow = Number(currentSwipedTile[1]);
             let currentSwipedTileCol = Number(currentSwipedTile[3]);
@@ -84,20 +79,17 @@ function handleTouchMove(event) {
                     previouslySwipedTile = currentSwipedTile;
                     wordFromSwipe += document.getElementById(div.id.replace('tile-','')).innerHTML;
                     console.log(wordFromSwipe);
-                    document.getElementById("word-entry").innerHTML = wordFromSwipe;
-                    console.log(wordFromSwipe);
+                    document.getElementById("word-entry").innerHTML = wordFromSwipe.toUpperCase();
                 }
             } else if(wordFromSwipe == '')  {
-                console.log('enter 2');
                 selectedTile.style.background = "orange";
                 selectedTile.style.color = "white";
                 selectedTile.setAttribute('visited', 'true');
                 previouslySwipedTile = currentSwipedTile;
                 wordFromSwipe += document.getElementById(div.id.replace('tile-','')).innerHTML;
-                document.getElementById("word-entry").innerHTML = wordFromSwipe;
-                console.log(wordFromSwipe);
+                document.getElementById("word-entry").innerHTML = wordFromSwipe.toUpperCase();
             } else {
-                console.log('enter 3');
+                console.log('Error with word.');
             }
         }
     });
@@ -234,13 +226,13 @@ function calculate_score(word) {
             word_score = 1;
             break;
         case 4:
-            word_score = 5;
+            word_score = 2;
             break;
         case 5: 
-            word_score = 10;
+            word_score = 5;
             break;
         case 6: 
-            word_score = 15;
+            word_score = 10;
             break;
         default:
             word_score = 20;
