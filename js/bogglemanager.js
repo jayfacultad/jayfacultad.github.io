@@ -136,7 +136,7 @@ function submitWord() {
         if ((input_value.length > 2) && boggle_answers.is_word(input_value) && !user_inputs.includes(input_value)) {   
             word_score = calculate_score(input_value.length);
             if (word_score < 10 ) {
-                display_text = "<div>" + word_score + "&emsp;" + input_value + "</div>";
+                display_text = "<div>" + word_score + "&nbsp;&nbsp;&emsp;" + input_value + "</div>";
             }
             else {
                 display_text = "<div>" + word_score + "&emsp;" + input_value  + "</div>";
