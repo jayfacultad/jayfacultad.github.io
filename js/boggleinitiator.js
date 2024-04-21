@@ -59,31 +59,24 @@ function navBarClick(x) {
 create_dictionary();
 
 function startClick() {
-    try{
-    if (startGame == false) {
-        score_total = 0;
 
-        //document.getElementById("word-entry").focus();
-        document.getElementById("word-entry").innerHTML = "&nbsp;"
+    score_total = 0;
+    document.getElementById("all-words").innerHTML = "";
 
-        document.getElementById("score").innerHTML = "CURRENT SCORE: " + score_total;
-        document.getElementById("word_bank").innerHTML = "";
-        
-        startGame = true;
-        timerOn = true;
-        build_board();
-        start_timer();
-        create_boggle_graph();
-        boggle_solver();
-    }
-    else if (startGame == true) {
-        
-    }
-}
+    //document.getElementById("word-entry").focus();
+    document.getElementById("word-entry").innerHTML = "&nbsp;"
 
-    catch(e){
-        console.log(e);
-    }
+    document.getElementById("score").innerHTML = "CURRENT SCORE: " + score_total;
+    document.getElementById("word_bank").innerHTML = "";
+    document.getElementById("all-words").innerHTML = "Will appear when game ends.";
+    
+    startGame = true;
+    timerOn = true;
+    build_board();
+    start_timer();
+    create_boggle_graph();
+    boggle_solver();
+    
 };
 
 function stopClick() {
