@@ -319,11 +319,6 @@ function create_boggle_graph() {
 }
 
 function boggle_solver() {
-
-    try{
-
-    
-
     for (var i = 0; i < num_of_tiles; i++) {
         var word = "";
         boggle_graph.clear_marks();
@@ -332,10 +327,6 @@ function boggle_solver() {
 
     // Sort: longest word to shortest, then alphabetically if equal length
     answers_array.sort((a, b) => b.length - a.length || a.localeCompare(b));
-
-    }catch(e){
-        console.log(e);
-    }
 }
 
 function DFS(index, word) {
@@ -364,7 +355,16 @@ function DFS(index, word) {
             }
         }
         boggle_graph.remove_mark(index); 
-    }    
+    }      
+}
+
+function openDescription(){
+    console.log("click");
+    document.getElementById("description-container").classList.remove('hide');
+}
+
+function closeDescription(){
+    document.getElementById("description-container").classList.add('hide');
 }
 
 
