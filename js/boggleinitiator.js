@@ -192,20 +192,22 @@ function start_timer() {
             
             if(time.minutes < 0 || timerOn == false) { 
 
-                document.getElementById("board").style.backgroundColor = "black";
-                document.getElementById("board").style.border = "5px solid black";
-                setTimeout(() => { 
-                    document.getElementById("board").style.backgroundColor = "#398BD4"; 
-                    document.getElementById("board").style.border = "5px solid #FFCA08";
-                }, 75);
-                setTimeout(() => { 
-                    document.getElementById("board").style.backgroundColor = "black"; 
+                if(startGame  == true){
+                    document.getElementById("board").style.backgroundColor = "black";
                     document.getElementById("board").style.border = "5px solid black";
-                }, 150);
-                setTimeout(() => { 
-                    document.getElementById("board").style.backgroundColor = "#398BD4"; 
-                    document.getElementById("board").style.border = "5px solid #FFCA08";
-                }, 225);
+                    setTimeout(() => { 
+                        document.getElementById("board").style.backgroundColor = "#398BD4"; 
+                        document.getElementById("board").style.border = "5px solid #FFCA08";
+                    }, 75);
+                    setTimeout(() => { 
+                        document.getElementById("board").style.backgroundColor = "black"; 
+                        document.getElementById("board").style.border = "5px solid black";
+                    }, 150);
+                    setTimeout(() => { 
+                        document.getElementById("board").style.backgroundColor = "#398BD4"; 
+                        document.getElementById("board").style.border = "5px solid #FFCA08";
+                    }, 225);
+                }
 
                 timer.innerHTML = "START";
                 timer.style.backgroundColor = "forestgreen";
