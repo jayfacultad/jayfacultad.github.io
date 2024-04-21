@@ -30,8 +30,8 @@ window.addEventListener('load', function() {
     var remainingheight = viewportheight - gamecontainerheight;
     console.log("remaining height: " + remainingheight);
 
-    document.getElementById('left-column').setAttribute("style","height:" + (remainingheight - 50) + "px");
-    document.getElementById('right-column').setAttribute("style","height:" + (remainingheight - 50) + "px");
+    document.getElementById('left-column').setAttribute("style","height:" + (remainingheight - 25) + "px");
+    document.getElementById('right-column').setAttribute("style","height:" + (remainingheight - 25) + "px");
 
     if(window.screen.width <= mobileSize ) {
         document.getElementById("mobile").classList.remove('hide');
@@ -67,6 +67,7 @@ function startClick() {
         document.getElementById("word-entry").innerHTML = "&nbsp;"
 
         document.getElementById("score").innerHTML = "CURRENT SCORE: " + score_total;
+        document.getElementById("word_bank").innerHTML = "";
         
         startGame = true;
         timerOn = true;
@@ -102,6 +103,8 @@ function stopClick() {
     });
 
     user_inputs.length = 0;
+
+    document.getElementById("all-words").innerHTML = answers_array;
 }
 
 function build_board() {
@@ -208,13 +211,20 @@ function start_timer() {
                     answer_set.add(answers_array[i]);
                 } 
                 var new_answer_array = Array.from(answer_set);
-                document.getElementById("score_cell").innerHTML = '<div style="text-align:left">' + new_answer_array.join("") + '</div>';
+                document.getElementById("all-words").innerHTML = '<div style="text-align:left">' + new_answer_array.join("") + '</div>';
 
                 // Reset Tile Colors
-                const tiles = document.querySelectorAll('.tile');
-                tiles.forEach(div => {
+                const swipeDivs = document.querySelectorAll('.swipe-div');
+                swipeDivs.forEach(div => {
                     div.style.background = "gainsboro";
                     div.style.color = "black";
+                });
+
+                // Reset word obtained from swipe
+                wordFromSwipe = '';
+                previouslySwipedTile = '';
+                let divsForSwipe = document.querySelectorAll('.swipe-div');
+                divsForSwipe.forEach(div => {
                     div.setAttribute('visited', 'false');
                 });
             }
