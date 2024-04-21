@@ -155,7 +155,7 @@
         </div> <!-- End board -->
 
         <div style="text-align:center;">
-            <div class="description-button">Tap for Technical Summary</div>
+            <div class="description-button" onclick="openDescription()">Tap for Technical Summary</div>
         </div>
 
         <div id="word-entry" class="current-word">
@@ -170,14 +170,6 @@
             <div class="column-header" >YOUR WORDS</div>
             <div style="padding-top:5px;">
                 <ul id="word_bank" class="word-list">
-                    <li>test</li>
-                    <li>test1</li>
-                    <li>test2</li>
-                    <li>test3</li>
-                    <li>test4</li>
-                    <li>test5</li>
-                    <li>test6</li>
-
                 </ul>
             </div>
         </div>
@@ -185,11 +177,6 @@
             <div class="column-header">ALL WORDS</div>
             <div style="padding-top:5px;">
                 <ul id="all-words" class="word-list">
-                    <li>test</li>
-                    <li>test1</li>
-                    <li>test2</li>
-                    <li>test3</li>
-                    <li>test4</li>
                 </ul>
             </div>
         </div>
@@ -199,64 +186,71 @@
 
     </div>
 
-    <!-- 
-    <br>
-    <div id="summary-container" class="boggle-summary">
-    <a class="bold">DESCRIPTION</a>
-    <br><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;Web application game that utilizes HTML, CSS, JavaScript, 
-    Node.js, and MongoDB via client side and server side implementations.  
-    The web application integrates adjacency matrix graphs and trie/prefix trees 
-    as data structures and depth first search as the primary algorithm.  
-    When the game is over, the app sends the user's inputted
-    username and final score to a <a href="https://frozen-hamlet-64285.herokuapp.com/">database server</a> for storage via MongoDB: 
-    <a href="https://frozen-hamlet-64285.herokuapp.com/">https://frozen-hamlet-64285.herokuapp.com/</a>
-    <br><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;This app utilizes two data structure classes: Tries and Graphs.  
-    The Trie implementation includes a node structure called TrieNode. 
-    Each node represents a letter of a possible word.
-    The TrieNode consists of two bool variables, one to signify if the 
-    letter is a prefix of an existing word, and one to signify if the letter 
-    is the end of a full word. The TrieNode also contains an array of its children. 
-    There are a total of 26 possible children, with each child representing a letter 
-    of the alphabet. One Trie data structure is used to store a Dictionary of all possible 
-    English words, and another Trie data structure is used to store all answers of the Boggle
-    Board.  The runtime for each Trie function is O(m), where m is the length 
-    of the key or word. A second data structure class utilized in this app is the
-    Graph implementation. This Graph class is used to store the Boggle Board.  
-    Each tile in the Boggle Board is represented as a Vertex in the graph, and each tile
-    is connected to its neighbors (8 neighbors maximum, 3 neighbors minimum for
-    corner tiles) by Edges. Therefore, the Boggle Board is represented as a cyclical, 
-    undirected, unweighed Graph.
-    <br><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;Depth First Search is used to find all answers of the Boggle Board.
-    The Depth First Search algorithm starts with one Vertex (the first tile), 
-    and recursively visits all of its unsivisted neighbors. The first neighbor's letter is 
-    appended to the current Vertex's letter, which creates a subword. 
-    If the Vertex's and neighbor's letters append to forma prefix of another word, 
-    the algorithm then continues and finds the neighbor's neighbors and appends one 
-    to the subword. This is performed for all neighbors as long as the
-    subword is a prefix of another word.  If it's not, then that
-    neighbor is marked as visited and does not get appended to the subword, and
-    the algorithm moves on to the next neighboring tile until all neighbors are visited. 
-    If at any point the subword is identified as a full word, then the current
-    letter is marked as an end of word. This algorithm contiunes until the last 
-    tile of the board is reached.  Because the Graph of the Boggle Board is 
-    implemented as an ajacency matrix, the runtime for the Depth First Search 
-    algorithm is O(n*n) where n is the number of nodes.
-    <br><br>
-    <a class="bold">Data Structures Implemented:</a>
-    <ul>
-        <li>Trie / Prefix Trees</li>
-        <li>Graphs / Adjacency Matrix</li>
-    </ul>
-    <a class="bold">Algorithms:</a>
-    <ul>
-        <li>Depth First Search</li>
-    </ul>
-
-    -->
-
+ 
+    <div id="description-container" class="hide description-container">
+        <span class="close" onclick="closeDescription()">&times;</span>
+        <div class="description-content">
+            <a><b>DESCRIPTION</b></a>
+            <br/>
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;Web application game that utilizes HTML, CSS, JavaScript, 
+            Node.js, and MongoDB via client side and server side implementations.  
+            The web application integrates adjacency matrix graphs and trie/prefix trees 
+            as data structures and depth first search as the primary algorithm.  
+            When the game is over, the app sends the user's inputted
+            username and final score to a <a href="https://frozen-hamlet-64285.herokuapp.com/">database server</a> for storage via MongoDB: 
+            <a href="https://frozen-hamlet-64285.herokuapp.com/">https://frozen-hamlet-64285.herokuapp.com/</a>
+            <br><br>
+            <a><b>DATA STRUCTURES</b></a>
+            <br/>
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;This app utilizes two data structure classes: Tries and Graphs.  
+            The Trie implementation includes a node structure called TrieNode. 
+            Each node represents a letter of a possible word.
+            The TrieNode consists of two bool variables, one to signify if the 
+            letter is a prefix of an existing word, and one to signify if the letter 
+            is the end of a full word. The TrieNode also contains an array of its children. 
+            There are a total of 26 possible children, with each child representing a letter 
+            of the alphabet. One Trie data structure is used to store a Dictionary of all possible 
+            English words, and another Trie data structure is used to store all answers of the Boggle
+            Board.  The runtime for each Trie function is O(m), where m is the length 
+            of the key or word. A second data structure class utilized in this app is the
+            Graph implementation. This Graph class is used to store the Boggle Board.  
+            Each tile in the Boggle Board is represented as a Vertex in the graph, and each tile
+            is connected to its neighbors (8 neighbors maximum, 3 neighbors minimum for
+            corner tiles) by Edges. Therefore, the Boggle Board is represented as a cyclical, 
+            undirected, unweighed Graph.
+            <br><br>
+            <a><b>ALGORITHMS</b></a>
+            <br/>
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;Depth First Search is used to find all answers of the Boggle Board.
+            The Depth First Search algorithm starts with one Vertex (the first tile), 
+            and recursively visits all of its unsivisted neighbors. The first neighbor's letter is 
+            appended to the current Vertex's letter, which creates a subword. 
+            If the Vertex's and neighbor's letters append to forma prefix of another word, 
+            the algorithm then continues and finds the neighbor's neighbors and appends one 
+            to the subword. This is performed for all neighbors as long as the
+            subword is a prefix of another word.  If it's not, then that
+            neighbor is marked as visited and does not get appended to the subword, and
+            the algorithm moves on to the next neighboring tile until all neighbors are visited. 
+            If at any point the subword is identified as a full word, then the current
+            letter is marked as an end of word. This algorithm contiunes until the last 
+            tile of the board is reached.  Because the Graph of the Boggle Board is 
+            implemented as an ajacency matrix, the runtime for the Depth First Search 
+            algorithm is O(n*n) where n is the number of nodes.
+            <br><br>
+            <a class="bold">Data Structures Implemented:</a>
+            <ul>
+                <li>Trie / Prefix Trees</li>
+                <li>Graphs / Adjacency Matrix</li>
+            </ul>
+            <a class="bold">Algorithms:</a>
+            <ul>
+                <li>Depth First Search</li>
+            </ul>
+        </div>
+    
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
