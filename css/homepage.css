@@ -124,14 +124,19 @@ body{
     margin-left: 20px;
     position: absolute;
     font-size: 20px;
-    font-family: sans-serif;
-    font-style: italic;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background: rgba(204, 204, 204, 0.7);
     width: 90%;
     height: 75%;
     border-radius: 18px;
+    text-align: center;
 }
 
 .welcome-body{
     margin-left: 16px;
+}
+
+.profile-picture{
+    max-width: 30%;
+    border-radius: 10px;
 }
