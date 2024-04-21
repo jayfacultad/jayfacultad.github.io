@@ -152,7 +152,7 @@ function submitWord() {
         }
         else if(!input_value.includes("&NBSP;")) {
             word_score = 0;
-            display_text = "<div style='color:red'>" + word_score + "&emsp;" + input_value + "</div>";
+            display_text = "<div style='color:red'>" + word_score + "&nbsp;&nbsp;&emsp;" + input_value + "</div>";
 
             document.getElementById("board").style.backgroundColor = "crimson";
             document.getElementById("board").style.border = "5px solid indianred";
