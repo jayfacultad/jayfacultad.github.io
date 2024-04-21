@@ -1,555 +1,143 @@
-@media (min-width: 1100px) {
-
-body {
-    /* background-color: #F57921; */
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-h3 {
-    text-align: center;
-    margin-bottom: 5px;
-}
-
-#start-button {
-    width: 100px;
-    background: steelblue;
-    border-radius: 3px;
-    padding: 0 10px;
-    color: #f9f6f2;
-    height: 40px;
-    line-height: 42px;
-    text-align: center;
-    margin: 0 auto;
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.intro {
-    font-size: 12px;
-    font-weight: bold;
-}
-
-#game-container {
-    width: 100%;
-    text-align: center;
-}
-
-#left-container {
-    margin: 15px 25px;
-    float: left;
-    display: inline-block;
-}
-
-#center-container {
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    /* width: 490px; */
-    text-align: center;
-}
-
-#right-container {
-    margin: 15px 25px;
-    /* width: 250px; */
-    float: right;
-    display: inline-block;
-}
-
-.score-container {
-    float: center;
-    text-align: center;
-}
-
-.score-heading {
-    color: black;
-    font-family: "Arial";
-    font-size: 30px;
-    text-align: center;
-}
-
-#score {
-    font-family: "Arial";
-    color: black;
-    font-size: 50px; 
-    text-align: center;
-}
-
-#word-submit {
-    margin: 15px 0;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.word-field {
-    font-size: 20px;
-    display: block;
-    width: 175px;
-    text-transform: uppercase;
-    padding: 5px; 
-}
-
-input {
-    font-size: 14px;
-    text-align: center;
-}
-
-#submit-button {
-    font-size: 14px;
-    vertical-align: middle;
-    background: lightgray;
-    font-weight: bold;
-    border-radius: 3px;
-    padding: 2px 5px;
-    height: 20px;
-    line-height: 20px;
-    color: lightgray;
-    text-align: center;
-    margin: 0 auto;
-}
-
-#submit-button:hover {
-    cursor: pointer;
-}
-
-#score-table {
-    width: 200px;
-    align-self: left;
-    border: 5px solid #FFCA08;
-    border-collapse: collapse;
-    text-align: left;
-    table-layout: fixed;
-    font-family: Monospace;
-}
-
-#score_cell {
-    height: 430px;
-    overflow: auto;
-}
-
-#score_col {
-    width: 50px;
-}
-
-#answer_cell {
-    height: 430px;
-    overflow: auto;
-}
-
-#score-table th {
-    border: 5px solid #FFCA08;
-    padding: 5px;
-    background-color: #ACCEEC;
-    text-align: center;
-}
-
-#score-table td {
-    border: 5px solid #FFCA08;
-    background-color: azure;
-    padding: 5px;
-    height: 430px;
-    text-align: right;
-    vertical-align: text-top;
-    table-layout: fixed;
-}
-
-#board {
-    border: 5px solid #FFCA08;
-    background-color: #398BD4;
-    padding: 5px;
-    margin-top: 5px;
-}
-
-.row {
-    display: flex;
-    text-align:center;
-    flex-direction:row;
-    padding: 3px;
-}
-
-.tile {
-    font-size: 35px;
-    font-family: "Lucida Sans Unicode";
-    color: black;
-    width: 75px;
-    height: 75px;
-    border-radius: 10px;
-    background-color: gainsboro;
-    box-shadow: -5px 3px 9px 2px rgba(0,0,0,0.69);
-    flex:1 1 auto;
-    margin:5px;
-}
-
-.tile:hover {
-    cursor: pointer;
-}
-
-.tile.selected {
-   background-color: #ACCEEC;
-}
-
-.tile span {
-   font-weight: bold;
-   display: block;
-   position: relative;
-   top: 50%;
-   transform: translateY(-50%);
-}
-
-.time-remaining-heading {
-    font-family: "Arial";
-    color: black;
-    font-size: 30px;
-    text-align: center;
-}
-
-#time-remaining {
-    font-family: "Arial";
-    color: black;
-    font-size: 50px;   
-    text-align: center; 
-}
-
-
-.time-container {
-    float: center;
-    text-align: center;
-}
-
-#answers-table {
-    width: 200px;
-    align-self: left;
-    border: 5px solid #FFCA08;
-    border-collapse: collapse;
-    text-align: left;
-    table-layout: fixed;
-    font-family: Monospace;
-}
-
-#answers-table th {
-    border: 5px solid #FFCA08;
-    background-color: #ACCEEC;
-    padding: 5px;
-    text-align: center;
-}
-
-#answers-table td {
-    border: 5px solid #FFCA08;
-    background-color: azure;
-    text-align: center;
-    padding: 5px;
-    height: 430px;
-    vertical-align: middle;
-    overflow: auto;
-
-}
-
-#start-button:hover {
-    cursor: pointer;
-}
-
-}
-
-/* MOBILE ---------------------------------------------------------------- */
-
-@media screen and (max-width: 1099px) {
-
 body {
     /* background-color: #F57921; */
     font-family: Arial, Helvetica, sans-serif;
     overscroll-behavior-y: none;
     overflow: hidden;
+
 }
 
-h3 {
-    text-align: center;
-    margin-bottom: 5px;
+.top-navbar{
+    background-color: lightslategray;
 }
 
+.start-button{
+    font-family: "Lucida Sans Unicode";
+    color: white;
+    border: 1px solid darkgray;
+    border-radius: 15px;
+    background-color: forestgreen;
+    margin-left: 15%;
+    margin-right: 5px;
+    margin-top: 10px;   
+    margin-bottom: 10px;
+    width: 25%;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    flex: 1;
+}
 
-#start-button {
-    width: 100px;
-    background: steelblue;
-    border-radius: 3px;
-    padding: 0 10px;
-    color: #f9f6f2;
-    height: 40px;
-    line-height: 42px;
-    text-align: center;
+.stop-button{
+    font-family: "Lucida Sans Unicode";
+    color: white;
+    border: 1px solid darkgray;
+    border-radius: 15px;
+    background-color: firebrick;
+    margin-left: 5px;
+    margin-right: 15%;
+    margin-top: 10px;   
+    margin-bottom: 10px;
+    width: 25%;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    flex: 1;
+}
+
+.description-button{
+    font-family: "Lucida Sans Unicode";
+    color: white;
+    border: 1px solid darkgray;
+    border-radius: 20px;
+    background-color: darkcyan;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;   
+    padding-bottom: 10px;
+    width: 60%;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.boggle-body-container{
+    max-width: 100%;
+    padding-top: 48px;
+}
+
+.board {
     margin: 0 auto;
-    vertical-align: middle;
-    margin-top: 2%;
-}
-
-.intro {
-    font-size: 12px;
-    font-weight: bold;
-}
-
-#game-container {
-    width: 100%;
-    display: inline-flex;
-    position: fixed;
-    overscroll-behavior: contain;
-    overflow: auto;
-    height: 50%;
-}
-
-.boggle-summary {
-  overflow: auto;
-  overscroll-behavior: contain;
-  height: 100%;
-}
-
-#left-container {
-    margin: 15px 25px;
-    /* width: 250px; */
-    display: inline-block;
-}
-
-#center-container {
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    /* width: 490px; */
-    text-align: center;
-}
-
-#right-container {
-    margin: 15px 25px;
-    /* width: 250px; */
-    display: inline-block;
-}
-
-.score-container {
-    float: center;
-    text-align: center;
-}
-
-.score-heading {
-    color: black;
-    font-family: "Arial";
-    font-size: 30px;
-    text-align: center;
-}
-
-#score {
-    font-family: "Arial";
-    color: black;
-    font-size: 50px; 
-    text-align: center;
-}
-
-#word-submit {
-    clear: center;
-    margin: 15px 0;
-    margin-left: auto;
-    margin-right: auto;
-    vertical-align: middle;
-}
-
-.word-field {
-    font-size: 30px;
-    width: 400px;
-    text-transform: uppercase;
-    margin-top: 2%; 
-}
-
-input {
-    font-size: 14px;
-    text-align: center;
-}
-
-#submit-button {
-    font-size: 16px;
-    vertical-align: middle;
-    background: steelblue;
-    font-weight: bold;
-    border-radius: 3px;
-    height: 20px;
-    line-height: 20px;
-    color: lightgray;
-    text-align: center;
-    width: 405px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#submit-button:hover {
-    cursor: pointer;
-}
-
-#score-table {
-    width: 200px;
-    align-self: left;
-    border: 5px solid #FFCA08;
-    border-collapse: collapse;
-    text-align: left;
-    table-layout: fixed;
-    font-family: Monospace;
-}
-
-#score_cell {
-    height: 480px;
-    overflow: auto;
-}
-
-#score_col {
-    width: 50px;
-}
-
-#answer_cell {
-    height: 480px;
-    overflow: auto;
-}
-
-#score-table th {
-    border: 5px solid #FFCA08;
-    padding: 5px;
-    background-color: #ACCEEC;
-    text-align: center;
-}
-
-#score-table td {
-    border: 5px solid #FFCA08;
-    background-color: azure;
-    padding: 5px;
-    height: 480px;
-    text-align: right;
-    vertical-align: text-top;
-    table-layout: fixed;
-}
-
-#board {
-    positition: fixed;
+    max-width: 80%;
     border: 5px solid #FFCA08;
     background-color: #398BD4;
-    padding: 5px;
-    margin-top: 5px;
+    border-radius: 7px;
 }
 
 .row {
     display: flex;
     text-align:center;
     flex-direction:row;
-    padding: 3px;
 }
 
 .tile {
     font-size: 35px;
     font-family: "Lucida Sans Unicode";
     color: black;
-    width: 75px;
-    height: 75px;
-    border-radius: 10px;
+    border-radius: 7px;
     background-color: gainsboro;
-    box-shadow: -5px 3px 9px 2px rgba(0,0,0,0.69);
+    box-shadow: -2px 2px 7px 1px rgba(0,0,0,0.69);
     flex:1 1 auto;
     margin:5px;
 }
 
-.tile:hover {
-    cursor: pointer;
-}
-
-.tile.selected {
-   background-color: #ACCEEC;
-}
-
-.tile span {
-   font-weight: bold;
-   display: block;
-   position: relative;
-   top: 50%;
-   transform: translateY(-50%);
-}
-
-.time-remaining-heading {
-    font-family: "Arial";
-    color: black;
-    font-size: 30px;
+.current-word{
     text-align: center;
+    padding-bottom: 10px;
+    font-weight: bold;
 }
 
-#time-remaining {
-    font-family: "Arial";
-    color: black;
-    font-size: 50px;   
-    text-align: center; 
+.column-header{
+    position:fixed;
+    background-color:lightgray;
+    width: auto;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 2px;
 }
 
-
-.time-container {
-    float: center;
-    text-align: center;
-}
-
-#answers-table {
-    width: 200px;
-    align-self: left;
-    border: 5px solid #FFCA08;
-    border-collapse: collapse;
-    text-align: left;
-    table-layout: fixed;
-    font-family: Monospace;
-}
-
-#answers-table th {
-    border: 5px solid #FFCA08;
-    background-color: #ACCEEC;
-    padding: 5px;
-    text-align: center;
-}
-
-#answers-table td {
-    border: 5px solid #FFCA08;
-    background-color: azure;
-    text-align: center;
-    padding: 5px;
-    height: 480px;
-    vertical-align: middle;
-    overflow: auto;
-
-}
-
-#start-button:hover {
-    cursor: pointer;
-}
-
-}
-
-#results-container {
-    text-align: center;
-    display: none;
-    position: absolute;
-    top: 35%;
-    right: 33%;
-    width: 480px;
-    height: 225px;
-    background: gray;
-}
-
-#usernameField {
-    margin-top: 2%;
-}
-
-#username {
-    padding: 4px 4px;
-    border-style: solid;
-    border-width: 1px;
+.left-column{
+    flex: 1;
+    width: 45%;
+    margin-left: 20px;
+    margin-right: 5px;
     background-color: lightgray;
+    text-align: left;
+    font-weight: bold;
+    overflow-y:scroll;
 }
 
-#username:hover {
-    cursor: pointer;
+.right-column{
+    flex: 1;
+    width: 45%;
+    margin-right: 20px;
+    margin-left: 5px;
+    background-color: lightgray;
+    text-align: left;
+    font-weight: bold;
 }
 
-#end-message {
-    margin-top: 5%;
+.word-list{
+    margin-top: 25px;
+    list-style-type:none;
+    padding:0; 
+    list-style-type:none;
+    padding-left: 10px;
 }
