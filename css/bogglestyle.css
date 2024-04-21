@@ -121,7 +121,7 @@ body {
     background-color: lightgray;
     text-align: left;
     font-weight: bold;
-    overflow-y:scroll;
+    overflow-y: scroll;
 }
 
 .right-column{
@@ -132,6 +132,7 @@ body {
     background-color: lightgray;
     text-align: left;
     font-weight: bold;
+    overflow-y: scroll;
 }
 
 .word-list{
