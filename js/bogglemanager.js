@@ -20,8 +20,11 @@ function startup() {
 document.addEventListener("DOMContentLoaded", startup);
 
 function handleTouchEnd(evt) {
-    console.log('touch end');
-    submitWord();
+    if(startGame){
+        console.log('touch end');
+        submitWord();
+    }
+    
 }
 
 // Add touch event listeners to all divs with class "swipe-div"
@@ -34,12 +37,17 @@ swipeDivs.forEach(div => {
 
 // Function to handle touch start event
 function handleTouchStart(event) {
-    touchStartX = event.touches[0].clientX;
-    touchStartY = event.touches[0].clientY;
+    if(startGame){
+        touchStartX = event.touches[0].clientX;
+        touchStartY = event.touches[0].clientY;
+    }
 }
 
 // Function to handle touch move event
 function handleTouchMove(event) {
+    if(!startGame){
+        return;
+    }
     const touchMoveX = event.touches[0].clientX;
     const touchMoveY = event.touches[0].clientY;
 
