@@ -68,7 +68,8 @@ function startClick() {
 
     document.getElementById("score").innerHTML = "CURRENT SCORE: " + score_total;
     document.getElementById("word_bank").innerHTML = "";
-    document.getElementById("all-words").innerHTML = "Will appear when game ends.";
+    document.getElementById("all-words").innerHTML = "(will appear when game ends)";
+    user_inputs = [];
     
     startGame = true;
     timerOn = true;
