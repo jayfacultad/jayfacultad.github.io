@@ -20,7 +20,8 @@ function startup() {
 document.addEventListener("DOMContentLoaded", startup);
 
 function handleTouchEnd(evt) {
-    document.getElementById("submit-button").click();
+    console.log('touch end');
+    submitWord();
 }
 
 // Add touch event listeners to all divs with class "swipe-div"
@@ -51,9 +52,7 @@ function handleTouchMove(event) {
             touchMoveY >= rect.top &&
             touchMoveY <= rect.bottom
         ) {
-            console.log(`Swiped on div with id: ${div.id}`);
             var selectedTile = document.getElementById(div.id);
-            console.log('selectedTile.getAttribute(\'visited\') = ' + selectedTile.getAttribute('visited'));
 
             // Css styling
             //selectedTile.style.background = "orange";
@@ -64,19 +63,10 @@ function handleTouchMove(event) {
             let currentSwipedTileRow = Number(currentSwipedTile[1]);
             let currentSwipedTileCol = Number(currentSwipedTile[3]);
 
-            console.log('currentSwipedTile: ' + currentSwipedTile);
-            console.log('previouslySwipedTile: ' + previouslySwipedTile);
-            console.log(previouslySwipedTile != '');
-            console.log(selectedTile.getAttribute('visited') == 'false');
 
             if(previouslySwipedTile != '' && selectedTile.getAttribute('visited') == 'false'){
-                console.log('enter 1');
-                console.log('currentSwipedTileRow: ' + currentSwipedTileRow);
-                console.log('currentSwipedTileCol: ' + currentSwipedTileCol);
                 let previouslySwipedTileRow = Number(previouslySwipedTile[1]);
                 let previouslySwipedTileCol = Number(previouslySwipedTile[3]);
-                console.log('previouslySwipedTileRow: ' + previouslySwipedTileRow);
-                console.log('previouslySwipedTileCol: ' + previouslySwipedTileCol);
                 
                 if((currentSwipedTileRow == previouslySwipedTileRow || currentSwipedTileRow + 1 == previouslySwipedTileRow || currentSwipedTileRow - 1 == previouslySwipedTileRow) 
                    && (currentSwipedTileCol == previouslySwipedTileCol || currentSwipedTileCol + 1 == previouslySwipedTileCol || currentSwipedTileCol - 1 == previouslySwipedTileCol)) {
@@ -85,7 +75,8 @@ function handleTouchMove(event) {
                     selectedTile.setAttribute('visited', 'true');
                     previouslySwipedTile = currentSwipedTile;
                     wordFromSwipe += document.getElementById(div.id.replace('tile-','')).innerHTML;
-                    document.getElementById("word-entry").value = wordFromSwipe;
+                    console.log(wordFromSwipe);
+                    document.getElementById("word-entry").innerHTML = wordFromSwipe;
                     console.log(wordFromSwipe);
                 }
             } else if(wordFromSwipe == '')  {
@@ -95,7 +86,7 @@ function handleTouchMove(event) {
                 selectedTile.setAttribute('visited', 'true');
                 previouslySwipedTile = currentSwipedTile;
                 wordFromSwipe += document.getElementById(div.id.replace('tile-','')).innerHTML;
-                document.getElementById("word-entry").value = wordFromSwipe;
+                document.getElementById("word-entry").innerHTML = wordFromSwipe;
                 console.log(wordFromSwipe);
             } else {
                 console.log('enter 3');
@@ -109,7 +100,7 @@ document.getElementById("word-entry").addEventListener("keyup", function(event) 
   // Number 13 is the "Enter" key on the keyboard
   if (event.keyCode == 13) {
     // Trigger the button element with a click
-    document.getElementById("submit-button").click();
+    submitWord();
   }
 });
 
@@ -122,45 +113,56 @@ for (var row = 0; row < 5; row++) {
 
 function addClickedLetter(tile) {
     var clickedItem = tile.target.id;
-    var initial_subword = document.getElementById("word-entry").value;
+    var initial_subword = document.getElementById("word-entry").innerHTML;
     var new_subword = initial_subword + document.getElementById(clickedItem).innerHTML;
-    document.getElementById("word-entry").value = new_subword;
+    document.getElementById("word-entry").innerHTML = new_subword;
     //document.getElementById("word-entry").focus();
 }
 
 
-document.getElementById("submit-button").addEventListener("click", function() {
+function submitWord() {
+    console.log('Submit');
     if (startGame == true) {
-
-        var input_value = document.getElementById("word-entry").value;
+    
+        var input_value = document.getElementById("word-entry").innerHTML;
+        if(input_value == "&NBSP;"){
+            input_value = "";
+        }
         input_value = input_value.toUpperCase();
+
+        console.log(input_value);
+        try{
+            console.log("is word? " + boggle_answers.is_word(input_value));
+        }catch(e){
+            console.log(e);
+        }
 
         var display_text;
 
         if ((input_value.length > 2) && boggle_answers.is_word(input_value) && !user_inputs.includes(input_value)) {   
             word_score = calculate_score(input_value.length);
             if (word_score < 10 ) {
-                display_text = "<div>" + input_value + "&nbsp;&nbsp;&emsp;" + word_score + "</div>";
+                display_text = "<div>" + word_score + "&emsp;" + input_value + "</div>";
             }
             else {
-                display_text = "<div>" + input_value + "&emsp;" + word_score + "</div>";
+                display_text = "<div>" + word_score + "&emsp;" + input_value  + "</div>";
             } 
         }
-        else {
+        else if(!input_value.includes("&NBSP;")) {
             word_score = 0;
-            display_text = "<div style='color:red'>" + input_value + "&nbsp;&nbsp;&emsp;" + word_score + "</div>";
+            display_text = "<div style='color:red'>" + word_score + "&emsp;" + input_value + "</div>";
         }
 
         score_total += word_score;
-        document.getElementById("score").innerHTML = score_total;
+        document.getElementById("score").innerHTML = "CURRENT SCORE: " + score_total;
 
         // Add to beginning of array
         user_inputs.unshift(display_text); 
  
         // Clear input field
-        document.getElementById("word-entry").value = "";
+        document.getElementById("word-entry").innerHTML = "&nbsp;";
         // Display user's inputted words in word table
-        document.getElementById("answer_cell").innerHTML = user_inputs.join("");
+        document.getElementById("word_bank").innerHTML = user_inputs.join("");
 
         // Reset Tile Colors
         const swipeDivs = document.querySelectorAll('.swipe-div');
@@ -177,7 +179,7 @@ document.getElementById("submit-button").addEventListener("click", function() {
             div.setAttribute('visited', 'false');
         });
     }
-});
+};
 
 document.getElementById("usernameField").addEventListener("keyup", function(event) {
   // Number 13 is the "Enter" key on the keyboard
