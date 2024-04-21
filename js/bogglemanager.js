@@ -142,8 +142,8 @@ function submitWord() {
                 display_text = "<div>" + word_score + "&emsp;" + input_value  + "</div>";
             } 
 
-            document.getElementById("board").style.backgroundColor = "limegreen";
-            document.getElementById("board").style.border = "5px solid mediumseagreen";
+            document.getElementById("board").style.backgroundColor = "green";
+            document.getElementById("board").style.border = "5px solid green";
             setTimeout(() => { 
                 document.getElementById("board").style.backgroundColor = "#398BD4"; 
                 document.getElementById("board").style.border = "5px solid #FFCA08";
@@ -155,7 +155,7 @@ function submitWord() {
             display_text = "<div style='color:red'>" + word_score + "&nbsp;&nbsp;&emsp;" + input_value + "</div>";
 
             document.getElementById("board").style.backgroundColor = "crimson";
-            document.getElementById("board").style.border = "5px solid indianred";
+            document.getElementById("board").style.border = "5px solid crimson";
             setTimeout(() => { 
                 document.getElementById("board").style.backgroundColor = "#398BD4"; 
                 document.getElementById("board").style.border = "5px solid #FFCA08";
