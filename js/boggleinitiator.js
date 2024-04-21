@@ -347,7 +347,7 @@ function boggle_solver() {
 
 function DFS(index, word) {
 
-    word += letter_array[index];
+    word += letter_array[index].toUpperCase();
 
     if (dictionary.is_word(word) && word.length > 2) {
         boggle_answers.insert_word(word);
