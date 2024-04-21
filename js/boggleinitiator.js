@@ -1,3 +1,6 @@
+const mobileSize = 480;
+const tabletSize = 768;
+
 var num_of_tiles = 25;
 var startGame = false;
 var timerOn = false;
@@ -8,10 +11,38 @@ var boggle_graph = new Graph(num_of_tiles);
 var letter_array = new Array();
 var answers_array = new Array();
 
-create_dictionary();
+window.addEventListener('load', function() {
+    var boardwidth = document.getElementById("board").offsetWidth;
+
+    document.getElementById('board').setAttribute("style","min-height:" + boardwidth + "px");
+    document.getElementById('board').setAttribute("style","max-height:" + boardwidth + "px");
+
+    // Reset Tile Size
+    const tiles = document.querySelectorAll('.tile');
+    tiles.forEach(div => {
+        div.style.minWidth = boardwidth / 6.5 + "px";
+        div.style.minHeight = boardwidth / 6.5 + "px";
+    });
+
+    // Set results section size
+    var viewportheight = window.innerHeight;
+    var gamecontainerheight = document.getElementById("game-container").offsetHeight;
+    var remainingheight = viewportheight - gamecontainerheight;
+    console.log("remaining height: " + remainingheight);
+
+    document.getElementById('left-column').setAttribute("style","height:" + (remainingheight - 50) + "px");
+    document.getElementById('right-column').setAttribute("style","height:" + (remainingheight - 50) + "px");
+
+    if(window.screen.width <= mobileSize ) {
+        document.getElementById("mobile").classList.remove('hide');
+    } else {
+        document.getElementById("desktop").classList.remove('hide');
+    };
+
+    
+});
 
 function navBarClick(x) {
-  console.log('Menu bar clicked');
 
   var myLinks = document.getElementById("myLinks");
   if (myLinks.classList.contains("show-nav")) {
@@ -25,20 +56,17 @@ function navBarClick(x) {
   x.classList.toggle("change");
 }
 
-document.getElementById("start-button").addEventListener("click", function() {
+create_dictionary();
 
-    console.log("click");
-    
+function startClick() {
+    try{
     if (startGame == false) {
         score_total = 0;
-        document.getElementById("start-button").style.background = "#8f7a66";
-        document.getElementById("start-button").innerHTML = "Stop Game";
-        document.getElementById("word-entry").value = "";
+
         //document.getElementById("word-entry").focus();
-        document.getElementById("answer_cell").innerHTML = "";
-        document.getElementById("submit-button").style.background = "steelblue";
-        document.getElementById("score_cell").innerHTML = "Displayed when game is over";
-        document.getElementById("score").innerHTML = score_total;
+        document.getElementById("word-entry").innerHTML = "&nbsp;"
+
+        document.getElementById("score").innerHTML = "CURRENT SCORE: " + score_total;
         
         startGame = true;
         timerOn = true;
@@ -48,32 +76,72 @@ document.getElementById("start-button").addEventListener("click", function() {
         boggle_solver();
     }
     else if (startGame == true) {
-        startGame = false;
-        timerOn = false;
-        document.getElementById("start-button").style.background = "steelblue";
-        document.getElementById("start-button").innerHTML = "Start Game";
-        document.getElementById("submit-button").style.background = "lightgray";
-        user_inputs.length = 0;
-
-        // Reset Tile Colors
-        const tiles = document.querySelectorAll('.tile');
-        tiles.forEach(div => {
-            div.style.background = "gainsboro";
-            div.style.color = "black";
-            div.setAttribute('visited', 'false');
-        });
+        
     }
-});
+}
+
+    catch(e){
+        console.log(e);
+    }
+};
+
+function stopClick() {
+    startGame = false;
+    timerOn = false;
+    document.getElementById("start-button").style.backgroundColor = "forestgreen";
+    document.getElementById("start-button").style.borderColor = "darkgray";
+    document.getElementById("start-button").innerHTML = "START";
+    document.getElementById("submit-button").style.background = "lightgray";
+
+    // Reset Tile Colors
+    const tiles = document.querySelectorAll('.tile');
+    tiles.forEach(div => {
+        div.style.backgroundColor = "gainsboro";
+        div.style.color = "black";
+        div.setAttribute('visited', 'false');
+    });
+
+    user_inputs.length = 0;
+}
 
 function build_board() {
 
-    var randomNumberForDice;
-    var randomNumberInEachDice;
+    var randomNumberForDice = 0;
+    var randomNumberInEachDice = 0;
     var tracker = new Array(num_of_tiles);
     for (var i = 0; i < num_of_tiles; i++) {
         tracker[i] = 0;
     }
     var j = 0;
+
+    // Dice values taken from actual Boggle game pieces
+    var dice = new Array(num_of_tiles);
+    dice[0]  = ["Q", 'B', 'Z', 'J', 'X', 'K'];
+    dice[1]  = ['H', 'H', 'L', 'R', 'D', 'O'];
+    dice[2]  = ['T', 'E', 'L', 'P', 'C', 'I'];
+    dice[3]  = ['T', 'T', 'O', 'T', 'E', 'M'];
+    dice[4]  = ['A', 'E', 'A', 'E', 'E', 'E'];
+    dice[5]  = ['T', 'O', 'U', 'O', 'T', 'O'];
+    dice[6]  = ['N', 'H', 'D', 'T', 'H', 'O'];
+    dice[7]  = ['S', 'S', 'N', 'S', 'E', 'U'];
+    dice[8]  = ['S', 'C', 'T', 'I', 'E', 'P'];
+    dice[9]  = ['Y', 'I', 'F', 'P', 'S', 'R'];
+    dice[10] = ['O', 'V', 'W', 'R', 'G', 'R'];
+    dice[11] = ['L', 'H', 'N', 'R', 'O', 'D'];
+    dice[12] = ['R', 'I', 'Y', 'P', 'R', 'H'];
+    dice[13] = ['E', 'A', 'N', 'D', 'N', 'N'];
+    dice[14] = ['E', 'E', 'E', 'E', 'M', 'A'];
+    dice[15] = ['A', 'A', 'A', 'F', 'S', 'R'];
+    dice[16] = ['A', 'F', 'A', 'I', 'S', 'R'];
+    dice[17] = ['D', 'O', 'R', 'D', 'L', 'N'];
+    dice[18] = ['M', 'N', 'N', 'E', 'A', 'G'];
+    dice[19] = ['I', 'T', 'I', 'T', 'I', 'E'];
+    dice[20] = ['A', 'U', 'M', 'E', 'E', 'G'];
+    dice[21] = ['Y', 'I', 'F', 'A', 'S', 'R'];
+    dice[22] = ['C', 'C', 'W', 'N', 'S', 'T'];
+    dice[23] = ['U', 'O', 'T', 'O', 'W', 'N'];
+    dice[24] = ['E', 'T', 'I', 'L', 'I', 'C'];
+
 
     for (var row = 0; row < 5; row++) {
         board[row] = new Array(5);
@@ -84,6 +152,7 @@ function build_board() {
                 if (tracker[randomNumberForDice] == 0) {
                     tracker[randomNumberForDice] = 1;
                     randomNumberInEachDice = Math.floor(Math.random() * 6);
+                    var assignedLetter = 'A';
                     assignedLetter = dice[randomNumberForDice][randomNumberInEachDice];
                     if (assignedLetter == 'Q') {
                         assignedLetter = "Qu";
@@ -115,25 +184,23 @@ function start_timer() {
     } 
 
     function run_clock(endtime) {
-        var timer = document.getElementById("time-remaining");
+        var timer = document.getElementById("start-button");
         function update_clock() {
             var time = time_remaining(endtime);
             if (timerOn == true) {
-                timer.innerHTML = "<span style='font-size:50px; color:black;'>" + time.minutes + ":" + time.seconds + "</span>";
+                timer.innerHTML = "<span style='font-size:24px; color:black;'>Time: " + time.minutes + ":" + time.seconds + "</span>";
+                timer.style.backgroundColor = "white";
+                timer.style.borderColor = "white";
             }
             
             if(time.minutes < 0 || timerOn == false) { 
-                timer.innerHTML = "<span style='font-size:50px; color:black;'>0:00</span>";
+                timer.innerHTML = "START";
+                timer.style.backgroundColor = "forestgreen";
+                timer.style.borderColor = "darkgray";
                 clearInterval(timeinterval); 
                 startGame = false;
-                document.getElementById("results-container").style.display = "block";
-                document.getElementById("final_score").innerHTML = score_total;
-                document.getElementById("usernameField").value = "";
-                document.getElementById("usernameField").focus();
-                document.getElementById("start-button").style.background = "steelblue";
-                document.getElementById("start-button").innerHTML = "Start Game";
-                document.getElementById("score_cell").innerHTML = "Start Game";
-                document.getElementById("submit-button").style.background = "lightgray";
+                document.getElementById("score").innerHTML = "FINAL SCORE: " + score_total;
+ 
                 //answers_array.sort();
                 var answer_set = new Set();
                 array_length = answers_array.length;
@@ -156,8 +223,8 @@ function start_timer() {
         var timeinterval = setInterval(update_clock,1000);
     }
 
-    // 2 minutes from now
-    var game_time = 2;
+    // 1 minutes from now
+    var game_time = 1;
     var current_time = Date.parse(new Date());
     var deadline = new Date(current_time + game_time*60*1000);
 
@@ -249,6 +316,10 @@ function create_boggle_graph() {
 
 function boggle_solver() {
 
+    try{
+
+    
+
     for (var i = 0; i < num_of_tiles; i++) {
         var word = "";
         boggle_graph.clear_marks();
@@ -257,6 +328,10 @@ function boggle_solver() {
 
     // Sort: longest word to shortest, then alphabetically if equal length
     answers_array.sort((a, b) => b.length - a.length || a.localeCompare(b));
+
+    }catch(e){
+        console.log(e);
+    }
 }
 
 function DFS(index, word) {
@@ -288,30 +363,4 @@ function DFS(index, word) {
     }    
 }
 
-// Dice values taken from actual Boggle game pieces
-var dice = new Array(num_of_tiles);
-dice[0]  = ["Q", 'B', 'Z', 'J', 'X', 'K'];
-dice[1]  = ['H', 'H', 'L', 'R', 'D', 'O'];
-dice[2]  = ['T', 'E', 'L', 'P', 'C', 'I'];
-dice[3]  = ['T', 'T', 'O', 'T', 'E', 'M'];
-dice[4]  = ['A', 'E', 'A', 'E', 'E', 'E'];
-dice[5]  = ['T', 'O', 'U', 'O', 'T', 'O'];
-dice[6]  = ['N', 'H', 'D', 'T', 'H', 'O'];
-dice[7]  = ['S', 'S', 'N', 'S', 'E', 'U'];
-dice[8]  = ['S', 'C', 'T', 'I', 'E', 'P'];
-dice[9]  = ['Y', 'I', 'F', 'P', 'S', 'R'];
-dice[10] = ['O', 'V', 'W', 'R', 'G', 'R'];
-dice[11] = ['L', 'H', 'N', 'R', 'O', 'D'];
-dice[12] = ['R', 'I', 'Y', 'P', 'R', 'H'];
-dice[13] = ['E', 'A', 'N', 'D', 'N', 'N'];
-dice[14] = ['E', 'E', 'E', 'E', 'M', 'A'];
-dice[15] = ['A', 'A', 'A', 'F', 'S', 'R'];
-dice[16] = ['A', 'F', 'A', 'I', 'S', 'R'];
-dice[17] = ['D', 'O', 'R', 'D', 'L', 'N'];
-dice[18] = ['M', 'N', 'N', 'E', 'A', 'G'];
-dice[19] = ['I', 'T', 'I', 'T', 'I', 'E'];
-dice[20] = ['A', 'U', 'M', 'E', 'E', 'G'];
-dice[21] = ['Y', 'I', 'F', 'A', 'S', 'R'];
-dice[22] = ['C', 'C', 'W', 'N', 'S', 'T'];
-dice[23] = ['U', 'O', 'T', 'O', 'W', 'N'];
-dice[24] = ['E', 'T', 'I', 'L', 'I', 'C'];
+
