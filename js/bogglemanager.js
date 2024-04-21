@@ -231,20 +231,19 @@ function calculate_score(word) {
     
     switch(word) {
         case 3:
-        case 4:
             word_score = 1;
             break;
-        case 5: 
-            word_score = 2;
-            break;
-        case 6: 
-            word_score = 3;
-            break;
-        case 7: 
+        case 4:
             word_score = 5;
             break;
+        case 5: 
+            word_score = 10;
+            break;
+        case 6: 
+            word_score = 15;
+            break;
         default:
-            word_score = 11;
+            word_score = 20;
             break;
     }
 
