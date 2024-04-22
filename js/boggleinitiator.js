@@ -73,6 +73,14 @@ function startClick() {
     
     startGame = true;
     timerOn = true;
+
+    dictionary = new Trie();
+    boggle_answers = new Trie();
+
+    boggle_graph = new Graph(num_of_tiles);
+    letter_array = new Array();
+    answers_array = new Array();
+
     build_board();
     start_timer();
     create_boggle_graph();
