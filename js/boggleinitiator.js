@@ -74,7 +74,6 @@ function startClick() {
     startGame = true;
     timerOn = true;
 
-    dictionary = new Trie();
     boggle_answers = new Trie();
 
     boggle_graph = new Graph(num_of_tiles);
