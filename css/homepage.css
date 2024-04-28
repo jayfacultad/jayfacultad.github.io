@@ -120,14 +120,14 @@ body{
 /* Nav Bar - End*/
 
 .welcome-container {
-    margin-top: 20%;
+    margin-top: 15%;
     margin-left: 20px;
     position: absolute;
     font-size: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background: rgba(204, 204, 204, 0.7);
     width: 90%;
-    height: 75%;
+    height: 85%;
     border-radius: 18px;
     text-align: center;
 }
