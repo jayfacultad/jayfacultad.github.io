@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>MBTA Map</title>
+    <link rel="stylesheet" href="css/homepage.css"/>
     <link rel="stylesheet" href="css/style.css"/>
     <meta charset="utf-8">
 
@@ -10,22 +11,41 @@
 
 <body id="frontpage">
 
-    <div id="heading">Jay Facultad</div>
+    <!-- desktop -->
+<div id="desktop" class="hide">
+    <br/>
+    <br/>
+    <br/>
+    Hello! Please view this page on mobile.
+</div>
+<!-- end desktop -->
+
+<div class="mobile-container">
+
+    <!-- Navigation bar -->
+    <div class="top-navbar">
+    <!-- Animated hamburger -->
+    <div class="navbar-hamburger" onclick="navBarClick(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+    <!-- menu items -->
+    <div id="myLinks" class="navbar-links hide-nav">
+        <div class="link-container"><a href="index.html">Home<img src="staticresources/home.png" class="navlink-icon"></a></div>
+        <div class="link-container" style="border-bottom: 2px solid;padding-top:10px;color:SteelBlue;"><span style="margin-left:auto; padding-right:10px;font-weight:bold;color:SteelBlue;">MY PROJECTS</span></div>  
+        <div class="link-container"><a href="boggle.html">Boggle Game App<img src="staticresources/boggle.png" class="navlink-icon"></a></div>
+        <div class="link-container"><a href="bostonsubway.html">Boston Subway App<img src="staticresources/underground.png" class="navlink-icon"></a></div>
         
-    <div id="menu">
+        <div class="link-container" style="border-bottom: 2px solid;padding-top:10px;color:SteelBlue;"><span style="margin-left:auto; padding-right:10px;font-weight:bold;color:SteelBlue;">LET'S CONNECT</span></div>
+        <div class="link-container"><a href="https://www.linkedin.com/in/jayfacultad">LinkedIn<img src="staticresources/linkedin.png" class="navlink-icon"></a></div>
+        <div class="link-container"><a href="https://trailblazer.me/id/jayfacultad">Trailblazer<img src="staticresources/salesforce.png" class="navlink-icon"></a></div>
+        <div class="link-container"><a href="https://github.com/jayfacultad/">GitHub<img src="staticresources/github.png" class="navlink-icon"></a></div>
 
-        <div id="links">
-            <div class="link"><a class="special_hover" href="index.html">Home</a></div>
-            <div class="link"><a class="special_hover" href="boggle.html">Boggle Game</a></div>
-            <div class="link" id="current"><a class="special_hover" id="current" href="bostonsubway.html">Boston Subway</a></div>
-        </div>
-
-        <div id="social_media">
-            <div class="button"><a class="special_hover" href="contact.html">Contact & Resume</a></div>
-            <div class="button"><a class="special_hover" href="https://github.com/jayfacultad">GitHub</a></div>
-            <div class="button"><a class="special_hover" href="https://www.linkedin.com/in/jayfacultad">LinkedIn</a></div>
-            <div class="button"><a class="special_hover" href="https://www.twitter.com/jay_facultad/">Twitter</a></div>
-
+        <div class="link-container" style="border-bottom: 2px solid;padding-top:10px;color:SteelBlue;"><span style="margin-left:auto; padding-right:10px;font-weight:bold;color:SteelBlue;">FOR FUN</span></div>
+        <div class="link-container"><a href="instagram://user?username=jayfacultad">Instagram<img src="staticresources/instagram.png" class="navlink-icon"></a></div>
+        <div class="link-container"><a href="fb://profile/3619468">Facebook<img src="staticresources/facebook.png" class="navlink-icon"></a></div>
+    </div>
     </div>
     <br>
     <hr>
