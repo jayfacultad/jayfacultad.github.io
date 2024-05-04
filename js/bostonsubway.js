@@ -3,6 +3,40 @@
 // failed.", it means you probably did not give permission for the browser to
 // locate you.
 
+const mobileSize = 480;
+const tabletSize = 768;
+
+window.addEventListener('load', function() {
+    setFormFactor();
+});
+
+window.addEventListener('resize', function() {
+    setFormFactor();
+});
+
+function setFormFactor() {
+    if(window.screen.width <= mobileSize ) {
+        document.getElementById("mobile").classList.remove('hide');
+    } else {
+    document.getElementById("desktop").classList.remove('hide');
+    }
+}
+
+function navBarClick(x) {
+  console.log('Menu bar clicked');
+
+  var myLinks = document.getElementById("myLinks");
+  if (myLinks.classList.contains("show-nav")) {
+    myLinks.classList.add("hide-nav");
+    myLinks.classList.remove("show-nav");
+  } else {
+    myLinks.classList.add("show-nav");
+    myLinks.classList.remove("hide-nav");
+  }
+  
+  x.classList.toggle("change");
+}
+
 var mbta_key = "8845d177307541a1847cb860f31e3f14";
 
 // var map, infoWindow;
