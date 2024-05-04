@@ -3,9 +3,11 @@ const tabletSize = 768;
 
 window.addEventListener('load', function() {
   if(window.screen.width <= mobileSize ) {
+    console.log('mobile');
     document.getElementById("mobile").classList.remove('hide');
     document.getElementById("desktop").classList.add('hide');
   } else {
+    console.log('desktop');
     document.getElementById("desktop").classList.remove('hide');
     document.getElementById("mobile").classList.add('hide');
   }
@@ -13,9 +15,11 @@ window.addEventListener('load', function() {
 
 window.addEventListener('resize', function() {
   if(window.screen.width <= mobileSize ) {
+    console.log('mobile');
     document.getElementById("mobile").classList.remove('hide');
     document.getElementById("desktop").classList.add('hide');
   } else {
+    console.log('desktop');
     document.getElementById("desktop").classList.remove('hide');
     document.getElementById("mobile").classList.add('hide');
   }
