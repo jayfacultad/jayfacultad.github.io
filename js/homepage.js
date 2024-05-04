@@ -4,16 +4,20 @@ const tabletSize = 768;
 window.addEventListener('load', function() {
   if(window.screen.width <= mobileSize ) {
     document.getElementById("mobile").classList.remove('hide');
+    document.getElementById("desktop").classList.add('hide');
   } else {
     document.getElementById("desktop").classList.remove('hide');
+    document.getElementById("mobile").classList.add('hide');
   }
 });
 
 window.addEventListener('resize', function() {
   if(window.screen.width <= mobileSize ) {
     document.getElementById("mobile").classList.remove('hide');
+    document.getElementById("desktop").classList.add('hide');
   } else {
     document.getElementById("desktop").classList.remove('hide');
+    document.getElementById("mobile").classList.add('hide');
   }
 });
 
