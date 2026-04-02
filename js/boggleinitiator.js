@@ -1,6 +1,3 @@
-const mobileSize = 480;
-const tabletSize = 768;
-
 var num_of_tiles = 25;
 var startGame = false;
 var timerOn = false;
@@ -10,51 +7,21 @@ var boggle_answers = new Trie();
 var boggle_graph = new Graph(num_of_tiles);
 var letter_array = new Array();
 var answers_array = new Array();
+var board = [];
+
+function syncBoardSizing() {
+    var boardElement = document.getElementById("board");
+    if (!boardElement) return;
+    var boardWidth = boardElement.offsetWidth;
+    boardElement.style.minHeight = boardWidth + "px";
+    boardElement.style.maxHeight = boardWidth + "px";
+}
 
 window.addEventListener('load', function() {
-    var boardwidth = document.getElementById("board").offsetWidth;
-
-    document.getElementById('board').setAttribute("style","min-height:" + boardwidth + "px");
-    document.getElementById('board').setAttribute("style","max-height:" + boardwidth + "px");
-
-    // Reset Tile Size
-    const tiles = document.querySelectorAll('.tile');
-    tiles.forEach(div => {
-        div.style.minWidth = boardwidth / 6.5 + "px";
-        div.style.minHeight = boardwidth / 6.5 + "px";
-    });
-
-    // Set results section size
-    var viewportheight = window.innerHeight;
-    var gamecontainerheight = document.getElementById("game-container").offsetHeight;
-    var remainingheight = viewportheight - gamecontainerheight;
-    console.log("remaining height: " + remainingheight);
-
-    document.getElementById('left-column').setAttribute("style","height:" + (remainingheight - 25) + "px");
-    document.getElementById('right-column').setAttribute("style","height:" + (remainingheight - 25) + "px");
-
-    if(window.screen.width <= mobileSize ) {
-        document.getElementById("mobile").classList.remove('hide');
-    } else {
-        document.getElementById("desktop").classList.remove('hide');
-    };
-
-    
+    syncBoardSizing();
 });
 
-function navBarClick(x) {
-
-  var myLinks = document.getElementById("myLinks");
-  if (myLinks.classList.contains("show-nav")) {
-    myLinks.classList.add("hide-nav");
-    myLinks.classList.remove("show-nav");
-  } else {
-    myLinks.classList.add("show-nav");
-    myLinks.classList.remove("hide-nav");
-  }
-  
-  x.classList.toggle("change");
-}
+window.addEventListener('resize', syncBoardSizing);
 
 create_dictionary();
 
@@ -93,7 +60,6 @@ function stopClick() {
     document.getElementById("start-button").style.backgroundColor = "forestgreen";
     document.getElementById("start-button").style.borderColor = "darkgray";
     document.getElementById("start-button").innerHTML = "START";
-    document.getElementById("submit-button").style.background = "lightgray";
 
     // Reset Tile Colors
     const tiles = document.querySelectorAll('.tile');
@@ -105,7 +71,7 @@ function stopClick() {
 
     user_inputs.length = 0;
 
-    document.getElementById("all-words").innerHTML = answers_array;
+    document.getElementById("all-words").innerHTML = answers_array.join("");
 }
 
 function build_board() {
