@@ -1,93 +1,94 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>MBTA Map</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <link rel="stylesheet" href="css/homepage.css"/>
-    <link rel="stylesheet" href="css/style.css"/>
-  </head>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Boston Subway App | Jay Facultad</title>
+  <meta name="description" content="Interactive MBTA Red Line map by Jay Facultad using Google Maps, geolocation, route plotting, and live transit data." />
+  <link rel="stylesheet" href="css/homepage.css" />
+  <link rel="stylesheet" href="css/mbtastyle.css" />
+  <link rel="icon" href="icons/githubicon.svg" type="image/svg+xml" />
+</head>
+<body class="project-page transit-page">
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-mark" aria-label="Jay Facultad home">JF</a>
 
-<body id="frontpage">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-    <!-- desktop -->
-<div id="desktop" class="hide">
-    <br/>
-    <br/>
-    <br/>
-    Hello! Please view this page on mobile.
-</div>
-<!-- end desktop -->
-
-<div class="mobile-container">
-
-    <!-- Navigation bar -->
-    <div class="top-navbar">
-    <!-- Animated hamburger -->
-    <div class="navbar-hamburger" onclick="navBarClick(this)">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="index.html#about">About</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#connect">Connect</a>
+        <a href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </nav>
     </div>
-    <!-- menu items -->
-    <div id="myLinks" class="navbar-links hide-nav">
-        <div class="link-container"><a href="index.html">Home<img src="staticresources/home.png" class="navlink-icon"></a></div>
-        <div class="link-container" style="border-bottom: 2px solid;padding-top:10px;color:SteelBlue;"><span style="margin-left:auto; padding-right:10px;font-weight:bold;color:SteelBlue;">MY PROJECTS</span></div>  
-        <div class="link-container"><a href="boggle.html">Boggle Game App<img src="staticresources/boggle.png" class="navlink-icon"></a></div>
-        <div class="link-container"><a href="bostonsubway.html">Boston Subway App<img src="staticresources/underground.png" class="navlink-icon"></a></div>
-        
-        <div class="link-container" style="border-bottom: 2px solid;padding-top:10px;color:SteelBlue;"><span style="margin-left:auto; padding-right:10px;font-weight:bold;color:SteelBlue;">LET'S CONNECT</span></div>
-        <div class="link-container"><a href="https://www.linkedin.com/in/jayfacultad">LinkedIn<img src="staticresources/linkedin.png" class="navlink-icon"></a></div>
-        <div class="link-container"><a href="https://trailblazer.me/id/jayfacultad">Trailblazer<img src="staticresources/salesforce.png" class="navlink-icon"></a></div>
-        <div class="link-container"><a href="https://github.com/jayfacultad/">GitHub<img src="staticresources/github.png" class="navlink-icon"></a></div>
+  </header>
 
-        <div class="link-container" style="border-bottom: 2px solid;padding-top:10px;color:SteelBlue;"><span style="margin-left:auto; padding-right:10px;font-weight:bold;color:SteelBlue;">FOR FUN</span></div>
-        <div class="link-container"><a href="instagram://user?username=jayfacultad">Instagram<img src="staticresources/instagram.png" class="navlink-icon"></a></div>
-        <div class="link-container"><a href="fb://profile/3619468">Facebook<img src="staticresources/facebook.png" class="navlink-icon"></a></div>
-    </div>
-    </div>
-    <br>
-    <hr>
+  <main class="project-main">
+    <section class="shell transit-hero">
+      <div>
+        <p class="project-label">Featured project</p>
+        <h1>Boston Subway App</h1>
+        <p class="project-intro">An interactive MBTA Red Line visualization with live station data, geolocation, nearest-station logic, and route mapping on top of Google Maps.</p>
+        <div class="project-badges" aria-label="Project technologies">
+          <span>JavaScript</span>
+          <span>Google Maps API</span>
+          <span>MBTA API</span>
+          <span>Geolocation</span>
+          <span>Transit data</span>
+        </div>
+      </div>
+      <div class="card project-summary-card">
+        <h2>What this showcases</h2>
+        <p>API integration, real-time data handling, map UI work, and location-aware behavior in a clean front-end presentation.</p>
+      </div>
+    </section>
 
-    <script>
-      var map, infoWindow;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 42.352271, lng: -71.05524200000001},
-          zoom: 14
-        });
-        infoWindow = new google.maps.InfoWindow;
-      }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAA0qX7SO1nYGBW3l4t05eKPdd1IMGLsvc&callback=initMap"
-    async defer></script>
-    <script type="text/javascript" src="js/bostonsubway.js"></script>
+    <section class="shell transit-layout">
+      <div class="map-shell card">
+        <div class="map-shell-head">
+          <div>
+            <p class="eyebrow">Interactive map</p>
+            <h2>MBTA Red Line explorer</h2>
+            <p class="panel-copy">Tap a station to view upcoming departures. Allow location access to see your nearest Red Line stop and distance.</p>
+          </div>
+          <div class="map-legend" aria-label="Map legend">
+            <span><i class="legend-dot legend-dot-red"></i>Red Line station</span>
+            <span><i class="legend-dot legend-dot-blue"></i>Your location</span>
+          </div>
+        </div>
+        <div id="map" aria-label="Boston subway map"></div>
+      </div>
 
-    <div id="map" style="height: 550px;"></div>
+      <aside class="transit-side">
+        <section class="card side-card">
+          <p class="project-label">Highlights</p>
+          <h2>Project features</h2>
+          <ul class="feature-list">
+            <li>Live station schedule lookups from the MBTA API</li>
+            <li>Custom map markers for Red Line stops</li>
+            <li>User geolocation with nearest-station calculation</li>
+            <li>Polyline rendering for the route and user connection</li>
+          </ul>
+        </section>
 
-    <br>
-    <div id="summary-container">
-    <a class="bold">DESCRIPTION</a>
-    <br><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;Web application that utilizes HTML, CSS, JavaScript, 
-    Massachusetts Bay Transportation Authority API, and Google Maps API integrations. 
-    This web app incorporates map markers, geolocation, and real time scheduling.
-    Each Boston MBTA red line station on the map is represented as a marker. 
-    Upon clicking on a station marker, an information 
-    window appears that displays the associate station's schedule of upcoming 
-    trains and train directions. A red polyline connects each station. Initially, 
-    the map is centered on South Station. When the user's geolocation is determined, 
-    the user's location is represented by a geolocation marker. The map 
-    centers on the user's location automatically. Upon selecting the user's 
-    geolocation on the map, an information window appears that displays the 
-    nearest Boston MBTA red line station, including distance away in miles.
-    A dotted polyline connects the user's geolocation marker to the marker of 
-    the nearest Boston MBTA red line station. 
-    <br><br>
-    <a class="bold">API's Utilized:</a>
-    <ul>
-        <li><a id="apilink" href="https://developers.google.com/maps/documentation/javascript/tutorial">Google Maps</a></li>
-        <li><a id="apilink" href="https://www.mbta.com/developers">Boston MBTA (Massachusetts Bay Transportation Authority)</a></li>
-    </ul>
-  </body>
+        <section class="card side-card">
+          <p class="project-label">Under the hood</p>
+          <h2>Technical notes</h2>
+          <p class="detail-copy">This project centers the map on Boston, plots each Red Line station as a marker, requests prediction data on interaction, and calculates the nearest station based on the user’s coordinates.</p>
+          <p class="detail-copy">For a production deployment, move API keys into a safer configuration flow instead of committing them to a public client-side repository.</p>
+        </section>
+      </aside>
+    </section>
+  </main>
+
+  <script src="js/homepage.js"></script>
+  <script src="js/bostonsubway.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAA0qX7SO1nYGBW3l4t05eKPdd1IMGLsvc&callback=initMap" async defer></script>
+</body>
 </html>
