@@ -70,16 +70,16 @@ function handleTouchMove(event) {
                 
                 if((currentSwipedTileRow == previouslySwipedTileRow || currentSwipedTileRow + 1 == previouslySwipedTileRow || currentSwipedTileRow - 1 == previouslySwipedTileRow) 
                    && (currentSwipedTileCol == previouslySwipedTileCol || currentSwipedTileCol + 1 == previouslySwipedTileCol || currentSwipedTileCol - 1 == previouslySwipedTileCol)) {
-                    selectedTile.style.background = "orange";
-                    selectedTile.style.color = "white";
+                    selectedTile.style.background = "linear-gradient(180deg, #ffca7a 0%, #ff9c43 100%)";
+                    selectedTile.style.color = "#08101c";
                     selectedTile.setAttribute('visited', 'true');
                     previouslySwipedTile = currentSwipedTile;
                     wordFromSwipe += document.getElementById(div.id.replace('tile-','')).innerHTML;
                     document.getElementById("word-entry").innerHTML = wordFromSwipe.toUpperCase();
                 }
             } else if(wordFromSwipe == '')  {
-                selectedTile.style.background = "orange";
-                selectedTile.style.color = "white";
+                selectedTile.style.background = "linear-gradient(180deg, #ffca7a 0%, #ff9c43 100%)";
+                selectedTile.style.color = "#08101c";
                 selectedTile.setAttribute('visited', 'true');
                 previouslySwipedTile = currentSwipedTile;
                 wordFromSwipe += document.getElementById(div.id.replace('tile-','')).innerHTML;
@@ -89,14 +89,6 @@ function handleTouchMove(event) {
     });
 }
 
-
-document.getElementById("word-entry").addEventListener("keyup", function(event) {
-  // Number 13 is the "Enter" key on the keyboard
-  if (event.keyCode == 13) {
-    // Trigger the button element with a click
-    submitWord();
-  }
-});
 
 /*
 for (var row = 0; row < 5; row++) {
@@ -180,8 +172,8 @@ function submitWord() {
         // Reset Tile Colors
         const swipeDivs = document.querySelectorAll('.swipe-div');
         swipeDivs.forEach(div => {
-            div.style.background = "gainsboro";
-            div.style.color = "black";
+            div.style.background = "linear-gradient(180deg, #eef5ff 0%, #dbe9ff 100%)";
+            div.style.color = "#08101c";
         });
 
         // Reset word obtained from swipe
@@ -194,20 +186,25 @@ function submitWord() {
     }
 };
 
-document.getElementById("usernameField").addEventListener("keyup", function(event) {
-  // Number 13 is the "Enter" key on the keyboard
-  if (event.keyCode == 13) {
-    // Trigger the button element with a click
-    document.getElementById("username").click();
-  }
-});
+const usernameField = document.getElementById("usernameField");
+const usernameButton = document.getElementById("username");
 
+if (usernameField && usernameButton) {
+  usernameField.addEventListener("keyup", function(event) {
+    if (event.keyCode == 13) {
+      usernameButton.click();
+    }
+  });
 
-document.getElementById("username").addEventListener("click", function() {
-    document.getElementById("results-container").style.display = "none";
-    username_send = document.getElementById("usernameField").value;
+  usernameButton.addEventListener("click", function() {
+    var resultsContainer = document.getElementById("results-container");
+    if (resultsContainer) {
+      resultsContainer.style.display = "none";
+    }
+    username_send = usernameField.value;
     sendData();
-});
+  });
+}
 
 
 function sendData() {
