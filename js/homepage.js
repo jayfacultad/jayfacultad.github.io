@@ -1,43 +1,35 @@
-const mobileSize = 480;
-const tabletSize = 768;
+const menuToggle = document.querySelector('.menu-toggle');
+const siteNav = document.querySelector('.site-nav');
+const navLinks = document.querySelectorAll('.site-nav a');
 
-window.addEventListener('load', function() {
-  if(window.screen.width <= mobileSize ) {
-    console.log('mobile');
-    document.getElementById("mobile").classList.remove('hide');
-    document.getElementById("desktop").classList.add('hide');
-  } else {
-    console.log('desktop');
-    document.getElementById("desktop").classList.remove('hide');
-    document.getElementById("mobile").classList.add('hide');
-  }
-});
+function closeMenu() {
+  if (!menuToggle || !siteNav) return;
 
-window.addEventListener('resize', function() {
-  if(window.screen.width <= mobileSize ) {
-    console.log('mobile');
-    document.getElementById("mobile").classList.remove('hide');
-    document.getElementById("desktop").classList.add('hide');
-  } else {
-    console.log('desktop');
-    document.getElementById("desktop").classList.remove('hide');
-    document.getElementById("mobile").classList.add('hide');
-  }
-});
-
-function navBarClick(x) {
-  console.log('Menu bar clicked');
-
-  var myLinks = document.getElementById("myLinks");
-  if (myLinks.classList.contains("show-nav")) {
-    myLinks.classList.add("hide-nav");
-    myLinks.classList.remove("show-nav");
-  } else {
-    myLinks.classList.add("show-nav");
-    myLinks.classList.remove("hide-nav");
-  }
-  
-  x.classList.toggle("change");
+  menuToggle.classList.remove('is-open');
+  menuToggle.setAttribute('aria-expanded', 'false');
+  siteNav.classList.remove('is-open');
 }
 
-window.addEventListener('scroll', scrollHandler);
+if (menuToggle && siteNav) {
+  menuToggle.addEventListener('click', () => {
+    const isOpen = menuToggle.classList.toggle('is-open');
+    siteNav.classList.toggle('is-open', isOpen);
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  navLinks.forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 720) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeMenu();
+    }
+  });
+}
