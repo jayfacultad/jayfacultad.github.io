@@ -1,23 +1,191 @@
+.project-page {
+  min-height: 100vh;
+}
+
+.project-main {
+  padding: 2rem 0 5rem;
+}
+
+.shell {
+  width: min(calc(100% - 2rem), var(--max-width));
+  margin: 0 auto;
+}
+
+.project-label {
+  margin: 0 0 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--accent-strong);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.transit-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.9fr);
+  gap: 1.5rem;
+  align-items: end;
+  padding-top: 2rem;
+}
+
+.project-intro,
+.panel-copy,
+.project-summary-card p,
+.detail-copy {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.project-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.project-badges span {
+  padding: 0.72rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.project-summary-card,
+.map-shell,
+.side-card {
+  padding: 1.5rem;
+}
+
+.transit-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.8fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.map-shell-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.map-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  color: var(--muted);
+}
+
+.map-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.legend-dot-red {
+  background: #ff5d6c;
+}
+
+.legend-dot-blue {
+  background: #6fb2ff;
+}
+
 #map {
-height: 100%;
-}
-/* Makes the sample page fill the window. */
-html, body {
-height: 100%;
-margin: 0;
-padding: 0;
+  width: 100%;
+  min-height: 620px;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-#name {
-font-weight: bold;
-font-size: 25px;
+.transit-side {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
 }
 
-#header {
-font-weight: bold;
-font-size: 18px;
+.feature-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--muted);
+  line-height: 1.9;
 }
 
-#schedule {
-font-size: 18px;        
+.side-card h2,
+.transit-hero h1,
+.map-shell h2 {
+  margin-top: 0;
+}
+
+.gm-style .gm-style-iw-c {
+  border-radius: 18px;
+  padding: 0 !important;
+}
+
+.info-card {
+  color: #08101c;
+  padding: 0.25rem;
+  min-width: 220px;
+}
+
+.info-card h3 {
+  margin: 0 0 0.8rem;
+  font-size: 1rem;
+}
+
+.info-meta {
+  font-size: 0.9rem;
+  color: #304255;
+  margin: 0 0 0.6rem;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.45rem 0;
+  border-top: 1px solid rgba(8, 16, 28, 0.08);
+  font-size: 0.92rem;
+}
+
+.info-empty {
+  font-size: 0.92rem;
+  color: #304255;
+}
+
+@media (max-width: 980px) {
+  .transit-hero,
+  .transit-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .project-main {
+    padding-top: 1rem;
+  }
+
+  .project-summary-card,
+  .map-shell,
+  .side-card {
+    padding: 1.1rem;
+  }
+
+  .map-shell-head {
+    flex-direction: column;
+  }
+
+  #map {
+    min-height: 460px;
+    border-radius: 20px;
+  }
 }
